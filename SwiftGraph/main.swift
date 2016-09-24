@@ -7,6 +7,13 @@
 //
 
 import Foundation
+import SourceKittenFramework
 
 print("Hello, World!")
+print("\(Process.arguments)")
+print(Structure.self.dynamicType)
+
+//struct Thing {
+//    var s: String
+//}
 

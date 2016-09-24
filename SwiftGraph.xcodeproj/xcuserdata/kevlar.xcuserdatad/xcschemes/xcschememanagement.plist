@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>swiftgraph.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>79D76EA71D960EEB0007AFCD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79D76EB71D960EEB0007AFCD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79EB92C71D935777007BF799</key>
 		<dict>
 			<key>primary</key>

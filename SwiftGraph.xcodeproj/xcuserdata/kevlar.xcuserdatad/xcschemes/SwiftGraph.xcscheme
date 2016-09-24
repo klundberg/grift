@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "79EB92C71D935777007BF799"
-               BuildableName = "SwiftGraph"
-               BlueprintName = "SwiftGraph"
+               BlueprintIdentifier = "79D76EA71D960EEB0007AFCD"
+               BuildableName = "swiftgraph.app"
+               BlueprintName = "swiftgraph"
                ReferencedContainer = "container:SwiftGraph.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,13 +28,23 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "79D76EB71D960EEB0007AFCD"
+               BuildableName = "swiftgraphTests.xctest"
+               BlueprintName = "swiftgraphTests"
+               ReferencedContainer = "container:SwiftGraph.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "79EB92C71D935777007BF799"
-            BuildableName = "SwiftGraph"
-            BlueprintName = "SwiftGraph"
+            BlueprintIdentifier = "79D76EA71D960EEB0007AFCD"
+            BuildableName = "swiftgraph.app"
+            BlueprintName = "swiftgraph"
             ReferencedContainer = "container:SwiftGraph.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +65,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "79EB92C71D935777007BF799"
-            BuildableName = "SwiftGraph"
-            BlueprintName = "SwiftGraph"
+            BlueprintIdentifier = "79D76EA71D960EEB0007AFCD"
+            BuildableName = "swiftgraph.app"
+            BlueprintName = "swiftgraph"
             ReferencedContainer = "container:SwiftGraph.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +84,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "79EB92C71D935777007BF799"
-            BuildableName = "SwiftGraph"
-            BlueprintName = "SwiftGraph"
+            BlueprintIdentifier = "79D76EA71D960EEB0007AFCD"
+            BuildableName = "swiftgraph.app"
+            BlueprintName = "swiftgraph"
             ReferencedContainer = "container:SwiftGraph.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
