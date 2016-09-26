@@ -13,7 +13,7 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2C02C668-3044-4505-BD6C-F57F09241214",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "FD7DA18210A2C280E9107E37D7344F243FEE5F75" : "SwiftGraph\/Carthage\/Checkouts\/SourceKitten\/",
-    "E084C86B03F81D63323C9E7510697EA528A758C7" : "SwiftGraph\/Carthage\/Checkouts\/SourceKitten\/Carthage\/Checkouts\/xcconfigs\/",
+    "E084C86B03F81D63323C9E7510697EA528A758C7" : "SwiftGraph\/Carthage\/Checkouts\/SourceKitten\/Carthage\/Checkouts\/Commandant\/Carthage\/Checkouts\/xcconfigs\/",
     "EB2210CFD48672E403BED699D5D7F01B844069CF" : "SwiftGraph\/Carthage\/Checkouts\/SWXMLHash\/",
     "E111B14063EC98ABE518A93E1C4498F4167C2DEE" : "SwiftGraph\/Carthage\/Checkouts\/YamlSwift\/",
     "D23C0CEAADB77074FDA4459000068A7940EB7AD0" : "SwiftGraph\/Carthage\/Checkouts\/SourceKitten\/Carthage\/Checkouts\/Commandant\/",

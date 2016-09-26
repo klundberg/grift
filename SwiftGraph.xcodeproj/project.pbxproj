@@ -17,6 +17,8 @@
 		79D76EF61D961CB70007AFCD /* SwiftGraphKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* SwiftGraphKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79D76EFE1D961E4A0007AFCD /* Something.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EFD1D961E4A0007AFCD /* Something.swift */; };
 		79D76EFF1D961FA50007AFCD /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76E8A1D936A320007AFCD /* SourceKittenFramework.framework */; };
+		79D76F021D98BB340007AFCD /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76F011D98BB340007AFCD /* Graph.swift */; };
+		79D76F041D98BB990007AFCD /* GraphTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76F031D98BB990007AFCD /* GraphTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		79D76EEF1D961CB70007AFCD /* SwiftGraphKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGraphKitTests.swift; sourceTree = "<group>"; };
 		79D76EF11D961CB70007AFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79D76EFD1D961E4A0007AFCD /* Something.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Something.swift; sourceTree = "<group>"; };
+		79D76F011D98BB340007AFCD /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		79D76F031D98BB990007AFCD /* GraphTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 		79D76EE11D961CB60007AFCD /* SwiftGraphKit */ = {
 			isa = PBXGroup;
 			children = (
+				79D76F001D98BB270007AFCD /* Dot */,
 				79D76EE21D961CB60007AFCD /* SwiftGraphKit.h */,
 				79D76EE31D961CB60007AFCD /* Info.plist */,
 				79D76EFD1D961E4A0007AFCD /* Something.swift */,
@@ -158,8 +163,17 @@
 			children = (
 				79D76EEF1D961CB70007AFCD /* SwiftGraphKitTests.swift */,
 				79D76EF11D961CB70007AFCD /* Info.plist */,
+				79D76F031D98BB990007AFCD /* GraphTest.swift */,
 			);
 			path = SwiftGraphKitTests;
+			sourceTree = "<group>";
+		};
+		79D76F001D98BB270007AFCD /* Dot */ = {
+			isa = PBXGroup;
+			children = (
+				79D76F011D98BB340007AFCD /* Graph.swift */,
+			);
+			name = Dot;
 			sourceTree = "<group>";
 		};
 		79EB92BF1D935776007BF799 = {
@@ -377,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D76F021D98BB340007AFCD /* Graph.swift in Sources */,
 				79D76EFE1D961E4A0007AFCD /* Something.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D76F041D98BB990007AFCD /* GraphTest.swift in Sources */,
 				79D76EF01D961CB70007AFCD /* SwiftGraphKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
