@@ -43,29 +43,27 @@ class GraphTests: XCTestCase {
     }
 
     func testUndirectedGraphWithOneEdge() {
-        let graph = Graph(statements: [Edge(from: Node("A"), to:Node("B"))])
+        let graph = Graph(statements: ["A" >> "B"])
 
         XCTAssertEqual(graph.description, "graph { A -- B }")
     }
 
     func testDirectedGraphWithOneEdge() {
         let graph = Graph(type: .directed,
-                          statements: [Edge(from: Node("A"), to:Node("B"))])
+                          statements: ["A" >> "B"])
 
         XCTAssertEqual(graph.description, "digraph { A -> B }")
     }
 
     func testUndirectedGraphWithTwoEdges() {
-        let graph = Graph(statements: [Edge(from: Node("A"), to:Node("B")),
-                                       Edge(from: Node("B"), to:Node("C"))])
+        let graph = Graph(statements: ["A" >> "B", "B" >> "C"])
 
         XCTAssertEqual(graph.description, "graph { A -- B; B -- C }")
     }
 
     func testDirectedGraphWithTwoEdges() {
         let graph = Graph(type: .directed,
-                          statements: [Edge(from: Node("A"), to:Node("B")),
-                            Edge(from: Node("B"), to:Node("C"))])
+                          statements: ["A" >> "B", "B" >> "C"])
 
         XCTAssertEqual(graph.description, "digraph { A -> B; B -> C }")
     }
@@ -77,8 +75,8 @@ class GraphTests: XCTestCase {
     }
 
     func testComplexUndirectedGraphWithSubgraph() {
-        let graph = Graph(statements: [Edge(from: Node("A"), to: Node("B")),
-                                       Subgraph(statements: [Edge(from: Node("C"), to: Node("D"))])])
+        let graph = Graph(statements: ["A" >> "B",
+                                       Subgraph(statements: ["C" >> "D"])])
 
         XCTAssertEqual(graph.description, "graph { A -- B; subgraph { C -- D } }")
     }

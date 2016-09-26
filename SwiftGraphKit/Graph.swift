@@ -106,6 +106,10 @@ struct Edge {
     var to: Node
 }
 
+func >> (lhs: Node, rhs: Node) -> Edge {
+    return Edge(from: lhs, to: rhs)
+}
+
 extension Edge: Statement {
     func serialize(with context: Graph) -> String {
         return "\(from.identifier) \(context.type.op.rawValue) \(to.identifier)"
