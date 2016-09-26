@@ -18,7 +18,7 @@
 		79D76EFE1D961E4A0007AFCD /* Something.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EFD1D961E4A0007AFCD /* Something.swift */; };
 		79D76EFF1D961FA50007AFCD /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76E8A1D936A320007AFCD /* SourceKittenFramework.framework */; };
 		79D76F021D98BB340007AFCD /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76F011D98BB340007AFCD /* Graph.swift */; };
-		79D76F041D98BB990007AFCD /* GraphTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76F031D98BB990007AFCD /* GraphTest.swift */; };
+		79D76F041D98BB990007AFCD /* GraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76F031D98BB990007AFCD /* GraphTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,7 @@
 		79D76EF11D961CB70007AFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79D76EFD1D961E4A0007AFCD /* Something.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Something.swift; sourceTree = "<group>"; };
 		79D76F011D98BB340007AFCD /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
-		79D76F031D98BB990007AFCD /* GraphTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTest.swift; sourceTree = "<group>"; };
+		79D76F031D98BB990007AFCD /* GraphTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +163,7 @@
 			children = (
 				79D76EEF1D961CB70007AFCD /* SwiftGraphKitTests.swift */,
 				79D76EF11D961CB70007AFCD /* Info.plist */,
-				79D76F031D98BB990007AFCD /* GraphTest.swift */,
+				79D76F031D98BB990007AFCD /* GraphTests.swift */,
 			);
 			path = SwiftGraphKitTests;
 			sourceTree = "<group>";
@@ -400,7 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79D76F041D98BB990007AFCD /* GraphTest.swift in Sources */,
+				79D76F041D98BB990007AFCD /* GraphTests.swift in Sources */,
 				79D76EF01D961CB70007AFCD /* SwiftGraphKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

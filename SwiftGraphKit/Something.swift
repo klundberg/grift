@@ -26,3 +26,7 @@ public func structures(at path: String) -> [Structure] {
         $0.map(Structure.init)
     })
 }
+
+func graph(structures: [Structure]) -> Graph {
+    return Graph()
+}
