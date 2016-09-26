@@ -12,8 +12,10 @@ protocol Statement {
     func serialize(with context: Graph) -> String
 }
 
-func serializeStatements(statements: [Statement], with context: Graph) -> String {
-    return statements.map({ $0.serialize(with: context) }).joinWithSeparator("; ")
+extension SequenceType where Generator.Element == Statement {
+    func serialize(with context: Graph) -> String {
+        return self.map({ $0.serialize(with: context) }).joinWithSeparator("; ")
+    }
 }
 
 struct Graph {
@@ -40,7 +42,7 @@ struct Graph {
     }
 
     func serialize() -> String {
-        return "\(type.rawValue) \(name) { \(serializeStatements(statements, with: self)) }".removingRepeatedWhitespace()
+        return "\(type.rawValue) \(name) { \(statements.serialize(with: self)) }".removingRepeatedWhitespace()
     }
 }
 
@@ -62,7 +64,7 @@ struct Subgraph {
 
 extension Subgraph: Statement {
     func serialize(with context: Graph) -> String {
-        return "subgraph \(identifier) { \(serializeStatements(statements, with: context)) }"
+        return "subgraph \(identifier) { \(statements.serialize(with: context)) }"
     }
 }
 
