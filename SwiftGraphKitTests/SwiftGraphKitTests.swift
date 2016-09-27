@@ -24,12 +24,33 @@ class SwiftGraphKitTests: XCTestCase {
     }
     
     func testFolderGivesStructureArrayOfAllFilesInIt() {
+
         let path = ("~/workspaces/SwiftGraph/SwiftGraphKitTests" as NSString).stringByExpandingTildeInPath
-        
+
+//        NSFileManager()
+
         let list = structures(at: path)
         print(list)
 
 //        XCTAssertEqual(list.count, 1)
     }
+
+    func testSingleStructSwiftCodeCreatesOneEdgeGraph() {
+        let code = "struct Thing { var x: String }"
+
+        let thing = graph(structures(for: code))
+
+        XCTAssertEqual(thing.serialize(), "digraph { Thing -> String }")
+    }
+
+    func testTwoStructSwiftCodeCreatesTwoEdgeGraphGraph() {
+        let code = "struct Thing { var x: String }; struct Foo { var bar: Int }"
+
+        let thing = graph(structures(for: code))
+
+        XCTAssertEqual(thing.serialize(), "digraph { Thing -> String; Foo -> Int }")
+    }
+
+
     
 }
