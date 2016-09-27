@@ -23,10 +23,10 @@ struct Graph {
         case undirected = "graph"
         case directed = "digraph"
 
-        var op: Edge.Operator {
+        var edgeOperator: String {
             switch self {
-            case .undirected: return .undirected
-            case .directed: return .directed
+            case .undirected: return "--"
+            case .directed: return "->"
             }
         }
     }
@@ -97,11 +97,6 @@ extension Node: StringLiteralConvertible {
 }
 
 struct Edge {
-    enum Operator: String {
-        case undirected = "--"
-        case directed = "->"
-    }
-
     var from: Node
     var to: Node
 }
@@ -112,7 +107,7 @@ func >> (lhs: Node, rhs: Node) -> Edge {
 
 extension Edge: Statement {
     func serialize(with context: Graph) -> String {
-        return "\(from.identifier) \(context.type.op.rawValue) \(to.identifier)"
+        return "\(from.identifier) \(context.type.edgeOperator) \(to.identifier)"
     }
 }
 
