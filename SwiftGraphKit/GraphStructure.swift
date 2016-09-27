@@ -9,10 +9,10 @@
 import Foundation
 import SourceKittenFramework
 
-public func structures(at path: String) -> [Structure] {
+public func structures(at path: String, using fileManager: NSFileManager = .defaultManager()) -> [Structure] {
     print(path)
     
-    let contents = try! NSFileManager.defaultManager().contentsOfDirectoryAtPath(path)
+    let contents = try! fileManager.contentsOfDirectoryAtPath(path)
 
     let files = contents.map({ (filename: String) -> File? in
         guard filename.hasSuffix(".swift") else {

@@ -15,7 +15,7 @@
 		79D76EF21D961CB70007AFCD /* SwiftGraphKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D76EE21D961CB60007AFCD /* SwiftGraphKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79D76EF51D961CB70007AFCD /* SwiftGraphKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* SwiftGraphKit.framework */; };
 		79D76EF61D961CB70007AFCD /* SwiftGraphKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* SwiftGraphKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		79D76EFE1D961E4A0007AFCD /* Something.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EFD1D961E4A0007AFCD /* Something.swift */; };
+		79D76EFE1D961E4A0007AFCD /* GraphStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EFD1D961E4A0007AFCD /* GraphStructure.swift */; };
 		79D76EFF1D961FA50007AFCD /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76E8A1D936A320007AFCD /* SourceKittenFramework.framework */; };
 		79D76F021D98BB340007AFCD /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76F011D98BB340007AFCD /* Graph.swift */; };
 		79D76F041D98BB990007AFCD /* GraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76F031D98BB990007AFCD /* GraphTests.swift */; };
@@ -80,7 +80,7 @@
 		79D76EE81D961CB60007AFCD /* SwiftGraphKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGraphKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D76EEF1D961CB70007AFCD /* SwiftGraphKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGraphKitTests.swift; sourceTree = "<group>"; };
 		79D76EF11D961CB70007AFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79D76EFD1D961E4A0007AFCD /* Something.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Something.swift; sourceTree = "<group>"; };
+		79D76EFD1D961E4A0007AFCD /* GraphStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphStructure.swift; sourceTree = "<group>"; };
 		79D76F011D98BB340007AFCD /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		79D76F031D98BB990007AFCD /* GraphTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,7 +153,7 @@
 				79D76F001D98BB270007AFCD /* Dot */,
 				79D76EE21D961CB60007AFCD /* SwiftGraphKit.h */,
 				79D76EE31D961CB60007AFCD /* Info.plist */,
-				79D76EFD1D961E4A0007AFCD /* Something.swift */,
+				79D76EFD1D961E4A0007AFCD /* GraphStructure.swift */,
 			);
 			path = SwiftGraphKit;
 			sourceTree = "<group>";
@@ -392,7 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79D76F021D98BB340007AFCD /* Graph.swift in Sources */,
-				79D76EFE1D961E4A0007AFCD /* Something.swift in Sources */,
+				79D76EFE1D961E4A0007AFCD /* GraphStructure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +662,7 @@
 				79D76EC11D960EEB0007AFCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79D76EC21D960EEB0007AFCD /* Build configuration list for PBXNativeTarget "swiftgraphTests" */ = {
 			isa = XCConfigurationList;
@@ -670,6 +671,7 @@
 				79D76EC41D960EEB0007AFCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79D76EF71D961CB70007AFCD /* Build configuration list for PBXNativeTarget "SwiftGraphKit" */ = {
 			isa = XCConfigurationList;
@@ -678,6 +680,7 @@
 				79D76EF91D961CB70007AFCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79D76EFA1D961CB70007AFCD /* Build configuration list for PBXNativeTarget "SwiftGraphKitTests" */ = {
 			isa = XCConfigurationList;
@@ -686,6 +689,7 @@
 				79D76EFC1D961CB70007AFCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79EB92C31D935776007BF799 /* Build configuration list for PBXProject "SwiftGraph" */ = {
 			isa = XCConfigurationList;
