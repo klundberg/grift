@@ -56,8 +56,8 @@ struct Subgraph {
     var identifier: String
     var statements: [Statement]
 
-    init(_ identifier: String = "", statements: [Statement] = []) {
-        self.identifier = identifier
+    init(_ identifier: String = "", isCluster: Bool = false, statements: [Statement] = []) {
+        self.identifier = isCluster ? "cluster_\(identifier)" : identifier
         self.statements = statements
     }
 }

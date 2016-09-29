@@ -80,4 +80,10 @@ class GraphTests: XCTestCase {
 
         XCTAssertEqual(graph.description, "graph { A -- B; subgraph { C -- D } }")
     }
+
+    func testGraphWithClusteredSubgraph() {
+        let graph = Graph(statements: [Subgraph("blah", isCluster: true)])
+
+        XCTAssertEqual(graph.description, "graph { subgraph cluster_blah { } }")
+    }
 }
