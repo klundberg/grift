@@ -9,27 +9,47 @@
 import Foundation
 import SourceKittenFramework
 
-public func structures(at path: String, using fileManager: NSFileManager = .defaultManager()) -> [Structure] {
-    print(path)
-    
+func filesInDirectory(at path: String, using fileManager: NSFileManager = .defaultManager()) -> [String] {
     let contents = try! fileManager.contentsOfDirectoryAtPath(path)
 
-    let files = contents.map({ (filename: String) -> File? in
+    return contents.flatMap({ (filename: String) -> String? in
         guard filename.hasSuffix(".swift") else {
             return nil
         }
 
-        return File(path: (path as NSString).stringByAppendingPathComponent(filename))
-    })
+        return (path as NSString).stringByAppendingPathComponent(filename)
 
-    return files.flatMap({
-        $0.map(Structure.init)
     })
+}
+
+public func structures(at path: String, using fileManager: NSFileManager = .defaultManager()) -> [Structure] {
+
+    let filePaths = filesInDirectory(at: path, using: fileManager)
+
+    return filePaths.flatMap({ structure(forFile: $0) })
+}
+
+public func structure(forFile path: String) -> Structure? {
+    guard let file = File(path: path) else {
+        return nil
+    }
+    return Structure(file: file)
+}
+
+//private protocol StringType {}
+//extension String: StringType {}
+
+extension Dictionary {
+    subscript (keyEnum: SwiftDocKey) -> Value? {
+        guard let key = keyEnum.rawValue as? Key else {
+            return nil
+        }
+        return self[key]
+    }
 }
 
 func graph(structures: [Structure]) -> Graph {
     var graph = Graph(type: .directed)
-
 
     var statements: [Statement] = []
 
@@ -38,11 +58,11 @@ func graph(structures: [Structure]) -> Graph {
         for substructure in substructures {
             let substructureThing = substructure as! [String: SourceKitRepresentable]
 
-            let name = substructureThing[SwiftDocKey.Name.rawValue] as! String
-            let subsubstructures = substructureThing[SwiftDocKey.Substructure.rawValue] as! [SourceKitRepresentable]
+            let name = substructureThing[.Name] as! String
+            let subsubstructures = substructureThing[.Substructure] as! [SourceKitRepresentable]
             for subsubstructure in subsubstructures {
                 let subsubstructureThing = subsubstructure as! [String: SourceKitRepresentable]
-                let typename = subsubstructureThing[SwiftDocKey.TypeName.rawValue] as! String
+                let typename = subsubstructureThing[.TypeName] as! String
 
                 statements.append(Node(name) >> Node(typename))
             }

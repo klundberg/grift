@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		793A67D31DB0526E001747A5 /* Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A67D21DB0526E001747A5 /* Structure.swift */; };
+		793A67D61DB301DA001747A5 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A67D51DB301DA001747A5 /* TestFile.swift */; };
 		79D76EBD1D960EEB0007AFCD /* swiftgraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EBC1D960EEB0007AFCD /* swiftgraphTests.swift */; };
 		79D76EC61D960F370007AFCD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EC51D960F370007AFCD /* main.swift */; };
 		79D76ED81D9610B80007AFCD /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76E8A1D936A320007AFCD /* SourceKittenFramework.framework */; };
@@ -66,6 +68,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		792E14F71D9F5F0800470E21 /* roadmap.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = roadmap.md; sourceTree = "<group>"; };
+		793A67D21DB0526E001747A5 /* Structure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structure.swift; sourceTree = "<group>"; };
+		793A67D51DB301DA001747A5 /* TestFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		79D76E8A1D936A320007AFCD /* SourceKittenFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SourceKittenFramework.framework; path = "../../Library/Developer/Xcode/DerivedData/SwiftGraph-hfkzlzlrhslwhleogjxpvmgkrxvs/Build/Products/Debug/SourceKittenFramework.framework"; sourceTree = "<group>"; };
 		79D76EA81D960EEB0007AFCD /* swiftgraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftgraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D76EB31D960EEB0007AFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +126,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		793A67D11DB0525A001747A5 /* SourceKittenExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				793A67D21DB0526E001747A5 /* Structure.swift */,
+			);
+			name = SourceKittenExtensions;
+			sourceTree = "<group>";
+		};
 		79D76E831D935F1E0007AFCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,10 +163,12 @@
 		79D76EE11D961CB60007AFCD /* SwiftGraphKit */ = {
 			isa = PBXGroup;
 			children = (
+				793A67D11DB0525A001747A5 /* SourceKittenExtensions */,
 				79D76F001D98BB270007AFCD /* Dot */,
 				79D76EE21D961CB60007AFCD /* SwiftGraphKit.h */,
 				79D76EE31D961CB60007AFCD /* Info.plist */,
 				79D76EFD1D961E4A0007AFCD /* GraphStructure.swift */,
+				793A67D51DB301DA001747A5 /* TestFile.swift */,
 			);
 			path = SwiftGraphKit;
 			sourceTree = "<group>";
@@ -186,6 +201,7 @@
 				79EB92C91D935777007BF799 /* Products */,
 				79D76E831D935F1E0007AFCD /* Frameworks */,
 				79D76ED91D961C880007AFCD /* Cartfile */,
+				792E14F71D9F5F0800470E21 /* roadmap.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +238,7 @@
 				79D76EA51D960EEB0007AFCD /* Frameworks */,
 				79D76EA61D960EEB0007AFCD /* Resources */,
 				79D76EC71D9610030007AFCD /* CopyFiles */,
+				794B31101DAB476400E9D790 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -370,6 +387,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		794B31101DAB476400E9D790 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo Hello";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		79D76EA41D960EEB0007AFCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -392,7 +425,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				79D76F021D98BB340007AFCD /* Graph.swift in Sources */,
+				793A67D61DB301DA001747A5 /* TestFile.swift in Sources */,
 				79D76EFE1D961E4A0007AFCD /* GraphStructure.swift in Sources */,
+				793A67D31DB0526E001747A5 /* Structure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

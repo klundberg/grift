@@ -12,27 +12,42 @@ import SourceKittenFramework
 @testable import SwiftGraphKit
 
 class SwiftGraphKitTests: XCTestCase {
-
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
     
     func testFolderGivesStructureArrayOfAllFilesInIt() {
 
-        let path = ("~/workspaces/SwiftGraph/SwiftGraphKitTests" as NSString).stringByExpandingTildeInPath
+        let dir = ("~/workspaces/SwiftGraph/SwiftGraphKitTests" as NSString).stringByExpandingTildeInPath
 
-//        NSFileManager()
+//        let files = filesInDirectory(at: dir)
 
-        let list = structures(at: path)
-        print(list)
+        let list = structures(at: dir)
 
+        let data = (list.description as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        try! data?.writeToFile("\(dir)/json.json", options: .DataWritingAtomic)
+
+//        print(list.map({
+//            $0.subStructures
+//        }))
 //        XCTAssertEqual(list.count, 1)
+
+//        let path = "/Users/kevlar/workspaces/SwiftGraph/SwiftGraphKit/TestFile.swift"
+//        let things = [structure(forFile: path)]
+//        let thing = things.flatMap({ $0 }).map({ thing in graph([thing]) })
+//
+//        print(thing)
+
+//        let path = files.first!
+//        var args = ["-sdk",
+//                    "/Applications/Xcode-8.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk",
+//                    "-module-name",
+//                    "Blah",
+//                    "-c",
+//                    path]
+//        args += files
+
+//        let index = Request.Index(
+//            file: path,
+//            arguments:args)
+//        print(toJSON(toAnyObject(index.send())))
     }
 
     func testSingleStructSwiftCodeCreatesOneEdgeGraph() {
@@ -51,6 +66,12 @@ class SwiftGraphKitTests: XCTestCase {
         XCTAssertEqual(thing.serialize(), "digraph { Thing -> String; Foo -> Int }")
     }
 
+    func testStructWithFunctionShowsFunctionReturnTypeProperly() {
+        let code = "struct Thing { func foo() -> Double { return 0 } }"
 
-    
+        let thing = graph(structures(for: code))
+
+        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
+    }
+
 }
