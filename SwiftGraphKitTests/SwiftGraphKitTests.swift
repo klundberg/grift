@@ -15,25 +15,50 @@ class SwiftGraphKitTests: XCTestCase {
     
     func testFolderGivesStructureArrayOfAllFilesInIt() {
 
-        let dir = ("~/workspaces/SwiftGraph/SwiftGraphKitTests" as NSString).stringByExpandingTildeInPath
+//        let dir = ("~/workspaces/SwiftGraph/SwiftGraphKitTests" as NSString).stringByExpandingTildeInPath
 
 //        let files = filesInDirectory(at: dir)
 
-        let list = structures(at: dir)
+//        let list = structures(at: dir)
 
-        let data = (list.description as NSString).dataUsingEncoding(NSUTF8StringEncoding)
-        try! data?.writeToFile("\(dir)/json.json", options: .DataWritingAtomic)
+//        let data = (list.description as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+//        try! data?.writeToFile("\(dir)/json.json", options: .DataWritingAtomic)
 
 //        print(list.map({
 //            $0.subStructures
 //        }))
 //        XCTAssertEqual(list.count, 1)
 
-//        let path = "/Users/kevlar/workspaces/SwiftGraph/SwiftGraphKit/TestFile.swift"
-//        let things = [structure(forFile: path)]
+        let path = "/Users/kevlar/workspaces/SwiftGraph/SwiftGraphKit/TestFile.swift"
+        let things = [structure(forFile: path)]
 //        let thing = things.flatMap({ $0 }).map({ thing in graph([thing]) })
 //
-//        print(thing)
+        print(things[0])
+
+        let args = ["-sdk",
+                    "/Applications/Xcode-8.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk",
+                    "-module-name",
+                    "Blah",
+                    "-c",
+                    path]
+// 489
+
+        let cursorInfo = Request.CursorInfo(file: path, offset: 489, arguments: args).send()
+        print(cursorInfo)
+
+/*
+
+         {
+         "key.kind" : "source.lang.swift.expr.call",
+         "key.offset" : 489,
+         "key.nameoffset" : 489,
+         "key.namelength" : 5,
+         "key.bodyoffset" : 495,
+         "key.bodylength" : 0,
+         "key.length" : 7,
+         "key.name" : "thing"
+         }
+ */
 
 //        let path = files.first!
 //        var args = ["-sdk",
@@ -66,12 +91,12 @@ class SwiftGraphKitTests: XCTestCase {
         XCTAssertEqual(thing.serialize(), "digraph { Thing -> String; Foo -> Int }")
     }
 
-    func testStructWithFunctionShowsFunctionReturnTypeProperly() {
-        let code = "struct Thing { func foo() -> Double { return 0 } }"
-
-        let thing = graph(structures(for: code))
-
-        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
-    }
+//    func testStructWithFunctionShowsFunctionReturnTypeProperly() {
+//        let code = "struct Thing { func foo() -> Double { return 0 } }"
+//
+//        let thing = graph(structures(for: code))
+//
+//        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
+//    }
 
 }

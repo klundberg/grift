@@ -29,6 +29,7 @@ public class FooClass {
 
         let const = Array<Int>()
         a_constant = const
+        thing()
     }
 
     func thing() -> String {
