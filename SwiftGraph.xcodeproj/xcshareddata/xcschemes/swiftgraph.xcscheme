@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "79D76EDF1D961CB60007AFCD"
-               BuildableName = "SwiftGraphKit.framework"
-               BlueprintName = "SwiftGraphKit"
+               BlueprintIdentifier = "79D76EA71D960EEB0007AFCD"
+               BuildableName = "swiftgraph.app"
+               BlueprintName = "swiftgraph"
                ReferencedContainer = "container:SwiftGraph.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "79D76EE71D961CB60007AFCD"
-               BuildableName = "SwiftGraphKitTests.xctest"
-               BlueprintName = "SwiftGraphKitTests"
+               BlueprintIdentifier = "79D76EB71D960EEB0007AFCD"
+               BuildableName = "swiftgraphTests.xctest"
+               BlueprintName = "swiftgraphTests"
                ReferencedContainer = "container:SwiftGraph.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "79D76EDF1D961CB60007AFCD"
-            BuildableName = "SwiftGraphKit.framework"
-            BlueprintName = "SwiftGraphKit"
+            BlueprintIdentifier = "79D76EA71D960EEB0007AFCD"
+            BuildableName = "swiftgraph.app"
+            BlueprintName = "swiftgraph"
             ReferencedContainer = "container:SwiftGraph.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,15 +61,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "79D76EDF1D961CB60007AFCD"
-            BuildableName = "SwiftGraphKit.framework"
-            BlueprintName = "SwiftGraphKit"
+            BlueprintIdentifier = "79D76EA71D960EEB0007AFCD"
+            BuildableName = "swiftgraph.app"
+            BlueprintName = "swiftgraph"
             ReferencedContainer = "container:SwiftGraph.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -79,15 +80,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "79D76EDF1D961CB60007AFCD"
-            BuildableName = "SwiftGraphKit.framework"
-            BlueprintName = "SwiftGraphKit"
+            BlueprintIdentifier = "79D76EA71D960EEB0007AFCD"
+            BuildableName = "swiftgraph.app"
+            BlueprintName = "swiftgraph"
             ReferencedContainer = "container:SwiftGraph.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

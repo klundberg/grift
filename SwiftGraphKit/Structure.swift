@@ -10,7 +10,7 @@ import SourceKittenFramework
 
 extension Structure {
     var subStructures: [SubStructure]? {
-        guard let substructures = dictionary[SwiftDocKey.Substructure.rawValue] as? [SourceKitRepresentable] else {
+        guard let substructures = dictionary[SwiftDocKey.substructure.rawValue] as? [SourceKitRepresentable] else {
             return nil
         }
         return substructures.flatMap({
@@ -41,13 +41,13 @@ struct SubStructure {
     var referencedTypes: [String] = []
 
     init(dictionary: [String: SourceKitRepresentable]) {
-        self.kind = Kind(rawValue: dictionary[SwiftDocKey.Kind.rawValue] as! String)!
+        self.kind = Kind(rawValue: dictionary[SwiftDocKey.kind.rawValue] as! String)!
         self.accessibility = Accessibility(rawValue: dictionary["key.accessibility"] as! String)!
-        let types = dictionary[SwiftDocKey.Inheritedtypes.rawValue] as! [SourceKitRepresentable]
+        let types = dictionary[SwiftDocKey.inheritedtypes.rawValue] as! [SourceKitRepresentable]
         self.inheritedTypeNames = types.map({
             $0 as! [String: SourceKitRepresentable]
         }).map({
-            $0[SwiftDocKey.Name.rawValue] as! String
+            $0[SwiftDocKey.name.rawValue] as! String
         })
     }
 

@@ -12,14 +12,14 @@ protocol Statement {
     func serialize(with context: Graph) -> String
 }
 
-extension SequenceType where Generator.Element == Statement {
+extension Sequence where Iterator.Element == Statement {
     func serialize(with context: Graph) -> String {
-        return self.map({ $0.serialize(with: context) }).joinWithSeparator("; ")
+        return self.map({ $0.serialize(with: context) }).joined(separator: "; ")
     }
 }
 
 struct Graph {
-    enum Type: String {
+    enum DirectionType: String {
         case undirected = "graph"
         case directed = "digraph"
 
@@ -31,11 +31,11 @@ struct Graph {
         }
     }
 
-    var type: Type
+    var type: DirectionType
     var name: String
     var statements: [Statement]
 
-    init(type: Type = .undirected, name: String = "", statements: [Statement] = []) {
+    init(type: DirectionType = .undirected, name: String = "", statements: [Statement] = []) {
         self.type = type
         self.name = name
         self.statements = statements
@@ -82,7 +82,7 @@ extension Node: Statement {
     }
 }
 
-extension Node: StringLiteralConvertible {
+extension Node: ExpressibleByStringLiteral {
     init(stringLiteral value: String) {
         self.init(value)
     }
@@ -113,9 +113,9 @@ extension Edge: Statement {
 
 extension String {
     func removingRepeatedWhitespace() -> String {
-        return self.stringByReplacingOccurrencesOfString("\\s+",
-                                                         withString: " ",
-                                                         options: .RegularExpressionSearch,
+        return self.replacingOccurrences(of: "\\s+",
+                                                         with: " ",
+                                                         options: .regularExpression,
                                                          range: self.startIndex..<self.endIndex)
     }
 }

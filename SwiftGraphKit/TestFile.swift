@@ -19,7 +19,7 @@ BarStruct ->
  FooClass
  String
 */
-public class FooClass {
+open class FooClass {
     var a_variable: String
     let a_constant: [Int]
 

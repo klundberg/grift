@@ -43,7 +43,7 @@ class SwiftGraphKitTests: XCTestCase {
                     path]
 // 489
 
-        let cursorInfo = Request.CursorInfo(file: path, offset: 489, arguments: args).send()
+        let cursorInfo = Request.cursorInfo(file: path, offset: 489, arguments: args).send()
         print(cursorInfo)
 
 /*

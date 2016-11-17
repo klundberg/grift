@@ -10,8 +10,8 @@ import Foundation
 import SourceKittenFramework
 
 print("Hello, World!")
-print("\(Process.arguments)")
-print(Structure.self.dynamicType)
+print("\(CommandLine.arguments)")
+print(type(of: Structure.self))
 
 //struct Thing {
 //    var s: String
