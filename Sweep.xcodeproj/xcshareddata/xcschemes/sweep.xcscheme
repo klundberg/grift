@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "79D76EA71D960EEB0007AFCD"
-               BuildableName = "swiftgraph.app"
-               BlueprintName = "swiftgraph"
-               ReferencedContainer = "container:SwiftGraph.xcodeproj">
+               BuildableName = "sweep.app"
+               BlueprintName = "sweep"
+               ReferencedContainer = "container:Sweep.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,16 +26,27 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "79D76EB71D960EEB0007AFCD"
-               BuildableName = "swiftgraphTests.xctest"
-               BlueprintName = "swiftgraphTests"
-               ReferencedContainer = "container:SwiftGraph.xcodeproj">
+               BuildableName = "sweepTests.xctest"
+               BlueprintName = "sweepTests"
+               ReferencedContainer = "container:Sweep.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "79D76EE71D961CB60007AFCD"
+               BuildableName = "SweepKitTests.xctest"
+               BlueprintName = "SweepKitTests"
+               ReferencedContainer = "container:Sweep.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +54,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "79D76EA71D960EEB0007AFCD"
-            BuildableName = "swiftgraph.app"
-            BlueprintName = "swiftgraph"
-            ReferencedContainer = "container:SwiftGraph.xcodeproj">
+            BuildableName = "sweep.app"
+            BlueprintName = "sweep"
+            ReferencedContainer = "container:Sweep.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "79D76EA71D960EEB0007AFCD"
-            BuildableName = "swiftgraph.app"
-            BlueprintName = "swiftgraph"
-            ReferencedContainer = "container:SwiftGraph.xcodeproj">
+            BuildableName = "sweep.app"
+            BlueprintName = "sweep"
+            ReferencedContainer = "container:Sweep.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "79D76EA71D960EEB0007AFCD"
-            BuildableName = "swiftgraph.app"
-            BlueprintName = "swiftgraph"
-            ReferencedContainer = "container:SwiftGraph.xcodeproj">
+            BuildableName = "sweep.app"
+            BlueprintName = "sweep"
+            ReferencedContainer = "container:Sweep.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

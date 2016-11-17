@@ -1,13 +1,6 @@
-//
-//  GraphTest.swift
-//  SwiftGraph
-//
-//  Created by Kevin Lundberg on 9/25/16.
-//  Copyright © 2016 Kevin Lundberg. All rights reserved.
-//
 
 import XCTest
-@testable import SwiftGraphKit
+@testable import SweepKit
 
 class GraphTests: XCTestCase {
 

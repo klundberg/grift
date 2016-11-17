@@ -1,10 +1,3 @@
-//
-//  Graph.swift
-//  SwiftGraph
-//
-//  Created by Kevin Lundberg on 9/25/16.
-//  Copyright © 2016 Kevin Lundberg. All rights reserved.
-//
 
 import Foundation
 
@@ -114,8 +107,8 @@ extension Edge: Statement {
 extension String {
     func removingRepeatedWhitespace() -> String {
         return self.replacingOccurrences(of: "\\s+",
-                                                         with: " ",
-                                                         options: .regularExpression,
-                                                         range: self.startIndex..<self.endIndex)
+                                         with: " ",
+                                         options: .regularExpression,
+                                         range: self.startIndex..<self.endIndex)
     }
 }

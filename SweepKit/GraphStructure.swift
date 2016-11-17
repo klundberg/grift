@@ -1,10 +1,3 @@
-//
-//  Something.swift
-//  SwiftGraph
-//
-//  Created by Kevin Lundberg on 9/23/16.
-//  Copyright © 2016 Kevin Lundberg. All rights reserved.
-//
 
 import Foundation
 import SourceKittenFramework

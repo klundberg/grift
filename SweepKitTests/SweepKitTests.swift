@@ -1,39 +1,17 @@
-//
-//  SwiftGraphKitTests.swift
-//  SwiftGraphKitTests
-//
-//  Created by Kevin Lundberg on 9/23/16.
-//  Copyright © 2016 Kevin Lundberg. All rights reserved.
-//
 
 import XCTest
 import Foundation
 import SourceKittenFramework
-@testable import SwiftGraphKit
+@testable import SweepKit
 
 class SwiftGraphKitTests: XCTestCase {
     
     func testFolderGivesStructureArrayOfAllFilesInIt() {
 
-//        let dir = ("~/workspaces/SwiftGraph/SwiftGraphKitTests" as NSString).stringByExpandingTildeInPath
-
-//        let files = filesInDirectory(at: dir)
-
-//        let list = structures(at: dir)
-
-//        let data = (list.description as NSString).dataUsingEncoding(NSUTF8StringEncoding)
-//        try! data?.writeToFile("\(dir)/json.json", options: .DataWritingAtomic)
-
-//        print(list.map({
-//            $0.subStructures
-//        }))
-//        XCTAssertEqual(list.count, 1)
-
-        let path = "/Users/kevlar/workspaces/SwiftGraph/SwiftGraphKit/TestFile.swift"
+        let path = "/Users/kevlar/workspaces/sweep/SweepKit/TestFile.swift"
         let things = [structure(forFile: path)]
-//        let thing = things.flatMap({ $0 }).map({ thing in graph([thing]) })
-//
-        print(things[0])
+
+        print(things[0]!)
 
         let args = ["-sdk",
                     "/Applications/Xcode-8.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk",
