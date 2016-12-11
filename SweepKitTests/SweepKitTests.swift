@@ -86,10 +86,18 @@ class SwiftGraphKitTests: XCTestCase {
         XCTAssertEqual(thing.serialize(), "digraph { Foo -> Int; Thing -> Foo }")
     }
 
+    func testStructWithFunctionParametersShowsParametersProperly() {
+        let code = "struct Thing { func foo(d: Double) { } }"
+
+        let thing = Graph(structures: structures(for: code))
+
+        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
+    }
+
 //    func testStructWithFunctionShowsFunctionReturnTypeProperly() {
 //        let code = "struct Thing { func foo() -> Double { return 0 } }"
 //
-//        let thing = graph(structures(for: code))
+//        let thing = Graph(structures: structures(for: code))
 //
 //        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
 //    }
