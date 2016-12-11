@@ -57,7 +57,7 @@ class SwiftGraphKitTests: XCTestCase {
     func testSingleStructSwiftCodeCreatesOneEdgeGraph() {
         let code = "struct Thing { var x: String }"
 
-        let thing = graph(structures(for: code))
+        let thing = Graph(structures: structures(for: code))
 
         XCTAssertEqual(thing.serialize(), "digraph { Thing -> String }")
     }
@@ -65,7 +65,7 @@ class SwiftGraphKitTests: XCTestCase {
     func testTwoStructSwiftCodeCreatesTwoEdgeGraphGraph() {
         let code = "struct Thing { var x: String }; struct Foo { var bar: Int }"
 
-        let thing = graph(structures(for: code))
+        let thing = Graph(structures: structures(for: code))
 
         XCTAssertEqual(thing.serialize(), "digraph { Thing -> String; Foo -> Int }")
     }
@@ -73,7 +73,7 @@ class SwiftGraphKitTests: XCTestCase {
     func testNestedStructSwiftCodeCreatesExpectedGraph() {
         let code = "struct Thing { struct Foo {} var x: Foo }"
 
-        let thing = graph(structures(for: code))
+        let thing = Graph(structures: structures(for: code))
 
         XCTAssertEqual(thing.serialize(), "digraph { Thing -> Foo }")
     }
@@ -81,7 +81,7 @@ class SwiftGraphKitTests: XCTestCase {
     func testMoreComplexNestedStructSwiftCodeCreatesExpectedGraph() {
         let code = "struct Thing { struct Foo { let s: Int } var x: Foo }"
 
-        let thing = graph(structures(for: code))
+        let thing = Graph(structures: structures(for: code))
 
         XCTAssertEqual(thing.serialize(), "digraph { Foo -> Int; Thing -> Foo }")
     }

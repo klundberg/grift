@@ -22,6 +22,10 @@ public func structures(at path: String, using fileManager: FileManager = .defaul
     return filePaths.flatMap({ structure(forFile: $0) })
 }
 
+func structures(for code: String) -> [Structure] {
+    return [Structure(file: File(contents: code))]
+}
+
 public func structure(forFile path: String) -> Structure? {
     guard let file = File(path: path) else {
         return nil
@@ -41,16 +45,10 @@ extension Dictionary {
     }
 }
 
-func graph(_ structures: [Structure]) -> Graph {
-
-    var statements: [Statement] = []
-
-    for structure in structures {
-        statements.append(contentsOf: createStatements(dict: structure.dictionary))
+extension Graph {
+    init(structures: [Structure]) {
+        self.init(type: .directed, statements: structures.flatMap({ createStatements(dict: $0.dictionary) }))
     }
-
-    return Graph(type: .directed, statements: statements)
-
 }
 
 private func createStatements(dict: [String: SourceKitRepresentable], name: String = "") -> [Statement] {
@@ -73,10 +71,6 @@ private func createStatements(dict: [String: SourceKitRepresentable], name: Stri
             }
         }
     }
-    
-    return statements
-}
 
-func structures(for code: String) -> [Structure] {
-    return [Structure(file: File(contents: code))]
+    return statements
 }
