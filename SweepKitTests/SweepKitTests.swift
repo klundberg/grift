@@ -9,9 +9,10 @@ class SwiftGraphKitTests: XCTestCase {
     func testFolderGivesStructureArrayOfAllFilesInIt() {
 
         let path = "/Users/kevlar/workspaces/sweep/SweepKit/TestFile.swift"
-        let things = [structure(forFile: path)]
-
-        print(things[0]!)
+//        let things = [structure(forFile: path)]
+//        print(things[0]!)
+        let thing = structure(forFile: path)
+        print(thing)
 
         let args = ["-sdk",
                     "/Applications/Xcode-8.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk",
@@ -67,6 +68,22 @@ class SwiftGraphKitTests: XCTestCase {
         let thing = graph(structures(for: code))
 
         XCTAssertEqual(thing.serialize(), "digraph { Thing -> String; Foo -> Int }")
+    }
+
+    func testNestedStructSwiftCodeCreatesExpectedGraph() {
+        let code = "struct Thing { struct Foo {} var x: Foo }"
+
+        let thing = graph(structures(for: code))
+
+        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Foo }")
+    }
+
+    func testMoreComplexNestedStructSwiftCodeCreatesExpectedGraph() {
+        let code = "struct Thing { struct Foo { let s: Int } var x: Foo }"
+
+        let thing = graph(structures(for: code))
+
+        XCTAssertEqual(thing.serialize(), "digraph { Foo -> Int; Thing -> Foo }")
     }
 
 //    func testStructWithFunctionShowsFunctionReturnTypeProperly() {

@@ -42,28 +42,39 @@ extension Dictionary {
 }
 
 func graph(_ structures: [Structure]) -> Graph {
-    var graph = Graph(type: .directed)
 
     var statements: [Statement] = []
 
     for structure in structures {
-        let substructures = structure.dictionary[SwiftDocKey.substructure.rawValue] as! [SourceKitRepresentable]
+        statements.append(contentsOf: createStatements(dict: structure.dictionary))
+    }
+
+    return Graph(type: .directed, statements: statements)
+
+}
+
+private func createStatements(dict: [String: SourceKitRepresentable], name: String = "") -> [Statement] {
+
+    var statements: [Statement] = []
+    var name = name
+
+    if let typeName = dict[.typeName] as? String, !name.isEmpty {
+        statements.append(Node(name) >> Node(typeName))
+    }
+
+    if let newName = dict[.name] as? String {
+        name = newName
+    }
+
+    if let substructures = dict[.substructure] as? [SourceKitRepresentable] {
         for substructure in substructures {
-            let substructureThing = substructure as! [String: SourceKitRepresentable]
-
-            let name = substructureThing[.name] as! String
-            let subsubstructures = substructureThing[.substructure] as! [SourceKitRepresentable]
-            for subsubstructure in subsubstructures {
-                let subsubstructureThing = subsubstructure as! [String: SourceKitRepresentable]
-                let typename = subsubstructureThing[.typeName] as! String
-
-                statements.append(Node(name) >> Node(typename))
+            if let substructureDict = substructure as? [String: SourceKitRepresentable] {
+                statements.append(contentsOf: createStatements(dict: substructureDict, name: name))
             }
         }
     }
-
-    graph.statements = statements
-    return graph
+    
+    return statements
 }
 
 func structures(for code: String) -> [Structure] {

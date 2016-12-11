@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		793A67D31DB0526E001747A5 /* Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A67D21DB0526E001747A5 /* Structure.swift */; };
-		793A67D61DB301DA001747A5 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A67D51DB301DA001747A5 /* TestFile.swift */; };
 		79D76EC61D960F370007AFCD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EC51D960F370007AFCD /* main.swift */; };
 		79D76ED81D9610B80007AFCD /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76E8A1D936A320007AFCD /* SourceKittenFramework.framework */; };
 		79D76EE91D961CB60007AFCD /* SweepKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* SweepKit.framework */; };
@@ -423,7 +422,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				79D76F021D98BB340007AFCD /* Graph.swift in Sources */,
-				793A67D61DB301DA001747A5 /* TestFile.swift in Sources */,
 				79D76EFE1D961E4A0007AFCD /* GraphStructure.swift in Sources */,
 				793A67D31DB0526E001747A5 /* Structure.swift in Sources */,
 			);
