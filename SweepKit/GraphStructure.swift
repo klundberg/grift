@@ -60,7 +60,7 @@ private func createStatements(dict: [String: SourceKitRepresentable], name: Stri
         statements.append(Node(name) >> Node(typeName))
     }
 
-    if let newName = dict[.name] as? String, properKind(kind: dict[.kind]) {
+    if let newName = dict[.name] as? String, kindIsEnclosingType(kind: dict[.kind]) {
         name = newName
     }
 
@@ -75,14 +75,14 @@ private func createStatements(dict: [String: SourceKitRepresentable], name: Stri
     return statements
 }
 
-private func properKind(kind: SourceKitRepresentable?) -> Bool {
+private func kindIsEnclosingType(kind: SourceKitRepresentable?) -> Bool {
     guard let kind = kind as? String,
         let declarationKind = SwiftDeclarationKind(rawValue: kind) else {
         return false
     }
 
     switch declarationKind {
-    case .`struct`:
+    case .`struct`, .`class`, .`enum`, .`protocol`:
         return true
     default:
         return false

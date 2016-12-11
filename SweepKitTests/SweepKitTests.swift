@@ -94,6 +94,30 @@ class SwiftGraphKitTests: XCTestCase {
         XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
     }
 
+    func testClassWithFunctionParametersShowsParametersProperly() {
+        let code = "class Thing { func foo(d: Double) { } }"
+
+        let thing = Graph(structures: structures(for: code))
+
+        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
+    }
+
+    func testEnumWithFunctionParametersShowsParametersProperly() {
+        let code = "enum Thing { func foo(d: Double) { } }"
+
+        let thing = Graph(structures: structures(for: code))
+
+        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
+    }
+
+    func testProtocolWithFunctionParametersShowsParametersProperly() {
+        let code = "protocol Thing { func foo(d: Double) }"
+
+        let thing = Graph(structures: structures(for: code))
+
+        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
+    }
+
 //    func testStructWithFunctionShowsFunctionReturnTypeProperly() {
 //        let code = "struct Thing { func foo() -> Double { return 0 } }"
 //
