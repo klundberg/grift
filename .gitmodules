@@ -7,3 +7,6 @@
 [submodule "Carthage/Checkouts/SourceKitten"]
 	path = Carthage/Checkouts/SourceKitten
 	url = https://github.com/jpsim/SourceKitten.git
+[submodule "Carthage/Checkouts/Yams"]
+	path = Carthage/Checkouts/Yams
+	url = https://github.com/jpsim/Yams.git
