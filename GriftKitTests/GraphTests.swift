@@ -1,6 +1,6 @@
 
 import XCTest
-@testable import SweepKit
+@testable import GriftKit
 
 class GraphTests: XCTestCase {
 

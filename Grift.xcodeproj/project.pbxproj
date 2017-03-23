@@ -11,11 +11,11 @@
 		797962021E8375BD00C9EE07 /* SwiftGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797962011E8375BD00C9EE07 /* SwiftGraph.framework */; };
 		797962051E8375C500C9EE07 /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797962031E8375C500C9EE07 /* Commandant.framework */; };
 		79D76EC61D960F370007AFCD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EC51D960F370007AFCD /* main.swift */; };
-		79D76EE91D961CB60007AFCD /* SweepKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* SweepKit.framework */; };
-		79D76EF01D961CB70007AFCD /* SweepKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EEF1D961CB70007AFCD /* SweepKitTests.swift */; };
-		79D76EF21D961CB70007AFCD /* SweepKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D76EE21D961CB60007AFCD /* SweepKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79D76EF51D961CB70007AFCD /* SweepKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* SweepKit.framework */; };
-		79D76EF61D961CB70007AFCD /* SweepKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* SweepKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79D76EE91D961CB60007AFCD /* GriftKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* GriftKit.framework */; };
+		79D76EF01D961CB70007AFCD /* GriftKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EEF1D961CB70007AFCD /* GriftKitTests.swift */; };
+		79D76EF21D961CB70007AFCD /* GriftKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D76EE21D961CB60007AFCD /* GriftKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79D76EF51D961CB70007AFCD /* GriftKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* GriftKit.framework */; };
+		79D76EF61D961CB70007AFCD /* GriftKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* GriftKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79D76EFE1D961E4A0007AFCD /* GraphStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EFD1D961E4A0007AFCD /* GraphStructure.swift */; };
 		79D76EFF1D961FA50007AFCD /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76E8A1D936A320007AFCD /* SourceKittenFramework.framework */; };
 		79D76F021D98BB340007AFCD /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76F011D98BB340007AFCD /* Graph.swift */; };
@@ -60,7 +60,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				79D76EF61D961CB70007AFCD /* SweepKit.framework in CopyFiles */,
+				79D76EF61D961CB70007AFCD /* GriftKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,21 +74,22 @@
 		797962031E8375C500C9EE07 /* Commandant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Commandant.framework; path = Carthage/Checkouts/SourceKitten/Carthage/Checkouts/Commandant/build/Debug/Commandant.framework; sourceTree = "<group>"; };
 		797962041E8375C500C9EE07 /* SwiftGraph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGraph.framework; path = Carthage/Checkouts/SwiftGraph/build/Debug/SwiftGraph.framework; sourceTree = "<group>"; };
 		79D76E8A1D936A320007AFCD /* SourceKittenFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SourceKittenFramework.framework; path = "../../Library/Developer/Xcode/DerivedData/SwiftGraph-hfkzlzlrhslwhleogjxpvmgkrxvs/Build/Products/Debug/SourceKittenFramework.framework"; sourceTree = "<group>"; };
-		79D76EA81D960EEB0007AFCD /* sweep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sweep.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D76EA81D960EEB0007AFCD /* grift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D76EB31D960EEB0007AFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79D76EB81D960EEB0007AFCD /* sweepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sweepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D76EB81D960EEB0007AFCD /* griftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = griftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D76EBE1D960EEB0007AFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79D76EC51D960F370007AFCD /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		79D76ED91D961C880007AFCD /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		79D76EE01D961CB60007AFCD /* SweepKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SweepKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		79D76EE21D961CB60007AFCD /* SweepKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SweepKit.h; sourceTree = "<group>"; };
+		79D76EE01D961CB60007AFCD /* GriftKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GriftKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D76EE21D961CB60007AFCD /* GriftKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GriftKit.h; sourceTree = "<group>"; };
 		79D76EE31D961CB60007AFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79D76EE81D961CB60007AFCD /* SweepKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweepKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		79D76EEF1D961CB70007AFCD /* SweepKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweepKitTests.swift; sourceTree = "<group>"; };
+		79D76EE81D961CB60007AFCD /* GriftKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GriftKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D76EEF1D961CB70007AFCD /* GriftKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GriftKitTests.swift; sourceTree = "<group>"; };
 		79D76EF11D961CB70007AFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79D76EFD1D961E4A0007AFCD /* GraphStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphStructure.swift; sourceTree = "<group>"; };
 		79D76F011D98BB340007AFCD /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		79D76F031D98BB990007AFCD /* GraphTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTests.swift; sourceTree = "<group>"; };
+		79E229271E837C5200698AC9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				797962051E8375C500C9EE07 /* Commandant.framework in Frameworks */,
-				79D76EF51D961CB70007AFCD /* SweepKit.framework in Frameworks */,
+				79D76EF51D961CB70007AFCD /* GriftKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79D76EE91D961CB60007AFCD /* SweepKit.framework in Frameworks */,
+				79D76EE91D961CB60007AFCD /* GriftKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,44 +148,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		79D76EA91D960EEB0007AFCD /* sweep */ = {
+		79D76EA91D960EEB0007AFCD /* grift */ = {
 			isa = PBXGroup;
 			children = (
 				79D76EC51D960F370007AFCD /* main.swift */,
 				79D76EB31D960EEB0007AFCD /* Info.plist */,
 			);
-			path = sweep;
+			path = grift;
 			sourceTree = "<group>";
 		};
-		79D76EBB1D960EEB0007AFCD /* sweepTests */ = {
+		79D76EBB1D960EEB0007AFCD /* griftTests */ = {
 			isa = PBXGroup;
 			children = (
 				79D76EBE1D960EEB0007AFCD /* Info.plist */,
 			);
-			path = sweepTests;
+			path = griftTests;
 			sourceTree = "<group>";
 		};
-		79D76EE11D961CB60007AFCD /* SweepKit */ = {
+		79D76EE11D961CB60007AFCD /* GriftKit */ = {
 			isa = PBXGroup;
 			children = (
 				793A67D11DB0525A001747A5 /* SourceKittenExtensions */,
 				79D76F001D98BB270007AFCD /* Dot */,
-				79D76EE21D961CB60007AFCD /* SweepKit.h */,
+				79D76EE21D961CB60007AFCD /* GriftKit.h */,
 				79D76EE31D961CB60007AFCD /* Info.plist */,
 				79D76EFD1D961E4A0007AFCD /* GraphStructure.swift */,
 				793A67D51DB301DA001747A5 /* TestFile.swift */,
 			);
-			path = SweepKit;
+			path = GriftKit;
 			sourceTree = "<group>";
 		};
-		79D76EEE1D961CB60007AFCD /* SweepKitTests */ = {
+		79D76EEE1D961CB60007AFCD /* GriftKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				79D76EEF1D961CB70007AFCD /* SweepKitTests.swift */,
-				79D76EF11D961CB70007AFCD /* Info.plist */,
 				79D76F031D98BB990007AFCD /* GraphTests.swift */,
+				79D76EEF1D961CB70007AFCD /* GriftKitTests.swift */,
+				79D76EF11D961CB70007AFCD /* Info.plist */,
 			);
-			path = SweepKitTests;
+			path = GriftKitTests;
 			sourceTree = "<group>";
 		};
 		79D76F001D98BB270007AFCD /* Dot */ = {
@@ -198,24 +199,25 @@
 		79EB92BF1D935776007BF799 = {
 			isa = PBXGroup;
 			children = (
-				79D76EA91D960EEB0007AFCD /* sweep */,
-				79D76EBB1D960EEB0007AFCD /* sweepTests */,
-				79D76EE11D961CB60007AFCD /* SweepKit */,
-				79D76EEE1D961CB60007AFCD /* SweepKitTests */,
+				79D76EA91D960EEB0007AFCD /* grift */,
+				79D76EBB1D960EEB0007AFCD /* griftTests */,
+				79D76EE11D961CB60007AFCD /* GriftKit */,
+				79D76EEE1D961CB60007AFCD /* GriftKitTests */,
 				79EB92C91D935777007BF799 /* Products */,
 				79D76E831D935F1E0007AFCD /* Frameworks */,
 				79D76ED91D961C880007AFCD /* Cartfile */,
 				792E14F71D9F5F0800470E21 /* roadmap.md */,
+				79E229271E837C5200698AC9 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
 		79EB92C91D935777007BF799 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				79D76EA81D960EEB0007AFCD /* sweep.app */,
-				79D76EB81D960EEB0007AFCD /* sweepTests.xctest */,
-				79D76EE01D961CB60007AFCD /* SweepKit.framework */,
-				79D76EE81D961CB60007AFCD /* SweepKitTests.xctest */,
+				79D76EA81D960EEB0007AFCD /* grift.app */,
+				79D76EB81D960EEB0007AFCD /* griftTests.xctest */,
+				79D76EE01D961CB60007AFCD /* GriftKit.framework */,
+				79D76EE81D961CB60007AFCD /* GriftKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,16 +229,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79D76EF21D961CB70007AFCD /* SweepKit.h in Headers */,
+				79D76EF21D961CB70007AFCD /* GriftKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		79D76EA71D960EEB0007AFCD /* sweep */ = {
+		79D76EA71D960EEB0007AFCD /* grift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79D76EBF1D960EEB0007AFCD /* Build configuration list for PBXNativeTarget "sweep" */;
+			buildConfigurationList = 79D76EBF1D960EEB0007AFCD /* Build configuration list for PBXNativeTarget "grift" */;
 			buildPhases = (
 				79D76EA41D960EEB0007AFCD /* Sources */,
 				79D76EA51D960EEB0007AFCD /* Frameworks */,
@@ -249,14 +251,14 @@
 			dependencies = (
 				79D76EF41D961CB70007AFCD /* PBXTargetDependency */,
 			);
-			name = sweep;
+			name = grift;
 			productName = swiftgraph;
-			productReference = 79D76EA81D960EEB0007AFCD /* sweep.app */;
+			productReference = 79D76EA81D960EEB0007AFCD /* grift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		79D76EB71D960EEB0007AFCD /* sweepTests */ = {
+		79D76EB71D960EEB0007AFCD /* griftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79D76EC21D960EEB0007AFCD /* Build configuration list for PBXNativeTarget "sweepTests" */;
+			buildConfigurationList = 79D76EC21D960EEB0007AFCD /* Build configuration list for PBXNativeTarget "griftTests" */;
 			buildPhases = (
 				79D76EB41D960EEB0007AFCD /* Sources */,
 				79D76EB51D960EEB0007AFCD /* Frameworks */,
@@ -267,14 +269,14 @@
 			dependencies = (
 				79D76EBA1D960EEB0007AFCD /* PBXTargetDependency */,
 			);
-			name = sweepTests;
+			name = griftTests;
 			productName = swiftgraphTests;
-			productReference = 79D76EB81D960EEB0007AFCD /* sweepTests.xctest */;
+			productReference = 79D76EB81D960EEB0007AFCD /* griftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		79D76EDF1D961CB60007AFCD /* SweepKit */ = {
+		79D76EDF1D961CB60007AFCD /* GriftKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79D76EF71D961CB70007AFCD /* Build configuration list for PBXNativeTarget "SweepKit" */;
+			buildConfigurationList = 79D76EF71D961CB70007AFCD /* Build configuration list for PBXNativeTarget "GriftKit" */;
 			buildPhases = (
 				79D76EDB1D961CB60007AFCD /* Sources */,
 				79D76EDC1D961CB60007AFCD /* Frameworks */,
@@ -285,14 +287,14 @@
 			);
 			dependencies = (
 			);
-			name = SweepKit;
+			name = GriftKit;
 			productName = SwiftGraphKit;
-			productReference = 79D76EE01D961CB60007AFCD /* SweepKit.framework */;
+			productReference = 79D76EE01D961CB60007AFCD /* GriftKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		79D76EE71D961CB60007AFCD /* SweepKitTests */ = {
+		79D76EE71D961CB60007AFCD /* GriftKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79D76EFA1D961CB70007AFCD /* Build configuration list for PBXNativeTarget "SweepKitTests" */;
+			buildConfigurationList = 79D76EFA1D961CB70007AFCD /* Build configuration list for PBXNativeTarget "GriftKitTests" */;
 			buildPhases = (
 				79D76EE41D961CB60007AFCD /* Sources */,
 				79D76EE51D961CB60007AFCD /* Frameworks */,
@@ -304,9 +306,9 @@
 				79D76EEB1D961CB60007AFCD /* PBXTargetDependency */,
 				79D76EED1D961CB60007AFCD /* PBXTargetDependency */,
 			);
-			name = SweepKitTests;
+			name = GriftKitTests;
 			productName = SwiftGraphKitTests;
-			productReference = 79D76EE81D961CB60007AFCD /* SweepKitTests.xctest */;
+			productReference = 79D76EE81D961CB60007AFCD /* GriftKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -341,7 +343,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 79EB92C31D935776007BF799 /* Build configuration list for PBXProject "Sweep" */;
+			buildConfigurationList = 79EB92C31D935776007BF799 /* Build configuration list for PBXProject "Grift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -354,10 +356,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				79D76EA71D960EEB0007AFCD /* sweep */,
-				79D76EB71D960EEB0007AFCD /* sweepTests */,
-				79D76EDF1D961CB60007AFCD /* SweepKit */,
-				79D76EE71D961CB60007AFCD /* SweepKitTests */,
+				79D76EA71D960EEB0007AFCD /* grift */,
+				79D76EB71D960EEB0007AFCD /* griftTests */,
+				79D76EDF1D961CB60007AFCD /* GriftKit */,
+				79D76EE71D961CB60007AFCD /* GriftKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -440,7 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79D76F041D98BB990007AFCD /* GraphTests.swift in Sources */,
-				79D76EF01D961CB70007AFCD /* SweepKitTests.swift in Sources */,
+				79D76EF01D961CB70007AFCD /* GriftKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,22 +451,22 @@
 /* Begin PBXTargetDependency section */
 		79D76EBA1D960EEB0007AFCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 79D76EA71D960EEB0007AFCD /* sweep */;
+			target = 79D76EA71D960EEB0007AFCD /* grift */;
 			targetProxy = 79D76EB91D960EEB0007AFCD /* PBXContainerItemProxy */;
 		};
 		79D76EEB1D961CB60007AFCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 79D76EDF1D961CB60007AFCD /* SweepKit */;
+			target = 79D76EDF1D961CB60007AFCD /* GriftKit */;
 			targetProxy = 79D76EEA1D961CB60007AFCD /* PBXContainerItemProxy */;
 		};
 		79D76EED1D961CB60007AFCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 79D76EA71D960EEB0007AFCD /* sweep */;
+			target = 79D76EA71D960EEB0007AFCD /* grift */;
 			targetProxy = 79D76EEC1D961CB60007AFCD /* PBXContainerItemProxy */;
 		};
 		79D76EF41D961CB70007AFCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 79D76EDF1D961CB60007AFCD /* SweepKit */;
+			target = 79D76EDF1D961CB60007AFCD /* GriftKit */;
 			targetProxy = 79D76EF31D961CB70007AFCD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -480,9 +482,9 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/SourceKitten/Carthage/Checkouts/Commandant/build/Debug",
 					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftGraph/build/Debug",
 				);
-				INFOPLIST_FILE = sweep/Info.plist;
+				INFOPLIST_FILE = grift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.sweep;
+				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.grift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
@@ -499,9 +501,9 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/SourceKitten/Carthage/Checkouts/Commandant/build/Debug",
 					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftGraph/build/Debug",
 				);
-				INFOPLIST_FILE = sweep/Info.plist;
+				INFOPLIST_FILE = grift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.sweep;
+				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.grift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -514,12 +516,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = sweepTests/Info.plist;
+				INFOPLIST_FILE = griftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.sweepTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.griftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sweep.app/Contents/MacOS/sweep";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/grift.app/Contents/MacOS/grift";
 			};
 			name = Debug;
 		};
@@ -529,12 +531,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = sweepTests/Info.plist;
+				INFOPLIST_FILE = griftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.sweepTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.griftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sweep.app/Contents/MacOS/sweep";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/grift.app/Contents/MacOS/grift";
 			};
 			name = Release;
 		};
@@ -554,10 +556,10 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftGraph/build/Debug",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = SweepKit/Info.plist;
+				INFOPLIST_FILE = GriftKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.SweepKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.GriftKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -584,10 +586,10 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftGraph/build/Debug",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = SweepKit/Info.plist;
+				INFOPLIST_FILE = GriftKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.SweepKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.GriftKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -602,9 +604,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SweepKitTests/Info.plist;
+				INFOPLIST_FILE = GriftKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.SweepKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.GriftKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
@@ -616,9 +618,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SweepKitTests/Info.plist;
+				INFOPLIST_FILE = GriftKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.SweepKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.GriftKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -720,7 +722,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		79D76EBF1D960EEB0007AFCD /* Build configuration list for PBXNativeTarget "sweep" */ = {
+		79D76EBF1D960EEB0007AFCD /* Build configuration list for PBXNativeTarget "grift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79D76EC01D960EEB0007AFCD /* Debug */,
@@ -729,7 +731,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79D76EC21D960EEB0007AFCD /* Build configuration list for PBXNativeTarget "sweepTests" */ = {
+		79D76EC21D960EEB0007AFCD /* Build configuration list for PBXNativeTarget "griftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79D76EC31D960EEB0007AFCD /* Debug */,
@@ -738,7 +740,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79D76EF71D961CB70007AFCD /* Build configuration list for PBXNativeTarget "SweepKit" */ = {
+		79D76EF71D961CB70007AFCD /* Build configuration list for PBXNativeTarget "GriftKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79D76EF81D961CB70007AFCD /* Debug */,
@@ -747,7 +749,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79D76EFA1D961CB70007AFCD /* Build configuration list for PBXNativeTarget "SweepKitTests" */ = {
+		79D76EFA1D961CB70007AFCD /* Build configuration list for PBXNativeTarget "GriftKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79D76EFB1D961CB70007AFCD /* Debug */,
@@ -756,7 +758,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79EB92C31D935776007BF799 /* Build configuration list for PBXProject "Sweep" */ = {
+		79EB92C31D935776007BF799 /* Build configuration list for PBXProject "Grift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79EB92CD1D935777007BF799 /* Debug */,

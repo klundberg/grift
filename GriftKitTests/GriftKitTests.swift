@@ -2,28 +2,26 @@
 import XCTest
 import Foundation
 import SourceKittenFramework
-@testable import SweepKit
+@testable import GriftKit
 
-class SwiftGraphKitTests: XCTestCase {
+class GriftKitTests: XCTestCase {
     
-    func testFolderGivesStructureArrayOfAllFilesInIt() {
-
-        let path = "/Users/kevlar/workspaces/sweep/SweepKit/TestFile.swift"
-//        let things = [structure(forFile: path)]
-//        print(things[0]!)
-        let thing = structure(forFile: path)
-        print(thing)
-
-        let args = ["-sdk",
-                    "/Applications/Xcode-8.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk",
-                    "-module-name",
-                    "Blah",
-                    "-c",
-                    path]
+//    func testFolderGivesStructureArrayOfAllFilesInIt() {
+//
+//        let path = "/Users/kevlar/workspaces/grift/GriftKit/TestFile.swift"
+//        let thing = structure(forFile: path)
+//        print(thing)
+//
+//        let args = ["-sdk",
+//                    "/Applications/Xcode-8.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk",
+//                    "-module-name",
+//                    "Blah",
+//                    "-c",
+//                    path]
 // 489
 
-        let cursorInfo = Request.cursorInfo(file: path, offset: 489, arguments: args).send()
-        print(cursorInfo)
+//        let cursorInfo = Request.cursorInfo(file: path, offset: 489, arguments: args).send()
+//        print(cursorInfo)
 
 /*
 
@@ -52,7 +50,7 @@ class SwiftGraphKitTests: XCTestCase {
 //            file: path,
 //            arguments:args)
 //        print(toJSON(toAnyObject(index.send())))
-    }
+//    }
 
     func testSingleStructSwiftCodeCreatesOneEdgeGraph() {
         let code = "struct Thing { var x: String }"

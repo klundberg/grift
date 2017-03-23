@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Sweep.xcodeproj">
+      location = "group:Grift.xcodeproj">
    </FileRef>
    <Group
       location = "container:"
@@ -24,9 +24,6 @@
       </FileRef>
       <FileRef
          location = "group:Carthage/Checkouts/SWXMLHash/SWXMLHash.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Carthage/Checkouts/SourceKitten/Carthage/Checkouts/Commandant/Commandant.xcodeproj">
       </FileRef>
    </Group>
 </Workspace>
