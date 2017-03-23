@@ -2,16 +2,16 @@
 import Foundation
 
 protocol Statement {
-    func serialize(with context: Graph) -> String
+    func serialize(with context: Graphviz) -> String
 }
 
 extension Sequence where Iterator.Element == Statement {
-    func serialize(with context: Graph) -> String {
+    func serialize(with context: Graphviz) -> String {
         return self.map({ $0.serialize(with: context) }).joined(separator: "; ")
     }
 }
 
-struct Graph {
+struct Graphviz {
     enum DirectionType: String {
         case undirected = "graph"
         case directed = "digraph"
@@ -39,7 +39,7 @@ struct Graph {
     }
 }
 
-extension Graph: CustomStringConvertible {
+extension Graphviz: CustomStringConvertible {
     var description: String {
         return serialize()
     }
@@ -56,7 +56,7 @@ struct Subgraph {
 }
 
 extension Subgraph: Statement {
-    func serialize(with context: Graph) -> String {
+    func serialize(with context: Graphviz) -> String {
         return "subgraph \(identifier) { \(statements.serialize(with: context)) }"
     }
 }
@@ -70,7 +70,7 @@ struct Node {
 }
 
 extension Node: Statement {
-    func serialize(with context: Graph) -> String {
+    func serialize(with context: Graphviz) -> String {
         return identifier
     }
 }
@@ -99,7 +99,7 @@ func >> (lhs: Node, rhs: Node) -> Edge {
 }
 
 extension Edge: Statement {
-    func serialize(with context: Graph) -> String {
+    func serialize(with context: Graphviz) -> String {
         return "\(from.identifier) \(context.type.edgeOperator) \(to.identifier)"
     }
 }

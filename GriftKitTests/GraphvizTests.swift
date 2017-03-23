@@ -2,80 +2,80 @@
 import XCTest
 @testable import GriftKit
 
-class GraphTests: XCTestCase {
+class GraphvizTests: XCTestCase {
 
     func testEmptyGraph() {
-        let graph = Graph()
+        let graph = Graphviz()
 
         XCTAssertEqual(graph.description, "graph { }")
     }
 
     func testEmptyDirectedGraph() {
-        let graph = Graph(type: .directed)
+        let graph = Graphviz(type: .directed)
 
         XCTAssertEqual(graph.description, "digraph { }")
     }
 
     func testEmptyGraphWithName() {
-        let graph = Graph(name: "foo")
+        let graph = Graphviz(name: "foo")
 
         XCTAssertEqual(graph.description, "graph foo { }")
     }
 
     func testGraphWithOneNode() {
-        let graph = Graph(statements: [Node("A")])
+        let graph = Graphviz(statements: [Node("A")])
 
         XCTAssertEqual(graph.description, "graph { A }")
     }
 
 
     func testGraphWithTwoNodes() {
-        let graph = Graph(statements: [Node("A"), Node("B")])
+        let graph = Graphviz(statements: [Node("A"), Node("B")])
 
         XCTAssertEqual(graph.description, "graph { A; B }")
     }
 
     func testUndirectedGraphWithOneEdge() {
-        let graph = Graph(statements: ["A" >> "B"])
+        let graph = Graphviz(statements: ["A" >> "B"])
 
         XCTAssertEqual(graph.description, "graph { A -- B }")
     }
 
     func testDirectedGraphWithOneEdge() {
-        let graph = Graph(type: .directed,
+        let graph = Graphviz(type: .directed,
                           statements: ["A" >> "B"])
 
         XCTAssertEqual(graph.description, "digraph { A -> B }")
     }
 
     func testUndirectedGraphWithTwoEdges() {
-        let graph = Graph(statements: ["A" >> "B", "B" >> "C"])
+        let graph = Graphviz(statements: ["A" >> "B", "B" >> "C"])
 
         XCTAssertEqual(graph.description, "graph { A -- B; B -- C }")
     }
 
     func testDirectedGraphWithTwoEdges() {
-        let graph = Graph(type: .directed,
+        let graph = Graphviz(type: .directed,
                           statements: ["A" >> "B", "B" >> "C"])
 
         XCTAssertEqual(graph.description, "digraph { A -> B; B -> C }")
     }
 
     func testUndirectedGraphWithSubgraph() {
-        let graph = Graph(statements: [Subgraph("foo")])
+        let graph = Graphviz(statements: [Subgraph("foo")])
 
         XCTAssertEqual(graph.description, "graph { subgraph foo { } }")
     }
 
     func testComplexUndirectedGraphWithSubgraph() {
-        let graph = Graph(statements: ["A" >> "B",
+        let graph = Graphviz(statements: ["A" >> "B",
                                        Subgraph(statements: ["C" >> "D"])])
 
         XCTAssertEqual(graph.description, "graph { A -- B; subgraph { C -- D } }")
     }
 
     func testGraphWithClusteredSubgraph() {
-        let graph = Graph(statements: [Subgraph("blah", isCluster: true)])
+        let graph = Graphviz(statements: [Subgraph("blah", isCluster: true)])
 
         XCTAssertEqual(graph.description, "graph { subgraph cluster_blah { } }")
     }

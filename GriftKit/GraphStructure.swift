@@ -45,7 +45,7 @@ extension Dictionary {
     }
 }
 
-extension Graph {
+extension Graphviz {
     init(structures: [Structure]) {
         self.init(type: .directed, statements: structures.flatMap({ createStatements(dict: $0.dictionary) }))
     }

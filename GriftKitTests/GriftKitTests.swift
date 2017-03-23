@@ -2,6 +2,7 @@
 import XCTest
 import Foundation
 import SourceKittenFramework
+import SwiftGraph
 @testable import GriftKit
 
 class GriftKitTests: XCTestCase {
@@ -22,21 +23,17 @@ class GriftKitTests: XCTestCase {
 
 //        let cursorInfo = Request.cursorInfo(file: path, offset: 489, arguments: args).send()
 //        print(cursorInfo)
-
-/*
-
-         {
-         "key.kind" : "source.lang.swift.expr.call",
-         "key.offset" : 489,
-         "key.nameoffset" : 489,
-         "key.namelength" : 5,
-         "key.bodyoffset" : 495,
-         "key.bodylength" : 0,
-         "key.length" : 7,
-         "key.name" : "thing"
-         }
- */
-
+//
+//         {
+//         "key.kind" : "source.lang.swift.expr.call",
+//         "key.offset" : 489,
+//         "key.nameoffset" : 489,
+//         "key.namelength" : 5,
+//         "key.bodyoffset" : 495,
+//         "key.bodylength" : 0,
+//         "key.length" : 7,
+//         "key.name" : "thing"
+//         }
 //        let path = files.first!
 //        var args = ["-sdk",
 //                    "/Applications/Xcode-8.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk",
@@ -52,76 +49,109 @@ class GriftKitTests: XCTestCase {
 //        print(toJSON(toAnyObject(index.send())))
 //    }
 
+
+    func testSingleStructWithNoFieldsCreatesSingleVertexGraph() {
+
+        let code = "struct Thing { }"
+
+        let graph = GraphBuilder(structures: structures(for: code)).build()
+
+        XCTAssertEqual(graph.vertexCount, 1)
+        XCTAssertEqual(graph.edgeCount, 0)
+        XCTAssertTrue(graph.vertexInGraph(vertex: "Thing"))
+    }
+
     func testSingleStructSwiftCodeCreatesOneEdgeGraph() {
         let code = "struct Thing { var x: String }"
 
-        let thing = Graph(structures: structures(for: code))
+        let graph = GraphBuilder(structures: structures(for: code)).build()
 
-        XCTAssertEqual(thing.serialize(), "digraph { Thing -> String }")
+        XCTAssertEqual(graph.vertexCount, 2)
+        XCTAssertEqual(graph.edgeCount, 1)
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
     }
 
     func testTwoStructSwiftCodeCreatesTwoEdgeGraphGraph() {
         let code = "struct Thing { var x: String }; struct Foo { var bar: Int }"
 
-        let thing = Graph(structures: structures(for: code))
+        let graph = GraphBuilder(structures: structures(for: code)).build()
 
-        XCTAssertEqual(thing.serialize(), "digraph { Thing -> String; Foo -> Int }")
+        XCTAssertEqual(graph.vertexCount, 4)
+        XCTAssertEqual(graph.edgeCount, 2)
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
+        XCTAssertTrue(graph.edgeExists(from: "Foo", to: "Int"))
     }
 
     func testNestedStructSwiftCodeCreatesExpectedGraph() {
         let code = "struct Thing { struct Foo {} var x: Foo }"
 
-        let thing = Graph(structures: structures(for: code))
+        let graph = GraphBuilder(structures: structures(for: code)).build()
 
-        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Foo }")
+        XCTAssertEqual(graph.vertexCount, 2)
+        XCTAssertEqual(graph.edgeCount, 1)
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Foo"))
     }
 
     func testMoreComplexNestedStructSwiftCodeCreatesExpectedGraph() {
         let code = "struct Thing { struct Foo { let s: Int } var x: Foo }"
 
-        let thing = Graph(structures: structures(for: code))
+        let graph = GraphBuilder(structures: structures(for: code)).build()
 
-        XCTAssertEqual(thing.serialize(), "digraph { Foo -> Int; Thing -> Foo }")
+        XCTAssertEqual(graph.vertexCount, 3)
+        XCTAssertEqual(graph.edgeCount, 2)
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Foo"))
+        XCTAssertTrue(graph.edgeExists(from: "Foo", to: "Int"))
     }
 
     func testStructWithFunctionParametersShowsParametersProperly() {
         let code = "struct Thing { func foo(d: Double) { } }"
 
-        let thing = Graph(structures: structures(for: code))
+        let graph = GraphBuilder(structures: structures(for: code)).build()
 
-        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
+        XCTAssertEqual(graph.vertexCount, 2)
+        XCTAssertEqual(graph.edgeCount, 1)
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
     }
 
     func testClassWithFunctionParametersShowsParametersProperly() {
         let code = "class Thing { func foo(d: Double) { } }"
 
-        let thing = Graph(structures: structures(for: code))
+        let graph = GraphBuilder(structures: structures(for: code)).build()
 
-        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
+        XCTAssertEqual(graph.vertexCount, 2)
+        XCTAssertEqual(graph.edgeCount, 1)
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
     }
 
     func testEnumWithFunctionParametersShowsParametersProperly() {
         let code = "enum Thing { func foo(d: Double) { } }"
 
-        let thing = Graph(structures: structures(for: code))
+        let graph = GraphBuilder(structures: structures(for: code)).build()
 
-        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
+        XCTAssertEqual(graph.vertexCount, 2)
+        XCTAssertEqual(graph.edgeCount, 1)
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
     }
 
     func testProtocolWithFunctionParametersShowsParametersProperly() {
         let code = "protocol Thing { func foo(d: Double) }"
 
-        let thing = Graph(structures: structures(for: code))
+        let graph = GraphBuilder(structures: structures(for: code)).build()
 
-        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
+        XCTAssertEqual(graph.vertexCount, 2)
+        XCTAssertEqual(graph.edgeCount, 1)
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
     }
 
+    // TODO: solve this test
 //    func testStructWithFunctionShowsFunctionReturnTypeProperly() {
 //        let code = "struct Thing { func foo() -> Double { return 0 } }"
 //
-//        let thing = Graph(structures: structures(for: code))
+//        let graph = GraphBuilder(structures: structures(for: code)).build()
 //
-//        XCTAssertEqual(thing.serialize(), "digraph { Thing -> Double }")
+//        XCTAssertEqual(graph.vertexCount, 2)
+//        XCTAssertEqual(graph.edgeCount, 1)
+//        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
 //    }
 
 }
