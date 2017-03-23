@@ -1,5 +1,6 @@
 
 import XCTest
+import SwiftGraph
 @testable import GriftKit
 
 class GraphvizTests: XCTestCase {
@@ -78,5 +79,19 @@ class GraphvizTests: XCTestCase {
         let graph = Graphviz(statements: [Subgraph("blah", isCluster: true)])
 
         XCTAssertEqual(graph.description, "graph { subgraph cluster_blah { } }")
+    }
+
+    func testSerializingSwiftGraph() {
+        let graph = UnweightedGraph<String>()
+        _ = graph.addVertex("A")
+        _ = graph.addVertex("B")
+        _ = graph.addVertex("C")
+
+        graph.addEdge(from: "A", to: "B", directed: true)
+        graph.addEdge(from: "B", to: "C", directed: true)
+        graph.addEdge(from: "C", to: "A", directed: true)
+
+        let gv = graph.graphviz(name: "Foo")
+        XCTAssertEqual(gv.description, "digraph Foo { A -> B; B -> C; C -> A }")
     }
 }

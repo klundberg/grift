@@ -68,5 +68,18 @@ public struct GraphBuilder {
             return false
         }
     }
+}
 
+extension Graph {
+    func graphviz(name: String = "") -> Graphviz {
+        var statements = [Statement]()
+
+        for from in self {
+            for to in neighborsForVertex(from)! {
+                statements.append(Node(String(describing: from)) >> Node(String(describing: to)))
+            }
+        }
+
+        return Graphviz(type: .directed, name: name, statements: statements)
+    }
 }

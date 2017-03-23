@@ -33,9 +33,6 @@ public func structure(forFile path: String) -> Structure? {
     return Structure(file: file)
 }
 
-//private protocol StringType {}
-//extension String: StringType {}
-
 extension Dictionary {
     subscript (keyEnum: SwiftDocKey) -> Value? {
         guard let key = keyEnum.rawValue as? Key else {
@@ -44,6 +41,23 @@ extension Dictionary {
         return self[key]
     }
 }
+
+
+private func kindIsEnclosingType(kind: SourceKitRepresentable?) -> Bool {
+    guard let kind = kind as? String,
+        let declarationKind = SwiftDeclarationKind(rawValue: kind) else {
+            return false
+    }
+
+    switch declarationKind {
+    case .`struct`, .`class`, .`enum`, .`protocol`:
+        return true
+    default:
+        return false
+    }
+}
+
+// MARK: - Graphviz stuff
 
 extension Graphviz {
     init(structures: [Structure]) {
@@ -73,18 +87,4 @@ private func createStatements(dict: [String: SourceKitRepresentable], name: Stri
     }
 
     return statements
-}
-
-private func kindIsEnclosingType(kind: SourceKitRepresentable?) -> Bool {
-    guard let kind = kind as? String,
-        let declarationKind = SwiftDeclarationKind(rawValue: kind) else {
-        return false
-    }
-
-    switch declarationKind {
-    case .`struct`, .`class`, .`enum`, .`protocol`:
-        return true
-    default:
-        return false
-    }
 }
