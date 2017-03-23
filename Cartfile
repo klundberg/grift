@@ -1,1 +1,3 @@
-github "jpsim/SourceKitten" ~> 0.15.0 
+github "jpsim/SourceKitten" ~> 0.17
+github "davecom/SwiftGraph" >= 1.3
+github "Carthage/Commandant"

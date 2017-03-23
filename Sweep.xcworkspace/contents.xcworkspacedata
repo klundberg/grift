@@ -4,19 +4,29 @@
    <FileRef
       location = "group:Sweep.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/SourceKitten/sourcekitten.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/SWXMLHash/SWXMLHash.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/YamlSwift/Yaml.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/SourceKitten/Carthage/Checkouts/Commandant/Commandant.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/SourceKitten/Carthage/Checkouts/Result/Result.xcodeproj">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "Dependencies">
+      <FileRef
+         location = "group:Carthage/Checkouts/SwiftGraph/SwiftGraph.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/SourceKitten/sourcekitten.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/Commandant/Commandant.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/Yams/Yams.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/Result/Result.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/SWXMLHash/SWXMLHash.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/SourceKitten/Carthage/Checkouts/Commandant/Commandant.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>
