@@ -17,7 +17,7 @@ public struct GraphBuilder {
     private var structures: [Structure]
     private var graph = UnweightedGraph<Vertex>()
 
-    init(structures: [Structure]) {
+    public init(structures: [Structure]) {
         self.structures = structures
     }
 
@@ -28,7 +28,7 @@ public struct GraphBuilder {
         return graph
     }
 
-    public func populateGraph(dict: [String: SourceKitRepresentable], forVertexNamed name: String = "") {
+    private func populateGraph(dict: [String: SourceKitRepresentable], forVertexNamed name: String = "") {
 
         var name = name
 
@@ -71,7 +71,7 @@ public struct GraphBuilder {
 }
 
 extension Graph {
-    func graphviz(name: String = "") -> Graphviz {
+    public func graphviz(name: String = "") -> Graphviz {
         var statements = [Statement]()
 
         for from in self {

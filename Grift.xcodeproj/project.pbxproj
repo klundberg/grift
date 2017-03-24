@@ -10,6 +10,7 @@
 		793A67D31DB0526E001747A5 /* Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A67D21DB0526E001747A5 /* Structure.swift */; };
 		797962021E8375BD00C9EE07 /* SwiftGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797962011E8375BD00C9EE07 /* SwiftGraph.framework */; };
 		797962051E8375C500C9EE07 /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797962031E8375C500C9EE07 /* Commandant.framework */; };
+		79ABF1801E84B4AE00C4D238 /* DependenciesCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABF17F1E84B4AE00C4D238 /* DependenciesCommand.swift */; };
 		79D76EC61D960F370007AFCD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EC51D960F370007AFCD /* main.swift */; };
 		79D76EE91D961CB60007AFCD /* GriftKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* GriftKit.framework */; };
 		79D76EF01D961CB70007AFCD /* GriftKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EEF1D961CB70007AFCD /* GriftKitTests.swift */; };
@@ -74,6 +75,7 @@
 		797962011E8375BD00C9EE07 /* SwiftGraph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGraph.framework; path = Carthage/Checkouts/SwiftGraph/build/Debug/SwiftGraph.framework; sourceTree = "<group>"; };
 		797962031E8375C500C9EE07 /* Commandant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Commandant.framework; path = Carthage/Checkouts/SourceKitten/Carthage/Checkouts/Commandant/build/Debug/Commandant.framework; sourceTree = "<group>"; };
 		797962041E8375C500C9EE07 /* SwiftGraph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGraph.framework; path = Carthage/Checkouts/SwiftGraph/build/Debug/SwiftGraph.framework; sourceTree = "<group>"; };
+		79ABF17F1E84B4AE00C4D238 /* DependenciesCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependenciesCommand.swift; sourceTree = "<group>"; };
 		79D76E8A1D936A320007AFCD /* SourceKittenFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SourceKittenFramework.framework; path = "../../Library/Developer/Xcode/DerivedData/SwiftGraph-hfkzlzlrhslwhleogjxpvmgkrxvs/Build/Products/Debug/SourceKittenFramework.framework"; sourceTree = "<group>"; };
 		79D76EA81D960EEB0007AFCD /* grift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D76EB31D960EEB0007AFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 			name = SourceKittenExtensions;
 			sourceTree = "<group>";
 		};
+		79ABF17E1E84B46200C4D238 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				79ABF17F1E84B4AE00C4D238 /* DependenciesCommand.swift */,
+			);
+			name = Commands;
+			sourceTree = "<group>";
+		};
 		79D76E831D935F1E0007AFCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		79D76EA91D960EEB0007AFCD /* grift */ = {
 			isa = PBXGroup;
 			children = (
+				79ABF17E1E84B46200C4D238 /* Commands */,
 				79D76EC51D960F370007AFCD /* main.swift */,
 				79D76EB31D960EEB0007AFCD /* Info.plist */,
 			);
@@ -419,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79ABF1801E84B4AE00C4D238 /* DependenciesCommand.swift in Sources */,
 				79D76EC61D960F370007AFCD /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

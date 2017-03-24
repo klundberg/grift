@@ -2,8 +2,8 @@
 import Foundation
 import SourceKittenFramework
 
-func filesInDirectory(at path: String, using fileManager: FileManager = .default) -> [String] {
-    let contents = try! fileManager.contentsOfDirectory(atPath: path)
+private func filesInDirectory(at path: String, using fileManager: FileManager = .default) throws -> [String] {
+    let contents = try fileManager.contentsOfDirectory(atPath: path)
 
     return contents.flatMap({ (filename: String) -> String? in
         guard filename.hasSuffix(".swift") else {
@@ -15,9 +15,9 @@ func filesInDirectory(at path: String, using fileManager: FileManager = .default
     })
 }
 
-public func structures(at path: String, using fileManager: FileManager = .default) -> [Structure] {
+public func structures(at path: String, using fileManager: FileManager = .default) throws -> [Structure] {
 
-    let filePaths = filesInDirectory(at: path, using: fileManager)
+    let filePaths = try filesInDirectory(at: path, using: fileManager)
 
     return filePaths.flatMap({ structure(forFile: $0) })
 }

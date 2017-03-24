@@ -11,7 +11,7 @@ extension Sequence where Iterator.Element == Statement {
     }
 }
 
-struct Graphviz {
+public struct Graphviz {
     enum DirectionType: String {
         case undirected = "graph"
         case directed = "digraph"
@@ -40,7 +40,7 @@ struct Graphviz {
 }
 
 extension Graphviz: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         return serialize()
     }
 }

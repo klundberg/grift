@@ -1,12 +1,14 @@
 
 import Foundation
-import SourceKittenFramework
+import GriftKit
+import Commandant
 
-print("Hello, World!")
-print("\(CommandLine.arguments)")
-print(type(of: Structure.self))
+let commands = CommandRegistry<GriftError>()
+let dependenciesCommand = DependenciesCommand()
+commands.register(dependenciesCommand)
 
-//struct Thing {
-//    var s: String
-//}
+commands.register(HelpCommand(registry: commands))
 
+commands.main(defaultVerb: dependenciesCommand.verb) { (error) in
+    fputs(error.description + "\n", stderr)
+}
