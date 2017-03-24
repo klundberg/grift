@@ -26,40 +26,40 @@ class GraphvizTests: XCTestCase {
     func testGraphWithOneNode() {
         let graph = Graphviz(statements: [Node("A")])
 
-        XCTAssertEqual(graph.description, "graph { A }")
+        XCTAssertEqual(graph.description, "graph { \"A\" }")
     }
 
 
     func testGraphWithTwoNodes() {
         let graph = Graphviz(statements: [Node("A"), Node("B")])
 
-        XCTAssertEqual(graph.description, "graph { A; B }")
+        XCTAssertEqual(graph.description, "graph { \"A\"; \"B\" }")
     }
 
     func testUndirectedGraphWithOneEdge() {
         let graph = Graphviz(statements: ["A" >> "B"])
 
-        XCTAssertEqual(graph.description, "graph { A -- B }")
+        XCTAssertEqual(graph.description, "graph { \"A\" -- \"B\" }")
     }
 
     func testDirectedGraphWithOneEdge() {
         let graph = Graphviz(type: .directed,
                           statements: ["A" >> "B"])
 
-        XCTAssertEqual(graph.description, "digraph { A -> B }")
+        XCTAssertEqual(graph.description, "digraph { \"A\" -> \"B\" }")
     }
 
     func testUndirectedGraphWithTwoEdges() {
         let graph = Graphviz(statements: ["A" >> "B", "B" >> "C"])
 
-        XCTAssertEqual(graph.description, "graph { A -- B; B -- C }")
+        XCTAssertEqual(graph.description, "graph { \"A\" -- \"B\"; \"B\" -- \"C\" }")
     }
 
     func testDirectedGraphWithTwoEdges() {
         let graph = Graphviz(type: .directed,
                           statements: ["A" >> "B", "B" >> "C"])
 
-        XCTAssertEqual(graph.description, "digraph { A -> B; B -> C }")
+        XCTAssertEqual(graph.description, "digraph { \"A\" -> \"B\"; \"B\" -> \"C\" }")
     }
 
     func testUndirectedGraphWithSubgraph() {
@@ -72,7 +72,7 @@ class GraphvizTests: XCTestCase {
         let graph = Graphviz(statements: ["A" >> "B",
                                        Subgraph(statements: ["C" >> "D"])])
 
-        XCTAssertEqual(graph.description, "graph { A -- B; subgraph { C -- D } }")
+        XCTAssertEqual(graph.description, "graph { \"A\" -- \"B\"; subgraph { \"C\" -- \"D\" } }")
     }
 
     func testGraphWithClusteredSubgraph() {
@@ -81,7 +81,7 @@ class GraphvizTests: XCTestCase {
         XCTAssertEqual(graph.description, "graph { subgraph cluster_blah { } }")
     }
 
-    func testSerializingSwiftGraph() {
+    func testSerializingBasicSwiftGraph() {
         let graph = UnweightedGraph<String>()
         _ = graph.addVertex("A")
         _ = graph.addVertex("B")
@@ -92,6 +92,6 @@ class GraphvizTests: XCTestCase {
         graph.addEdge(from: "C", to: "A", directed: true)
 
         let gv = graph.graphviz(name: "Foo")
-        XCTAssertEqual(gv.description, "digraph Foo { A -> B; B -> C; C -> A }")
+        XCTAssertEqual(gv.description, "digraph Foo { \"A\" -> \"B\"; \"B\" -> \"C\"; \"C\" -> \"A\" }")
     }
 }

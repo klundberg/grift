@@ -71,7 +71,7 @@ struct Node {
 
 extension Node: Statement {
     func serialize(with context: Graphviz) -> String {
-        return identifier
+        return "\"\(identifier)\""
     }
 }
 
@@ -100,7 +100,7 @@ func >> (lhs: Node, rhs: Node) -> Edge {
 
 extension Edge: Statement {
     func serialize(with context: Graphviz) -> String {
-        return "\(from.identifier) \(context.type.edgeOperator) \(to.identifier)"
+        return "\"\(from.identifier)\" \(context.type.edgeOperator) \"\(to.identifier)\""
     }
 }
 

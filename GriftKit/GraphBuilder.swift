@@ -32,7 +32,7 @@ public struct GraphBuilder {
 
         var name = name
 
-        if let typeName = dict[.typeName] as? String, !name.isEmpty {
+        if var typeName = dict[.typeName] as? String, !name.isEmpty {
 
             if !graph.vertexInGraph(vertex: typeName) {
                 _ = graph.addVertex(typeName)
@@ -78,7 +78,9 @@ extension Graph {
 
         for from in self {
             for to in neighborsForVertex(from)! {
-                statements.append(Node(String(describing: from)) >> Node(String(describing: to)))
+                var fromNode = String(describing: from)
+                var toNode = String(describing: to)
+                statements.append(Node(fromNode) >> Node(toNode))
             }
         }
 

@@ -153,6 +153,16 @@ class GriftKitTests: XCTestCase {
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
     }
 
+    func testArrayTypesAreNormalizedToNotHaveBrackets() {
+        let code = "struct Thing { var x: [String] }"
+
+        let graph = GraphBuilder(structures: structures(for: code)).build()
+
+        XCTAssertEqual(graph.vertexCount, 2)
+        XCTAssertEqual(graph.edgeCount, 1)
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String")) // TODO: Next
+    }
+
 //    func testStructWithFunctionShowsFunctionReturnTypeProperly() {
 //        let code = "struct Thing { func foo() -> Double { return 0 } }"
 //

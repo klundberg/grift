@@ -3,16 +3,32 @@ import Foundation
 import SourceKittenFramework
 
 private func filesInDirectory(at path: String, using fileManager: FileManager = .default) throws -> [String] {
-    let contents = try fileManager.contentsOfDirectory(atPath: path)
 
-    return contents.flatMap({ (filename: String) -> String? in
-        guard filename.hasSuffix(".swift") else {
-            return nil
+    guard let enumerator = fileManager.enumerator(at: URL(fileURLWithPath: path), includingPropertiesForKeys: nil) else {
+        return [] // TODO: throw error
+    }
+
+    return enumerator.flatMap({
+        guard let url = $0 as? URL,
+            !url.pathComponents.contains(".build"),
+            !url.pathComponents.contains("Carthage"),
+            url.pathExtension == "swift" else {
+                return nil
         }
 
-        return (path as NSString).appendingPathComponent(filename)
-
+        return url.relativePath
     })
+
+//    let contents = try fileManager.contentsOfDirectory(atPath: path)
+//
+//    return contents.flatMap({ (filename: String) -> String? in
+//        guard filename.hasSuffix(".swift") else {
+//            return nil
+//        }
+//
+//        return (path as NSString).appendingPathComponent(filename)
+//
+//    })
 }
 
 public func structures(at path: String, using fileManager: FileManager = .default) throws -> [Structure] {
