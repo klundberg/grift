@@ -37,7 +37,9 @@ public struct GraphBuilder {
             if !graph.vertexInGraph(vertex: typeName) {
                 _ = graph.addVertex(typeName)
             }
-            graph.addEdge(from: name, to: typeName, directed: true)
+            if !graph.edgeExists(from: name, to: typeName) {
+                graph.addEdge(from: name, to: typeName, directed: true)
+            }
         }
 
         if let newName = dict[.name] as? String, kindIsEnclosingType(kind: dict[.kind]) {

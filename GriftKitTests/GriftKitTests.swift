@@ -143,14 +143,24 @@ class GriftKitTests: XCTestCase {
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
     }
 
-    func testStructWithFunctionShowsFunctionReturnTypeProperly() {
-        let code = "struct Thing { func foo() -> Double { return 0 } }"
+    func testTwoReferencesToTheSameTypeOnlyYieldOneEdge() {
+        let code = "struct Thing { var x: String; var y: String }"
 
         let graph = GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
-        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
     }
+
+//    func testStructWithFunctionShowsFunctionReturnTypeProperly() {
+//        let code = "struct Thing { func foo() -> Double { return 0 } }"
+//
+//        let graph = GraphBuilder(structures: structures(for: code)).build()
+//
+//        XCTAssertEqual(graph.vertexCount, 2)
+//        XCTAssertEqual(graph.edgeCount, 1)
+//        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
+//    }
 
 }
