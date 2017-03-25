@@ -7,8 +7,8 @@
 //
 
 import Commandant
-import Result
 import GriftKit
+import Result
 import SourceKittenFramework
 import SwiftGraph
 

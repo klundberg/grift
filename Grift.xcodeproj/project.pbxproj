@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7924EB961E86095F008969C0 /* Commandant.framework in Embed Frameworks into GriftKit.framework */ = {isa = PBXBuildFile; fileRef = 7924EB901E86095F008969C0 /* Commandant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7924EB971E86095F008969C0 /* Result.framework in Embed Frameworks into GriftKit.framework */ = {isa = PBXBuildFile; fileRef = 7924EB911E86095F008969C0 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7924EB981E86095F008969C0 /* SourceKittenFramework.framework in Embed Frameworks into GriftKit.framework */ = {isa = PBXBuildFile; fileRef = 7924EB921E86095F008969C0 /* SourceKittenFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7924EB991E86095F008969C0 /* SwiftGraph.framework in Embed Frameworks into GriftKit.framework */ = {isa = PBXBuildFile; fileRef = 7924EB931E86095F008969C0 /* SwiftGraph.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7924EB9A1E86095F008969C0 /* SWXMLHash.framework in Embed Frameworks into GriftKit.framework */ = {isa = PBXBuildFile; fileRef = 7924EB941E86095F008969C0 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7924EB9B1E86095F008969C0 /* Yams.framework in Embed Frameworks into GriftKit.framework */ = {isa = PBXBuildFile; fileRef = 7924EB951E86095F008969C0 /* Yams.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		793A67D31DB0526E001747A5 /* Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A67D21DB0526E001747A5 /* Structure.swift */; };
-		797962021E8375BD00C9EE07 /* SwiftGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797962011E8375BD00C9EE07 /* SwiftGraph.framework */; };
+		795748461E8609E300EED5E2 /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7924EB921E86095F008969C0 /* SourceKittenFramework.framework */; };
+		795748471E8609E300EED5E2 /* SwiftGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7924EB931E86095F008969C0 /* SwiftGraph.framework */; };
 		797962051E8375C500C9EE07 /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797962031E8375C500C9EE07 /* Commandant.framework */; };
 		79ABF1801E84B4AE00C4D238 /* DependenciesCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABF17F1E84B4AE00C4D238 /* DependenciesCommand.swift */; };
 		79D76EC61D960F370007AFCD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EC51D960F370007AFCD /* main.swift */; };
@@ -16,9 +23,8 @@
 		79D76EF01D961CB70007AFCD /* GriftKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EEF1D961CB70007AFCD /* GriftKitTests.swift */; };
 		79D76EF21D961CB70007AFCD /* GriftKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D76EE21D961CB60007AFCD /* GriftKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79D76EF51D961CB70007AFCD /* GriftKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* GriftKit.framework */; };
-		79D76EF61D961CB70007AFCD /* GriftKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* GriftKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79D76EF61D961CB70007AFCD /* GriftKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76EE01D961CB60007AFCD /* GriftKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79D76EFE1D961E4A0007AFCD /* GraphStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76EFD1D961E4A0007AFCD /* GraphStructure.swift */; };
-		79D76EFF1D961FA50007AFCD /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D76E8A1D936A320007AFCD /* SourceKittenFramework.framework */; };
 		79D76F021D98BB340007AFCD /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76F011D98BB340007AFCD /* Graph.swift */; };
 		79D76F041D98BB990007AFCD /* GraphvizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D76F031D98BB990007AFCD /* GraphvizTests.swift */; };
 		79E2292A1E837E4500698AC9 /* GraphBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E229291E837E4500698AC9 /* GraphBuilder.swift */; };
@@ -56,27 +62,51 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		79D76EC71D9610030007AFCD /* CopyFiles */ = {
+		7924EB881E860678008969C0 /* Embed Frameworks into GriftKit.framework */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = GriftKit.framework/Versions/Current/Frameworks;
+			dstSubfolderSpec = 10;
+			files = (
+				7924EB961E86095F008969C0 /* Commandant.framework in Embed Frameworks into GriftKit.framework */,
+				7924EB971E86095F008969C0 /* Result.framework in Embed Frameworks into GriftKit.framework */,
+				7924EB981E86095F008969C0 /* SourceKittenFramework.framework in Embed Frameworks into GriftKit.framework */,
+				7924EB991E86095F008969C0 /* SwiftGraph.framework in Embed Frameworks into GriftKit.framework */,
+				7924EB9A1E86095F008969C0 /* SWXMLHash.framework in Embed Frameworks into GriftKit.framework */,
+				7924EB9B1E86095F008969C0 /* Yams.framework in Embed Frameworks into GriftKit.framework */,
+			);
+			name = "Embed Frameworks into GriftKit.framework";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D76EC71D9610030007AFCD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				79D76EF61D961CB70007AFCD /* GriftKit.framework in CopyFiles */,
+				79D76EF61D961CB70007AFCD /* GriftKit.framework in Embed Frameworks */,
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7924EB801E8605DD008969C0 /* check-xcode-version */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "check-xcode-version"; sourceTree = "<group>"; };
+		7924EB821E8605DD008969C0 /* extract-tool */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "extract-tool"; sourceTree = "<group>"; };
+		7924EB8F1E860815008969C0 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7924EB901E86095F008969C0 /* Commandant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Commandant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7924EB911E86095F008969C0 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7924EB921E86095F008969C0 /* SourceKittenFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SourceKittenFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7924EB931E86095F008969C0 /* SwiftGraph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7924EB941E86095F008969C0 /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7924EB951E86095F008969C0 /* Yams.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Yams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		792E14F71D9F5F0800470E21 /* roadmap.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = roadmap.md; sourceTree = "<group>"; };
 		793A67D21DB0526E001747A5 /* Structure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structure.swift; sourceTree = "<group>"; };
 		793A67D51DB301DA001747A5 /* TestFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
-		797962011E8375BD00C9EE07 /* SwiftGraph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGraph.framework; path = Carthage/Checkouts/SwiftGraph/build/Debug/SwiftGraph.framework; sourceTree = "<group>"; };
-		797962031E8375C500C9EE07 /* Commandant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Commandant.framework; path = Carthage/Checkouts/SourceKitten/Carthage/Checkouts/Commandant/build/Debug/Commandant.framework; sourceTree = "<group>"; };
-		797962041E8375C500C9EE07 /* SwiftGraph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGraph.framework; path = Carthage/Checkouts/SwiftGraph/build/Debug/SwiftGraph.framework; sourceTree = "<group>"; };
+		795748481E860AB300EED5E2 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		797962031E8375C500C9EE07 /* Commandant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Commandant.framework; path = /Users/kevlar/workspaces/grift/Carthage/Checkouts/SourceKitten/Carthage/Checkouts/Commandant/build/Debug/Commandant.framework; sourceTree = "<absolute>"; };
 		79ABF17F1E84B4AE00C4D238 /* DependenciesCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependenciesCommand.swift; sourceTree = "<group>"; };
-		79D76E8A1D936A320007AFCD /* SourceKittenFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SourceKittenFramework.framework; path = "../../Library/Developer/Xcode/DerivedData/SwiftGraph-hfkzlzlrhslwhleogjxpvmgkrxvs/Build/Products/Debug/SourceKittenFramework.framework"; sourceTree = "<group>"; };
 		79D76EA81D960EEB0007AFCD /* grift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D76EB31D960EEB0007AFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79D76EB81D960EEB0007AFCD /* griftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = griftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,8 +147,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				797962021E8375BD00C9EE07 /* SwiftGraph.framework in Frameworks */,
-				79D76EFF1D961FA50007AFCD /* SourceKittenFramework.framework in Frameworks */,
+				795748461E8609E300EED5E2 /* SourceKittenFramework.framework in Frameworks */,
+				795748471E8609E300EED5E2 /* SwiftGraph.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +163,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7924EB7E1E8605DD008969C0 /* script */ = {
+			isa = PBXGroup;
+			children = (
+				7924EB801E8605DD008969C0 /* check-xcode-version */,
+				7924EB821E8605DD008969C0 /* extract-tool */,
+			);
+			path = script;
+			sourceTree = "<group>";
+		};
 		793A67D11DB0525A001747A5 /* SourceKittenExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,10 +191,12 @@
 		79D76E831D935F1E0007AFCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				797962031E8375C500C9EE07 /* Commandant.framework */,
-				797962041E8375C500C9EE07 /* SwiftGraph.framework */,
-				797962011E8375BD00C9EE07 /* SwiftGraph.framework */,
-				79D76E8A1D936A320007AFCD /* SourceKittenFramework.framework */,
+				7924EB901E86095F008969C0 /* Commandant.framework */,
+				7924EB911E86095F008969C0 /* Result.framework */,
+				7924EB921E86095F008969C0 /* SourceKittenFramework.framework */,
+				7924EB931E86095F008969C0 /* SwiftGraph.framework */,
+				7924EB941E86095F008969C0 /* SWXMLHash.framework */,
+				7924EB951E86095F008969C0 /* Yams.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -219,9 +260,12 @@
 				79D76EEE1D961CB60007AFCD /* GriftKitTests */,
 				79EB92C91D935777007BF799 /* Products */,
 				79D76E831D935F1E0007AFCD /* Frameworks */,
+				7924EB7E1E8605DD008969C0 /* script */,
 				79D76ED91D961C880007AFCD /* Cartfile */,
 				792E14F71D9F5F0800470E21 /* roadmap.md */,
 				79E229271E837C5200698AC9 /* README.md */,
+				7924EB8F1E860815008969C0 /* LICENSE */,
+				795748481E860AB300EED5E2 /* .swiftlint.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -254,11 +298,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79D76EBF1D960EEB0007AFCD /* Build configuration list for PBXNativeTarget "grift" */;
 			buildPhases = (
+				7924EB8E1E8607A3008969C0 /* Check Xcode Version */,
 				79D76EA41D960EEB0007AFCD /* Sources */,
 				79D76EA51D960EEB0007AFCD /* Frameworks */,
 				79D76EA61D960EEB0007AFCD /* Resources */,
-				79D76EC71D9610030007AFCD /* CopyFiles */,
-				794B31101DAB476400E9D790 /* ShellScript */,
+				7924EB8C1E8606E6008969C0 /* Extract CLI Tool */,
+				79D76EC71D9610030007AFCD /* Embed Frameworks */,
+				7924EB881E860678008969C0 /* Embed Frameworks into GriftKit.framework */,
+				794B31101DAB476400E9D790 /* Embed Swift Libraries into GriftKit.framework */,
+				7924EB8D1E860730008969C0 /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -331,7 +379,7 @@
 		79EB92C01D935776007BF799 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Kevin Lundberg";
 				TargetAttributes = {
@@ -410,18 +458,64 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		794B31101DAB476400E9D790 /* ShellScript */ = {
+		7924EB8C1E8606E6008969C0 /* Extract CLI Tool */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_PATH)",
+			);
+			name = "Extract CLI Tool";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ". script/extract-tool";
+		};
+		7924EB8D1E860730008969C0 /* Run Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Swiftlint";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo Hello";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+			showEnvVarsInLog = 0;
+		};
+		7924EB8E1E8607A3008969C0 /* Check Xcode Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Xcode Version";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ". script/check-xcode-version";
+		};
+		794B31101DAB476400E9D790 /* Embed Swift Libraries into GriftKit.framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Swift Libraries into GriftKit.framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$TARGET_BUILD_DIR\"\nGRIFTKIT_BUNDLE=\"$FRAMEWORKS_FOLDER_PATH/GriftKit.framework\"\n\nxcrun swift-stdlib-tool --copy --verbose --Xcodesign --timestamp=none \\\n--scan-executable \"$EXECUTABLE_PATH\" \\\n--scan-folder \"$FRAMEWORKS_FOLDER_PATH\" \\\n--platform macosx --destination \"$GRIFTKIT_BUNDLE/Versions/Current/Frameworks\" \\\n--strip-bitcode";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -493,11 +587,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SourceKitten/Carthage/Checkouts/Commandant/build/Debug",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftGraph/build/Debug",
-				);
 				INFOPLIST_FILE = grift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.grift;
@@ -512,11 +601,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SourceKitten/Carthage/Checkouts/Commandant/build/Debug",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftGraph/build/Debug",
-				);
 				INFOPLIST_FILE = grift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.grift;
@@ -567,10 +651,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftGraph/build/Debug",
-				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = GriftKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -597,10 +677,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftGraph/build/Debug",
-				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = GriftKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

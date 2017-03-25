@@ -1,7 +1,6 @@
-
+import Commandant
 import Foundation
 import GriftKit
-import Commandant
 
 let commands = CommandRegistry<GriftError>()
 let dependenciesCommand = DependenciesCommand()

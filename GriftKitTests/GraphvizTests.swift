@@ -1,7 +1,6 @@
-
-import XCTest
-import SwiftGraph
 @testable import GriftKit
+import SwiftGraph
+import XCTest
 
 class GraphvizTests: XCTestCase {
 
@@ -28,7 +27,6 @@ class GraphvizTests: XCTestCase {
 
         XCTAssertEqual(graph.description, "graph { \"A\" }")
     }
-
 
     func testGraphWithTwoNodes() {
         let graph = Graphviz(statements: [Node("A"), Node("B")])

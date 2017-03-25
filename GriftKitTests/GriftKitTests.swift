@@ -1,12 +1,11 @@
-
-import XCTest
 import Foundation
+@testable import GriftKit
 import SourceKittenFramework
 import SwiftGraph
-@testable import GriftKit
+import XCTest
 
 class GriftKitTests: XCTestCase {
-    
+
 //    func testFolderGivesStructureArrayOfAllFilesInIt() {
 //
 //        let path = "/Users/kevlar/workspaces/grift/GriftKit/TestFile.swift"
@@ -48,7 +47,6 @@ class GriftKitTests: XCTestCase {
 //            arguments:args)
 //        print(toJSON(toAnyObject(index.send())))
 //    }
-
 
     func testSingleStructWithNoFieldsCreatesSingleVertexGraph() {
 

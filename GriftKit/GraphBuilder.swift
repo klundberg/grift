@@ -32,7 +32,7 @@ public struct GraphBuilder {
 
         var name = name
 
-        if var typeName = dict[.typeName] as? String, !name.isEmpty {
+        if let typeName = dict[.typeName] as? String, !name.isEmpty {
 
             if !graph.vertexInGraph(vertex: typeName) {
                 _ = graph.addVertex(typeName)
@@ -56,7 +56,7 @@ public struct GraphBuilder {
             }
         }
     }
-    
+
     private func kindIsEnclosingType(kind: SourceKitRepresentable?) -> Bool {
         guard let kind = kind as? String,
             let declarationKind = SwiftDeclarationKind(rawValue: kind) else {
@@ -78,8 +78,8 @@ extension Graph {
 
         for from in self {
             for to in neighborsForVertex(from)! {
-                var fromNode = String(describing: from)
-                var toNode = String(describing: to)
+                let fromNode = String(describing: from)
+                let toNode = String(describing: to)
                 statements.append(Node(fromNode) >> Node(toNode))
             }
         }

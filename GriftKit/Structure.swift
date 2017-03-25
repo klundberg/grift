@@ -1,4 +1,3 @@
-
 import SourceKittenFramework
 
 extension Structure {
@@ -44,5 +43,4 @@ struct SubStructure {
         })
     }
 
-    
 }

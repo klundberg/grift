@@ -1,4 +1,3 @@
-
 import Foundation
 import SourceKittenFramework
 
@@ -57,7 +56,6 @@ extension Dictionary {
         return self[key]
     }
 }
-
 
 private func kindIsEnclosingType(kind: SourceKitRepresentable?) -> Bool {
     guard let kind = kind as? String,

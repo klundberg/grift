@@ -1,4 +1,3 @@
-
 import Foundation
 
 /* expected edges:
@@ -15,7 +14,6 @@ BarStruct ->
 open class FooClass {
     var a_variable: String
     let a_constant: [Int]
-
 
     init(variable: String) {
         self.a_variable = variable
