@@ -1,11 +1,3 @@
-//
-//  GraphBuilder.swift
-//  Grift
-//
-//  Created by Kevin Lundberg on 3/22/17.
-//  Copyright © 2017 Kevin Lundberg. All rights reserved.
-//
-
 import Foundation
 import SourceKittenFramework
 import SwiftGraph
@@ -23,38 +15,53 @@ public struct GraphBuilder {
 
     public func build() -> UnweightedGraph<Vertex> {
         for structure in structures {
-            populateGraph(dict: structure.dictionary)
+            populateGraph(from: structure.dictionary)
         }
         return graph
     }
 
-    private func populateGraph(dict: [String: SourceKitRepresentable], forVertexNamed name: String = "") {
+    private func populateGraph(from dict: [String: SourceKitRepresentable], forVertexNamed name: String = "") {
 
         var name = name
 
         if let typeName = dict[.typeName] as? String, !name.isEmpty {
 
-            if !graph.vertexInGraph(vertex: typeName) {
-                _ = graph.addVertex(typeName)
-            }
-            if !graph.edgeExists(from: name, to: typeName) {
-                graph.addEdge(from: name, to: typeName, directed: true)
+            let normalizedTypeName = normalize(typeWithName: typeName)
+
+            let singleTypeNames = splitSingleTypeNames(fromComposedTypeName: normalizedTypeName)
+            for singleTypeName in singleTypeNames {
+                graph.addVertextIfNotPresent(singleTypeName)
+                graph.addEdgeIfNotPresent(from: name, to: singleTypeName, directed: true)
             }
         }
 
         if let newName = dict[.name] as? String, kindIsEnclosingType(kind: dict[.kind]) {
             name = newName
-
-            if !graph.vertexInGraph(vertex: name) {
-                _ = graph.addVertex(name)
-            }
+            graph.addVertextIfNotPresent(name)
         }
 
         if let substructures = dict[.substructure] as? [SourceKitRepresentable] {
             for case let substructureDict as [String: SourceKitRepresentable] in substructures {
-                populateGraph(dict: substructureDict, forVertexNamed: name)
+                populateGraph(from: substructureDict, forVertexNamed: name)
             }
         }
+    }
+
+    private func normalize(typeWithName name: String) -> String {
+        let arrayShorthandRegex = try! NSRegularExpression(pattern: "\\[(.+)\\]", options: [])
+
+        return arrayShorthandRegex.stringByReplacingMatches(in: name,
+                                                            options: [],
+                                                            range: NSRange(location: 0, length: (name as NSString).length),
+                                                            withTemplate: "Array<$1>")
+    }
+
+    private func splitSingleTypeNames(fromComposedTypeName name: String) -> [String] {
+        let separatorCharacters = CharacterSet(charactersIn: "><,")
+
+        return name.unicodeScalars.split(whereSeparator: {
+            return separatorCharacters.contains($0)
+        }).map({ String($0).trimmingCharacters(in: CharacterSet.whitespaces) })
     }
 
     private func kindIsEnclosingType(kind: SourceKitRepresentable?) -> Bool {
@@ -72,7 +79,20 @@ public struct GraphBuilder {
     }
 }
 
+extension UnweightedGraph {
+    public func addEdgeIfNotPresent(from source: T, to destination: T, directed: Bool) {
+        if !edgeExists(from: source, to: destination) {
+            addEdge(from: source, to: destination, directed: directed)
+        }
+    }
+}
+
 extension Graph {
+    @discardableResult
+    public func addVertextIfNotPresent(_ vertex: V) -> Int {
+        return indexOfVertex(vertex) ?? addVertex(vertex)
+    }
+
     public func graphviz(name: String = "") -> Graphviz {
         var statements = [Statement]()
 

@@ -151,14 +151,41 @@ class GriftKitTests: XCTestCase {
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
     }
 
+    func testThatGenericTypesPointToBothTypeAndGenericTypeParameter() {
+        let code = "struct Thing { var x: Array<String> }"
+
+        let graph = GraphBuilder(structures: structures(for: code)).build()
+
+        XCTAssertEqual(graph.vertexCount, 3)
+        XCTAssertEqual(graph.edgeCount, 2)
+
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Array"))
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
+    }
+
     func testArrayTypesAreNormalizedToNotHaveBrackets() {
         let code = "struct Thing { var x: [String] }"
 
         let graph = GraphBuilder(structures: structures(for: code)).build()
 
-        XCTAssertEqual(graph.vertexCount, 2)
-        XCTAssertEqual(graph.edgeCount, 1)
-        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String")) // TODO: Next
+        XCTAssertEqual(graph.vertexCount, 3)
+        XCTAssertEqual(graph.edgeCount, 2)
+
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Array"))
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
+    }
+
+    func testThatGenericTypesWithMultipleGenericParamsPointToEachParameter() {
+        let code = "struct Thing { var x: Dictionary<String, Int> }"
+
+        let graph = GraphBuilder(structures: structures(for: code)).build()
+
+        XCTAssertEqual(graph.vertexCount, 4)
+        XCTAssertEqual(graph.edgeCount, 3)
+
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Dictionary"))
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Int"))
     }
 
 //    func testStructWithFunctionShowsFunctionReturnTypeProperly() {
