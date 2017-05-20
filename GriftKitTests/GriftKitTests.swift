@@ -188,6 +188,19 @@ class GriftKitTests: XCTestCase {
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Int"))
     }
 
+    func testThatDictionaryTypesAreNormalizedToNotHaveBracketsOrColons() {
+        let code = "struct Thing { var x: [String: Int] }"
+
+        let graph = GraphBuilder(structures: structures(for: code)).build()
+
+        XCTAssertEqual(graph.vertexCount, 4)
+        XCTAssertEqual(graph.edgeCount, 3)
+
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Dictionary"))
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
+        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Int"))
+    }
+
 //    func testStructWithFunctionShowsFunctionReturnTypeProperly() {
 //        let code = "struct Thing { func foo() -> Double { return 0 } }"
 //

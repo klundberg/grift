@@ -48,11 +48,17 @@ public struct GraphBuilder {
     }
 
     private func normalize(typeWithName name: String) -> String {
+        let dictionarShorthandRegex = try! NSRegularExpression(pattern: "\\[\\s*(.+)\\s*:\\s*(.+)\\s*]", options: [])
+
+        let dictionaryNormalizedTypeName = dictionarShorthandRegex.stringByReplacingMatches(in: name,
+                                                                                            options: [],
+                                                                                            range: NSRange(location: 0, length: (name as NSString).length), withTemplate: "Dictionary<$1,$2>")
+
         let arrayShorthandRegex = try! NSRegularExpression(pattern: "\\[(.+)\\]", options: [])
 
-        return arrayShorthandRegex.stringByReplacingMatches(in: name,
+        return arrayShorthandRegex.stringByReplacingMatches(in: dictionaryNormalizedTypeName,
                                                             options: [],
-                                                            range: NSRange(location: 0, length: (name as NSString).length),
+                                                            range: NSRange(location: 0, length: (dictionaryNormalizedTypeName as NSString).length),
                                                             withTemplate: "Array<$1>")
     }
 

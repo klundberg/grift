@@ -25,4 +25,4 @@ disabled_rules:
   - todo
   - variable_name
 
-line_length: 160
+line_length: 240
