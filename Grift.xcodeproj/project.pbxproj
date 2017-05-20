@@ -301,7 +301,6 @@
 				7924EB8E1E8607A3008969C0 /* Check Xcode Version */,
 				79D76EA41D960EEB0007AFCD /* Sources */,
 				79D76EA51D960EEB0007AFCD /* Frameworks */,
-				79D76EA61D960EEB0007AFCD /* Resources */,
 				7924EB8C1E8606E6008969C0 /* Extract CLI Tool */,
 				79D76EC71D9610030007AFCD /* Embed Frameworks */,
 				7924EB881E860678008969C0 /* Embed Frameworks into GriftKit.framework */,
@@ -427,13 +426,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		79D76EA61D960EEB0007AFCD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		79D76EB61D960EEB0007AFCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
