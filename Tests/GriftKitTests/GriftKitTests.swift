@@ -8,51 +8,53 @@ class GriftKitTests: XCTestCase {
 
 //    func testFolderGivesStructureArrayOfAllFilesInIt() {
 //
-//        let path = "/Users/kevlar/workspaces/grift/GriftKit/TestFile.swift"
-//        let thing = structure(forFile: path)
+//        var path = "./example.swift.test"
+//        let thing = try! structure(forFile: path)
 //        print(thing)
 //
-//        let args = ["-sdk",
-//                    "/Applications/Xcode-8.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk",
+//        var args = ["-sdk",
+//                    "/Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk",
 //                    "-module-name",
 //                    "Blah",
 //                    "-c",
 //                    path]
-// 489
-
-//        let cursorInfo = Request.cursorInfo(file: path, offset: 489, arguments: args).send()
+//
+//        let cursorInfo = try! Request.cursorInfo(file: path, offset: 489, arguments: args).send()
 //        print(cursorInfo)
 //
-//         {
-//         "key.kind" : "source.lang.swift.expr.call",
-//         "key.offset" : 489,
-//         "key.nameoffset" : 489,
-//         "key.namelength" : 5,
-//         "key.bodyoffset" : 495,
-//         "key.bodylength" : 0,
-//         "key.length" : 7,
-//         "key.name" : "thing"
-//         }
-//        let path = files.first!
-//        var args = ["-sdk",
+////         {
+////         "key.kind" : "source.lang.swift.expr.call",
+////         "key.offset" : 489,
+////         "key.nameoffset" : 489,
+////         "key.namelength" : 5,
+////         "key.bodyoffset" : 495,
+////         "key.bodylength" : 0,
+////         "key.length" : 7,
+////         "key.name" : "thing"
+////         }
+//        args = ["-sdk",
 //                    "/Applications/Xcode-8.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk",
 //                    "-module-name",
 //                    "Blah",
 //                    "-c",
 //                    path]
-//        args += files
-
-//        let index = Request.Index(
+////        args += files
+//
+//        let index = Request.index(
 //            file: path,
 //            arguments:args)
-//        print(toJSON(toAnyObject(index.send())))
+//        try! print(toJSON(index.send()))
 //    }
 
-    func testSingleStructWithNoFieldsCreatesSingleVertexGraph() throws {
+    private func buildGraph(for code: String) throws -> UnweightedGraph<Vertex> {
+        return try GraphBuilder.build(structures: structures(for: code))
+//        return try GraphBuilder.build(docs: docs(for: code))
+    }
 
+    func testSingleStructWithNoFieldsCreatesSingleVertexGraph() throws {
         let code = "struct Thing { }"
 
-        let graph = GraphBuilder(structures: try structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 1)
         XCTAssertEqual(graph.edgeCount, 0)
@@ -62,7 +64,7 @@ class GriftKitTests: XCTestCase {
     func testSingleStructSwiftCodeCreatesOneEdgeGraph() throws {
         let code = "struct Thing { var x: String }"
 
-        let graph = GraphBuilder(structures: try structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
@@ -72,7 +74,7 @@ class GriftKitTests: XCTestCase {
     func testTwoStructSwiftCodeCreatesTwoEdgeGraphGraph() throws {
         let code = "struct Thing { var x: String }; struct Foo { var bar: Int }"
 
-        let graph = try GraphBuilder(structures: structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 4)
         XCTAssertEqual(graph.edgeCount, 2)
@@ -83,7 +85,7 @@ class GriftKitTests: XCTestCase {
     func testNestedStructSwiftCodeCreatesExpectedGraph() throws {
         let code = "struct Thing { struct Foo {} var x: Foo }"
 
-        let graph = try GraphBuilder(structures: structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
@@ -93,7 +95,7 @@ class GriftKitTests: XCTestCase {
     func testMoreComplexNestedStructSwiftCodeCreatesExpectedGraph() throws {
         let code = "struct Thing { struct Foo { let s: Int } var x: Foo }"
 
-        let graph = try GraphBuilder(structures: structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 3)
         XCTAssertEqual(graph.edgeCount, 2)
@@ -104,7 +106,7 @@ class GriftKitTests: XCTestCase {
     func testStructWithFunctionParametersShowsParametersProperly() throws {
         let code = "struct Thing { func foo(d: Double) { } }"
 
-        let graph = try GraphBuilder(structures: structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
@@ -114,7 +116,7 @@ class GriftKitTests: XCTestCase {
     func testClassWithFunctionParametersShowsParametersProperly() throws {
         let code = "class Thing { func foo(d: Double) { } }"
 
-        let graph = try GraphBuilder(structures: structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
@@ -124,7 +126,7 @@ class GriftKitTests: XCTestCase {
     func testEnumWithFunctionParametersShowsParametersProperly() throws {
         let code = "enum Thing { func foo(d: Double) { } }"
 
-        let graph = try GraphBuilder(structures: structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
@@ -134,7 +136,7 @@ class GriftKitTests: XCTestCase {
     func testProtocolWithFunctionParametersShowsParametersProperly() throws {
         let code = "protocol Thing { func foo(d: Double) }"
 
-        let graph = try GraphBuilder(structures: structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
@@ -144,7 +146,7 @@ class GriftKitTests: XCTestCase {
     func testTwoReferencesToTheSameTypeOnlyYieldOneEdge() throws {
         let code = "struct Thing { var x: String; var y: String }"
 
-        let graph = try GraphBuilder(structures: structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
@@ -154,7 +156,7 @@ class GriftKitTests: XCTestCase {
     func testThatGenericTypesPointToBothTypeAndGenericTypeParameter() throws {
         let code = "struct Thing { var x: Array<String> }"
 
-        let graph = try GraphBuilder(structures: structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 3)
         XCTAssertEqual(graph.edgeCount, 2)
@@ -166,7 +168,7 @@ class GriftKitTests: XCTestCase {
     func testArrayTypesAreNormalizedToNotHaveBrackets() throws {
         let code = "struct Thing { var x: [String] }"
 
-        let graph = try GraphBuilder(structures: structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 3)
         XCTAssertEqual(graph.edgeCount, 2)
@@ -178,7 +180,7 @@ class GriftKitTests: XCTestCase {
     func testThatGenericTypesWithMultipleGenericParamsPointToEachParameter() throws {
         let code = "struct Thing { var x: Dictionary<String, Int> }"
 
-        let graph = try GraphBuilder(structures: structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 4)
         XCTAssertEqual(graph.edgeCount, 3)
@@ -191,7 +193,7 @@ class GriftKitTests: XCTestCase {
     func testThatDictionaryTypesAreNormalizedToNotHaveBracketsOrColons() throws {
         let code = "struct Thing { var x: [String: Int] }"
 
-        let graph = try GraphBuilder(structures: structures(for: code)).build()
+        let graph = try buildGraph(for: code)
 
         XCTAssertEqual(graph.vertexCount, 4)
         XCTAssertEqual(graph.edgeCount, 3)
@@ -204,7 +206,7 @@ class GriftKitTests: XCTestCase {
 //    func testStructWithFunctionShowsFunctionReturnTypeProperly() throws {
 //        let code = "struct Thing { func foo() -> Double { return 0 } }"
 //
-//        let graph = try GraphBuilder(structures: structures(for: code)).build()
+//        let graph = try buildGraph(for: code)
 //
 //        XCTAssertEqual(graph.vertexCount, 2)
 //        XCTAssertEqual(graph.edgeCount, 1)

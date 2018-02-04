@@ -79,7 +79,7 @@ class GraphvizTests: XCTestCase {
         XCTAssertEqual(graph.description, "graph { subgraph cluster_blah { } }")
     }
 
-    func testSerializingBasicSwiftGraph() {
+    func testSerializingBasicGraph() {
         let graph = UnweightedGraph<String>()
         _ = graph.addVertex("A")
         _ = graph.addVertex("B")

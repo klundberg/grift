@@ -28,13 +28,13 @@ struct DependenciesCommand: CommandProtocol {
     func run(_ options: DependenciesOptions) -> Result<(), GriftError> {
         do {
             let structures = try GriftKit.structures(at: options.path)
-            let graph = GraphBuilder(structures: structures).build()
+            let graph = GraphBuilder.build(structures: structures)
             let dot = graph.graphviz()
             print(dot.description)
 
-            return Result(())
+            return .success(())
         } catch {
-            return Result(error: GriftError(message: "\(error)"))
+            return .failure(GriftError(message: "\(error)"))
         }
     }
 }

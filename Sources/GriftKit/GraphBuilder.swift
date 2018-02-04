@@ -5,23 +5,25 @@ import Graphviz
 
 public typealias Vertex = String
 
-public struct GraphBuilder {
+public enum GraphBuilder {
 
-    private var structures: [Structure]
-    private var graph = UnweightedGraph<Vertex>()
-
-    public init(structures: [Structure]) {
-        self.structures = structures
-    }
-
-    public func build() -> UnweightedGraph<Vertex> {
+    public static func build(structures: [Structure]) -> UnweightedGraph<Vertex> {
+        let graph = UnweightedGraph<Vertex>()
         for structure in structures {
-            populateGraph(from: structure.dictionary)
+            populate(graph: graph, from: structure.dictionary)
         }
         return graph
     }
 
-    private func populateGraph(from dict: [String: SourceKitRepresentable], forVertexNamed name: String = "") {
+    public static func build(docs: [SwiftDocs]) -> UnweightedGraph<Vertex> {
+        let graph = UnweightedGraph<Vertex>()
+        for doc in docs {
+            populate(graph: graph, from: doc.docsDictionary)
+        }
+        return graph
+    }
+
+    private static func populate(graph: UnweightedGraph<Vertex>, from dict: [String: SourceKitRepresentable], forVertexNamed name: String = "") {
 
         var name = name
 
@@ -43,12 +45,12 @@ public struct GraphBuilder {
 
         if let substructures = dict[.substructure] as? [SourceKitRepresentable] {
             for case let substructureDict as [String: SourceKitRepresentable] in substructures {
-                populateGraph(from: substructureDict, forVertexNamed: name)
+                populate(graph: graph, from: substructureDict, forVertexNamed: name)
             }
         }
     }
 
-    private func normalize(typeWithName name: String) -> String {
+    private static func normalize(typeWithName name: String) -> String {
         let dictionarShorthandRegex = try! NSRegularExpression(pattern: "\\[\\s*(.+)\\s*:\\s*(.+)\\s*]", options: [])
 
         let dictionaryNormalizedTypeName = dictionarShorthandRegex.stringByReplacingMatches(in: name,
@@ -63,25 +65,11 @@ public struct GraphBuilder {
                                                             withTemplate: "Array<$1>")
     }
 
-    private func splitSingleTypeNames(fromComposedTypeName name: String) -> [String] {
+    private static func splitSingleTypeNames(fromComposedTypeName name: String) -> [String] {
         let separatorCharacters = CharacterSet(charactersIn: "><,")
 
         return name.unicodeScalars.split(whereSeparator: {
             return separatorCharacters.contains($0)
         }).map({ String($0).trimmingCharacters(in: CharacterSet.whitespaces) })
-    }
-
-    private func kindIsEnclosingType(kind: SourceKitRepresentable?) -> Bool {
-        guard let kind = kind as? String,
-            let declarationKind = SwiftDeclarationKind(rawValue: kind) else {
-                return false
-        }
-
-        switch declarationKind {
-        case .`struct`, .`class`, .`enum`, .`protocol`:
-            return true
-        default:
-            return false
-        }
     }
 }

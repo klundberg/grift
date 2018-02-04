@@ -31,6 +31,10 @@ private func filesInDirectory(at path: String, using fileManager: FileManager = 
 //    })
 }
 
+public func docs(for code: String) throws -> [SwiftDocs] {
+    return SwiftDocs(file: File(contents: code), arguments: []).map({ [$0] }) ?? []
+}
+
 public func structures(at path: String, using fileManager: FileManager = .default) throws -> [Structure] {
 
     let filePaths = try filesInDirectory(at: path, using: fileManager)
@@ -58,7 +62,7 @@ extension Dictionary {
     }
 }
 
-private func kindIsEnclosingType(kind: SourceKitRepresentable?) -> Bool {
+func kindIsEnclosingType(kind: SourceKitRepresentable?) -> Bool {
     guard let kind = kind as? String,
         let declarationKind = SwiftDeclarationKind(rawValue: kind) else {
             return false
@@ -70,36 +74,4 @@ private func kindIsEnclosingType(kind: SourceKitRepresentable?) -> Bool {
     default:
         return false
     }
-}
-
-// MARK: - Graphviz stuff
-
-extension Graphviz {
-    init(structures: [Structure]) {
-        self.init(type: .directed, statements: structures.flatMap({ createStatements(dict: $0.dictionary) }))
-    }
-}
-
-private func createStatements(dict: [String: SourceKitRepresentable], name: String = "") -> [Statement] {
-
-    var statements: [Statement] = []
-    var name = name
-
-    if let typeName = dict[.typeName] as? String, !name.isEmpty {
-        statements.append(Node(name) >> Node(typeName))
-    }
-
-    if let newName = dict[.name] as? String, kindIsEnclosingType(kind: dict[.kind]) {
-        name = newName
-    }
-
-    if let substructures = dict[.substructure] as? [SourceKitRepresentable] {
-        for substructure in substructures {
-            if let substructureDict = substructure as? [String: SourceKitRepresentable] {
-                statements.append(contentsOf: createStatements(dict: substructureDict, name: name))
-            }
-        }
-    }
-
-    return statements
 }
