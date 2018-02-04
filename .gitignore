@@ -101,8 +101,8 @@ fastlane/test_output
 ### Xcode ###
 build
 *.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcworkspace/contents.xcworkspacedata
+#!*.xcodeproj/project.pbxproj
+#!*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
 # End of https://www.gitignore.io/api/xcode,swift,macos
