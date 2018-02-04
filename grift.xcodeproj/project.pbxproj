@@ -1,0 +1,2681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"grift::griftPackageTests::ProductTarget" /* griftPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_429 /* Build configuration list for PBXAggregateTarget "griftPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_432 /* PBXTargetDependency */,
+			);
+			name = griftPackageTests;
+			productName = griftPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_154 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_160 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* Package.swift */; };
+		OBJ_166 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* Package.swift */; };
+		OBJ_172 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* Package.swift */; };
+		OBJ_178 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* Package.swift */; };
+		OBJ_184 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* Package.swift */; };
+		OBJ_190 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* Package.swift */; };
+		OBJ_196 /* GraphvizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* GraphvizTests.swift */; };
+		OBJ_197 /* GriftKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* GriftKitTests.swift */; };
+		OBJ_199 /* GriftKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "grift::GriftKit::Product" /* GriftKit.framework */; };
+		OBJ_200 /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Commandant::Commandant::Product" /* Commandant.framework */; };
+		OBJ_201 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
+		OBJ_202 /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SourceKitten::SourceKittenFramework::Product" /* SourceKittenFramework.framework */; };
+		OBJ_203 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::Yams::Product" /* Yams.framework */; };
+		OBJ_204 /* CYaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::CYaml::Product" /* CYaml.framework */; };
+		OBJ_205 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SWXMLHash::SWXMLHash::Product" /* SWXMLHash.framework */; };
+		OBJ_206 /* SwiftGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftGraph::SwiftGraph::Product" /* SwiftGraph.framework */; };
+		OBJ_230 /* DependenciesCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* DependenciesCommand.swift */; };
+		OBJ_231 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* main.swift */; };
+		OBJ_233 /* GriftKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "grift::GriftKit::Product" /* GriftKit.framework */; };
+		OBJ_234 /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Commandant::Commandant::Product" /* Commandant.framework */; };
+		OBJ_235 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
+		OBJ_236 /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SourceKitten::SourceKittenFramework::Product" /* SourceKittenFramework.framework */; };
+		OBJ_237 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::Yams::Product" /* Yams.framework */; };
+		OBJ_238 /* CYaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::CYaml::Product" /* CYaml.framework */; };
+		OBJ_239 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SWXMLHash::SWXMLHash::Product" /* SWXMLHash.framework */; };
+		OBJ_240 /* SwiftGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftGraph::SwiftGraph::Product" /* SwiftGraph.framework */; };
+		OBJ_254 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Graph.swift */; };
+		OBJ_255 /* GraphBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* GraphBuilder.swift */; };
+		OBJ_256 /* GraphStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* GraphStructure.swift */; };
+		OBJ_257 /* Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Structure.swift */; };
+		OBJ_258 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* TestFile.swift */; };
+		OBJ_260 /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Commandant::Commandant::Product" /* Commandant.framework */; };
+		OBJ_261 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
+		OBJ_262 /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SourceKitten::SourceKittenFramework::Product" /* SourceKittenFramework.framework */; };
+		OBJ_263 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::Yams::Product" /* Yams.framework */; };
+		OBJ_264 /* CYaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::CYaml::Product" /* CYaml.framework */; };
+		OBJ_265 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SWXMLHash::SWXMLHash::Product" /* SWXMLHash.framework */; };
+		OBJ_266 /* SwiftGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftGraph::SwiftGraph::Product" /* SwiftGraph.framework */; };
+		OBJ_279 /* CompleteCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* CompleteCommand.swift */; };
+		OBJ_280 /* DocCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* DocCommand.swift */; };
+		OBJ_281 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Errors.swift */; };
+		OBJ_282 /* FormatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* FormatCommand.swift */; };
+		OBJ_283 /* IndexCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* IndexCommand.swift */; };
+		OBJ_284 /* StructureCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* StructureCommand.swift */; };
+		OBJ_285 /* SyntaxCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* SyntaxCommand.swift */; };
+		OBJ_286 /* VersionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* VersionCommand.swift */; };
+		OBJ_287 /* YamlRequestCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* YamlRequestCommand.swift */; };
+		OBJ_288 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* main.swift */; };
+		OBJ_290 /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Commandant::Commandant::Product" /* Commandant.framework */; };
+		OBJ_291 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
+		OBJ_292 /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SourceKitten::SourceKittenFramework::Product" /* SourceKittenFramework.framework */; };
+		OBJ_293 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::Yams::Product" /* Yams.framework */; };
+		OBJ_294 /* CYaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::CYaml::Product" /* CYaml.framework */; };
+		OBJ_295 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SWXMLHash::SWXMLHash::Product" /* SWXMLHash.framework */; };
+		OBJ_306 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* Argument.swift */; };
+		OBJ_307 /* ArgumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* ArgumentParser.swift */; };
+		OBJ_308 /* ArgumentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* ArgumentProtocol.swift */; };
+		OBJ_309 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* Command.swift */; };
+		OBJ_310 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* Errors.swift */; };
+		OBJ_311 /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* HelpCommand.swift */; };
+		OBJ_312 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* Option.swift */; };
+		OBJ_313 /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* OrderedSet.swift */; };
+		OBJ_314 /* Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* Switch.swift */; };
+		OBJ_316 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
+		OBJ_322 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_118 /* Result.swift */; };
+		OBJ_323 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* ResultProtocol.swift */; };
+		OBJ_329 /* Clang+SourceKitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Clang+SourceKitten.swift */; };
+		OBJ_330 /* ClangTranslationUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* ClangTranslationUnit.swift */; };
+		OBJ_331 /* CodeCompletionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* CodeCompletionItem.swift */; };
+		OBJ_332 /* Dictionary+Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Dictionary+Merge.swift */; };
+		OBJ_333 /* Documentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Documentation.swift */; };
+		OBJ_334 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* File.swift */; };
+		OBJ_335 /* JSONOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* JSONOutput.swift */; };
+		OBJ_336 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* Language.swift */; };
+		OBJ_337 /* LinuxCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* LinuxCompatibility.swift */; };
+		OBJ_338 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Module.swift */; };
+		OBJ_339 /* ObjCDeclarationKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* ObjCDeclarationKind.swift */; };
+		OBJ_340 /* OffsetMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* OffsetMap.swift */; };
+		OBJ_341 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Parameter.swift */; };
+		OBJ_342 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Request.swift */; };
+		OBJ_343 /* SourceDeclaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* SourceDeclaration.swift */; };
+		OBJ_344 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* SourceLocation.swift */; };
+		OBJ_345 /* StatementKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* StatementKind.swift */; };
+		OBJ_346 /* String+SourceKitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* String+SourceKitten.swift */; };
+		OBJ_347 /* Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Structure.swift */; };
+		OBJ_348 /* SwiftDeclarationKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* SwiftDeclarationKind.swift */; };
+		OBJ_349 /* SwiftDocKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* SwiftDocKey.swift */; };
+		OBJ_350 /* SwiftDocs.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* SwiftDocs.swift */; };
+		OBJ_351 /* SwiftLangSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* SwiftLangSyntax.swift */; };
+		OBJ_352 /* SyntaxKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* SyntaxKind.swift */; };
+		OBJ_353 /* SyntaxMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* SyntaxMap.swift */; };
+		OBJ_354 /* SyntaxToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* SyntaxToken.swift */; };
+		OBJ_355 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Text.swift */; };
+		OBJ_356 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Version.swift */; };
+		OBJ_357 /* Xcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Xcode.swift */; };
+		OBJ_358 /* library_wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* library_wrapper.swift */; };
+		OBJ_359 /* library_wrapper_CXString.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* library_wrapper_CXString.swift */; };
+		OBJ_360 /* library_wrapper_Documentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* library_wrapper_Documentation.swift */; };
+		OBJ_361 /* library_wrapper_Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* library_wrapper_Index.swift */; };
+		OBJ_362 /* library_wrapper_sourcekitd.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* library_wrapper_sourcekitd.swift */; };
+		OBJ_364 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::Yams::Product" /* Yams.framework */; };
+		OBJ_365 /* CYaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::CYaml::Product" /* CYaml.framework */; };
+		OBJ_366 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SWXMLHash::SWXMLHash::Product" /* SWXMLHash.framework */; };
+		OBJ_374 /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Constructor.swift */; };
+		OBJ_375 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Decoder.swift */; };
+		OBJ_376 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* Emitter.swift */; };
+		OBJ_377 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* Encoder.swift */; };
+		OBJ_378 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* Mark.swift */; };
+		OBJ_379 /* Node.Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* Node.Mapping.swift */; };
+		OBJ_380 /* Node.Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* Node.Scalar.swift */; };
+		OBJ_381 /* Node.Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* Node.Sequence.swift */; };
+		OBJ_382 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* Node.swift */; };
+		OBJ_383 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* Parser.swift */; };
+		OBJ_384 /* Representer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* Representer.swift */; };
+		OBJ_385 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* Resolver.swift */; };
+		OBJ_386 /* String+Yams.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* String+Yams.swift */; };
+		OBJ_387 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* Tag.swift */; };
+		OBJ_388 /* YamlError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* YamlError.swift */; };
+		OBJ_390 /* CYaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yams::CYaml::Product" /* CYaml.framework */; };
+		OBJ_396 /* api.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* api.c */; };
+		OBJ_397 /* emitter.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* emitter.c */; };
+		OBJ_398 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* parser.c */; };
+		OBJ_399 /* reader.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* reader.c */; };
+		OBJ_400 /* scanner.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* scanner.c */; };
+		OBJ_401 /* writer.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* writer.c */; };
+		OBJ_407 /* SWXMLHash+TypeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* SWXMLHash+TypeConversion.swift */; };
+		OBJ_408 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* SWXMLHash.swift */; };
+		OBJ_414 /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Cycle.swift */; };
+		OBJ_415 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* Edge.swift */; };
+		OBJ_416 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_125 /* Graph.swift */; };
+		OBJ_417 /* MST.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_126 /* MST.swift */; };
+		OBJ_418 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_127 /* Queue.swift */; };
+		OBJ_419 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_128 /* Search.swift */; };
+		OBJ_420 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_129 /* Sort.swift */; };
+		OBJ_421 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_130 /* Stack.swift */; };
+		OBJ_422 /* SwiftPriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_131 /* SwiftPriorityQueue.swift */; };
+		OBJ_423 /* UnweightedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_132 /* UnweightedEdge.swift */; };
+		OBJ_424 /* UnweightedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_133 /* UnweightedGraph.swift */; };
+		OBJ_425 /* WeightedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_134 /* WeightedEdge.swift */; };
+		OBJ_426 /* WeightedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* WeightedGraph.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00879CEA2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "grift::GriftKit";
+			remoteInfo = GriftKit;
+		};
+		00879CEB2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SourceKitten::sourcekitten";
+			remoteInfo = sourcekitten;
+		};
+		00879CEC2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Commandant::Commandant";
+			remoteInfo = Commandant;
+		};
+		00879CED2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Result::Result";
+			remoteInfo = Result;
+		};
+		00879CEE2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Result::Result";
+			remoteInfo = Result;
+		};
+		00879CEF2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SourceKitten::SourceKittenFramework";
+			remoteInfo = SourceKittenFramework;
+		};
+		00879CF02026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yams::Yams";
+			remoteInfo = Yams;
+		};
+		00879CF12026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yams::CYaml";
+			remoteInfo = CYaml;
+		};
+		00879CF22026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yams::CYaml";
+			remoteInfo = CYaml;
+		};
+		00879CF32026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SWXMLHash::SWXMLHash";
+			remoteInfo = SWXMLHash;
+		};
+		00879CF42026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yams::Yams";
+			remoteInfo = Yams;
+		};
+		00879CF52026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yams::CYaml";
+			remoteInfo = CYaml;
+		};
+		00879CF62026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SWXMLHash::SWXMLHash";
+			remoteInfo = SWXMLHash;
+		};
+		00879CF72026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Commandant::Commandant";
+			remoteInfo = Commandant;
+		};
+		00879CF82026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Result::Result";
+			remoteInfo = Result;
+		};
+		00879CF92026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SourceKitten::SourceKittenFramework";
+			remoteInfo = SourceKittenFramework;
+		};
+		00879CFA2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yams::Yams";
+			remoteInfo = Yams;
+		};
+		00879CFB2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yams::CYaml";
+			remoteInfo = CYaml;
+		};
+		00879CFC2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SWXMLHash::SWXMLHash";
+			remoteInfo = SWXMLHash;
+		};
+		00879CFD2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftGraph::SwiftGraph";
+			remoteInfo = SwiftGraph;
+		};
+		00879CFE2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SourceKitten::sourcekitten";
+			remoteInfo = sourcekitten;
+		};
+		00879CFF2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Commandant::Commandant";
+			remoteInfo = Commandant;
+		};
+		00879D002026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Result::Result";
+			remoteInfo = Result;
+		};
+		00879D012026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SourceKitten::SourceKittenFramework";
+			remoteInfo = SourceKittenFramework;
+		};
+		00879D022026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yams::Yams";
+			remoteInfo = Yams;
+		};
+		00879D032026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yams::CYaml";
+			remoteInfo = CYaml;
+		};
+		00879D042026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SWXMLHash::SWXMLHash";
+			remoteInfo = SWXMLHash;
+		};
+		00879D052026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftGraph::SwiftGraph";
+			remoteInfo = SwiftGraph;
+		};
+		00879D062026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "grift::GriftKit";
+			remoteInfo = GriftKit;
+		};
+		00879D072026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SourceKitten::sourcekitten";
+			remoteInfo = sourcekitten;
+		};
+		00879D082026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Commandant::Commandant";
+			remoteInfo = Commandant;
+		};
+		00879D092026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Result::Result";
+			remoteInfo = Result;
+		};
+		00879D0A2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SourceKitten::SourceKittenFramework";
+			remoteInfo = SourceKittenFramework;
+		};
+		00879D0B2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yams::Yams";
+			remoteInfo = Yams;
+		};
+		00879D0C2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yams::CYaml";
+			remoteInfo = CYaml;
+		};
+		00879D0D2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SWXMLHash::SWXMLHash";
+			remoteInfo = SWXMLHash;
+		};
+		00879D0E2026A61C000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftGraph::SwiftGraph";
+			remoteInfo = SwiftGraph;
+		};
+		00879D0F2026A61E000D10AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "grift::GriftKitTests";
+			remoteInfo = GriftKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"Commandant::Commandant::Product" /* Commandant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Commandant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* GraphBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphBuilder.swift; sourceTree = "<group>"; };
+		OBJ_101 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/klundberg/workspaces/grift/.build/checkouts/SWXMLHash.git-5776748636326364470/Package.swift"; sourceTree = "<group>"; };
+		OBJ_102 /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
+		OBJ_103 /* SWXMLHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
+		OBJ_106 /* Argument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Argument.swift; sourceTree = "<group>"; };
+		OBJ_107 /* ArgumentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentParser.swift; sourceTree = "<group>"; };
+		OBJ_108 /* ArgumentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentProtocol.swift; sourceTree = "<group>"; };
+		OBJ_109 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		OBJ_11 /* GraphStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphStructure.swift; sourceTree = "<group>"; };
+		OBJ_110 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		OBJ_111 /* HelpCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCommand.swift; sourceTree = "<group>"; };
+		OBJ_112 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		OBJ_113 /* OrderedSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
+		OBJ_114 /* Switch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switch.swift; sourceTree = "<group>"; };
+		OBJ_115 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/klundberg/workspaces/grift/.build/checkouts/Commandant.git-3062511658102057207/Package.swift"; sourceTree = "<group>"; };
+		OBJ_118 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		OBJ_119 /* ResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
+		OBJ_12 /* Structure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structure.swift; sourceTree = "<group>"; };
+		OBJ_120 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/klundberg/workspaces/grift/.build/checkouts/Result.git-8684547452332391156/Package.swift"; sourceTree = "<group>"; };
+		OBJ_123 /* Cycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cycle.swift; sourceTree = "<group>"; };
+		OBJ_124 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		OBJ_125 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		OBJ_126 /* MST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MST.swift; sourceTree = "<group>"; };
+		OBJ_127 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		OBJ_128 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		OBJ_129 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		OBJ_13 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
+		OBJ_130 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		OBJ_131 /* SwiftPriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPriorityQueue.swift; sourceTree = "<group>"; };
+		OBJ_132 /* UnweightedEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnweightedEdge.swift; sourceTree = "<group>"; };
+		OBJ_133 /* UnweightedGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnweightedGraph.swift; sourceTree = "<group>"; };
+		OBJ_134 /* WeightedEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedEdge.swift; sourceTree = "<group>"; };
+		OBJ_135 /* WeightedGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedGraph.swift; sourceTree = "<group>"; };
+		OBJ_136 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/klundberg/workspaces/grift/.build/checkouts/SwiftGraph.git-3268834182182477747/Package.swift"; sourceTree = "<group>"; };
+		OBJ_15 /* DependenciesCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesCommand.swift; sourceTree = "<group>"; };
+		OBJ_16 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_19 /* GraphvizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphvizTests.swift; sourceTree = "<group>"; };
+		OBJ_20 /* GriftKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GriftKitTests.swift; sourceTree = "<group>"; };
+		OBJ_24 /* Clang+SourceKitten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clang+SourceKitten.swift"; sourceTree = "<group>"; };
+		OBJ_25 /* ClangTranslationUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClangTranslationUnit.swift; sourceTree = "<group>"; };
+		OBJ_26 /* CodeCompletionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCompletionItem.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Dictionary+Merge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Merge.swift"; sourceTree = "<group>"; };
+		OBJ_28 /* Documentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documentation.swift; sourceTree = "<group>"; };
+		OBJ_29 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		OBJ_30 /* JSONOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONOutput.swift; sourceTree = "<group>"; };
+		OBJ_31 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		OBJ_32 /* LinuxCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxCompatibility.swift; sourceTree = "<group>"; };
+		OBJ_33 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		OBJ_34 /* ObjCDeclarationKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjCDeclarationKind.swift; sourceTree = "<group>"; };
+		OBJ_35 /* OffsetMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetMap.swift; sourceTree = "<group>"; };
+		OBJ_36 /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
+		OBJ_37 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		OBJ_38 /* SourceDeclaration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceDeclaration.swift; sourceTree = "<group>"; };
+		OBJ_39 /* SourceLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLocation.swift; sourceTree = "<group>"; };
+		OBJ_40 /* StatementKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementKind.swift; sourceTree = "<group>"; };
+		OBJ_41 /* String+SourceKitten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SourceKitten.swift"; sourceTree = "<group>"; };
+		OBJ_42 /* Structure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structure.swift; sourceTree = "<group>"; };
+		OBJ_43 /* SwiftDeclarationKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeclarationKind.swift; sourceTree = "<group>"; };
+		OBJ_44 /* SwiftDocKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDocKey.swift; sourceTree = "<group>"; };
+		OBJ_45 /* SwiftDocs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDocs.swift; sourceTree = "<group>"; };
+		OBJ_46 /* SwiftLangSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLangSyntax.swift; sourceTree = "<group>"; };
+		OBJ_47 /* SyntaxKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxKind.swift; sourceTree = "<group>"; };
+		OBJ_48 /* SyntaxMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxMap.swift; sourceTree = "<group>"; };
+		OBJ_49 /* SyntaxToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxToken.swift; sourceTree = "<group>"; };
+		OBJ_50 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		OBJ_51 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		OBJ_52 /* Xcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xcode.swift; sourceTree = "<group>"; };
+		OBJ_53 /* library_wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = library_wrapper.swift; sourceTree = "<group>"; };
+		OBJ_54 /* library_wrapper_CXString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = library_wrapper_CXString.swift; sourceTree = "<group>"; };
+		OBJ_55 /* library_wrapper_Documentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = library_wrapper_Documentation.swift; sourceTree = "<group>"; };
+		OBJ_56 /* library_wrapper_Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = library_wrapper_Index.swift; sourceTree = "<group>"; };
+		OBJ_57 /* library_wrapper_sourcekitd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = library_wrapper_sourcekitd.swift; sourceTree = "<group>"; };
+		OBJ_59 /* CompleteCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteCommand.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* DocCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocCommand.swift; sourceTree = "<group>"; };
+		OBJ_61 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		OBJ_62 /* FormatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatCommand.swift; sourceTree = "<group>"; };
+		OBJ_63 /* IndexCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCommand.swift; sourceTree = "<group>"; };
+		OBJ_64 /* StructureCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureCommand.swift; sourceTree = "<group>"; };
+		OBJ_65 /* SyntaxCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxCommand.swift; sourceTree = "<group>"; };
+		OBJ_66 /* VersionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionCommand.swift; sourceTree = "<group>"; };
+		OBJ_67 /* YamlRequestCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlRequestCommand.swift; sourceTree = "<group>"; };
+		OBJ_68 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_69 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/klundberg/workspaces/grift/.build/checkouts/SourceKitten.git-6484296299232452758/Package.swift"; sourceTree = "<group>"; };
+		OBJ_73 /* api.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = api.c; sourceTree = "<group>"; };
+		OBJ_74 /* emitter.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = emitter.c; sourceTree = "<group>"; };
+		OBJ_75 /* parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
+		OBJ_76 /* reader.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reader.c; sourceTree = "<group>"; };
+		OBJ_77 /* scanner.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = scanner.c; sourceTree = "<group>"; };
+		OBJ_78 /* writer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = writer.c; sourceTree = "<group>"; };
+		OBJ_80 /* CYaml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYaml.h; sourceTree = "<group>"; };
+		OBJ_81 /* yaml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yaml.h; sourceTree = "<group>"; };
+		OBJ_82 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = /Users/klundberg/workspaces/grift/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap; sourceTree = "<group>"; };
+		OBJ_84 /* Constructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructor.swift; sourceTree = "<group>"; };
+		OBJ_85 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		OBJ_86 /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		OBJ_87 /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
+		OBJ_88 /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
+		OBJ_89 /* Node.Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.Mapping.swift; sourceTree = "<group>"; };
+		OBJ_9 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		OBJ_90 /* Node.Scalar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.Scalar.swift; sourceTree = "<group>"; };
+		OBJ_91 /* Node.Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.Sequence.swift; sourceTree = "<group>"; };
+		OBJ_92 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		OBJ_93 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		OBJ_94 /* Representer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representer.swift; sourceTree = "<group>"; };
+		OBJ_95 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		OBJ_96 /* String+Yams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Yams.swift"; sourceTree = "<group>"; };
+		OBJ_97 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		OBJ_98 /* YamlError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlError.swift; sourceTree = "<group>"; };
+		OBJ_99 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/klundberg/workspaces/grift/.build/checkouts/Yams.git-8068124914099325722/Package.swift"; sourceTree = "<group>"; };
+		"Result::Result::Product" /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SWXMLHash::SWXMLHash::Product" /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SourceKitten::SourceKittenFramework::Product" /* SourceKittenFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceKittenFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SourceKitten::sourcekitten::Product" /* sourcekitten */ = {isa = PBXFileReference; lastKnownFileType = text; path = sourcekitten; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiftGraph::SwiftGraph::Product" /* SwiftGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Yams::CYaml::Product" /* CYaml.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CYaml.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Yams::Yams::Product" /* Yams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Yams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"grift::GriftKit::Product" /* GriftKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GriftKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"grift::GriftKitTests::Product" /* GriftKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GriftKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"grift::grift::Product" /* grift */ = {isa = PBXFileReference; lastKnownFileType = text; path = grift; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_199 /* GriftKit.framework in Frameworks */,
+				OBJ_200 /* Commandant.framework in Frameworks */,
+				OBJ_201 /* Result.framework in Frameworks */,
+				OBJ_202 /* SourceKittenFramework.framework in Frameworks */,
+				OBJ_203 /* Yams.framework in Frameworks */,
+				OBJ_204 /* CYaml.framework in Frameworks */,
+				OBJ_205 /* SWXMLHash.framework in Frameworks */,
+				OBJ_206 /* SwiftGraph.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_233 /* GriftKit.framework in Frameworks */,
+				OBJ_234 /* Commandant.framework in Frameworks */,
+				OBJ_235 /* Result.framework in Frameworks */,
+				OBJ_236 /* SourceKittenFramework.framework in Frameworks */,
+				OBJ_237 /* Yams.framework in Frameworks */,
+				OBJ_238 /* CYaml.framework in Frameworks */,
+				OBJ_239 /* SWXMLHash.framework in Frameworks */,
+				OBJ_240 /* SwiftGraph.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_260 /* Commandant.framework in Frameworks */,
+				OBJ_261 /* Result.framework in Frameworks */,
+				OBJ_262 /* SourceKittenFramework.framework in Frameworks */,
+				OBJ_263 /* Yams.framework in Frameworks */,
+				OBJ_264 /* CYaml.framework in Frameworks */,
+				OBJ_265 /* SWXMLHash.framework in Frameworks */,
+				OBJ_266 /* SwiftGraph.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_289 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_290 /* Commandant.framework in Frameworks */,
+				OBJ_291 /* Result.framework in Frameworks */,
+				OBJ_292 /* SourceKittenFramework.framework in Frameworks */,
+				OBJ_293 /* Yams.framework in Frameworks */,
+				OBJ_294 /* CYaml.framework in Frameworks */,
+				OBJ_295 /* SWXMLHash.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_315 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_316 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_324 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_363 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_364 /* Yams.framework in Frameworks */,
+				OBJ_365 /* CYaml.framework in Frameworks */,
+				OBJ_366 /* SWXMLHash.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_390 /* CYaml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_402 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_409 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_427 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_100 /* SWXMLHash 4.3.6 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_101 /* Package.swift */,
+				OBJ_102 /* SWXMLHash+TypeConversion.swift */,
+				OBJ_103 /* SWXMLHash.swift */,
+			);
+			name = "SWXMLHash 4.3.6";
+			path = ".build/checkouts/SWXMLHash.git-5776748636326364470/Source";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_104 /* Commandant 0.13.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_105 /* Commandant */,
+				OBJ_115 /* Package.swift */,
+			);
+			name = "Commandant 0.13.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_105 /* Commandant */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_106 /* Argument.swift */,
+				OBJ_107 /* ArgumentParser.swift */,
+				OBJ_108 /* ArgumentProtocol.swift */,
+				OBJ_109 /* Command.swift */,
+				OBJ_110 /* Errors.swift */,
+				OBJ_111 /* HelpCommand.swift */,
+				OBJ_112 /* Option.swift */,
+				OBJ_113 /* OrderedSet.swift */,
+				OBJ_114 /* Switch.swift */,
+			);
+			name = Commandant;
+			path = ".build/checkouts/Commandant.git-3062511658102057207/Sources/Commandant";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_116 /* Result 3.2.4 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_117 /* Result */,
+				OBJ_120 /* Package.swift */,
+			);
+			name = "Result 3.2.4";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_117 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_118 /* Result.swift */,
+				OBJ_119 /* ResultProtocol.swift */,
+			);
+			name = Result;
+			path = ".build/checkouts/Result.git-8684547452332391156/Result";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_121 /* SwiftGraph 1.5.1 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_122 /* SwiftGraph */,
+				OBJ_136 /* Package.swift */,
+			);
+			name = "SwiftGraph 1.5.1";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_122 /* SwiftGraph */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_123 /* Cycle.swift */,
+				OBJ_124 /* Edge.swift */,
+				OBJ_125 /* Graph.swift */,
+				OBJ_126 /* MST.swift */,
+				OBJ_127 /* Queue.swift */,
+				OBJ_128 /* Search.swift */,
+				OBJ_129 /* Sort.swift */,
+				OBJ_130 /* Stack.swift */,
+				OBJ_131 /* SwiftPriorityQueue.swift */,
+				OBJ_132 /* UnweightedEdge.swift */,
+				OBJ_133 /* UnweightedGraph.swift */,
+				OBJ_134 /* WeightedEdge.swift */,
+				OBJ_135 /* WeightedGraph.swift */,
+			);
+			name = SwiftGraph;
+			path = ".build/checkouts/SwiftGraph.git-3268834182182477747/Sources/SwiftGraph";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_137 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"grift::GriftKitTests::Product" /* GriftKitTests.xctest */,
+				"grift::grift::Product" /* grift */,
+				"grift::GriftKit::Product" /* GriftKit.framework */,
+				"SourceKitten::sourcekitten::Product" /* sourcekitten */,
+				"Commandant::Commandant::Product" /* Commandant.framework */,
+				"Result::Result::Product" /* Result.framework */,
+				"SourceKitten::SourceKittenFramework::Product" /* SourceKittenFramework.framework */,
+				"Yams::Yams::Product" /* Yams.framework */,
+				"Yams::CYaml::Product" /* CYaml.framework */,
+				"SWXMLHash::SWXMLHash::Product" /* SWXMLHash.framework */,
+				"SwiftGraph::SwiftGraph::Product" /* SwiftGraph.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_14 /* grift */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_15 /* DependenciesCommand.swift */,
+				OBJ_16 /* main.swift */,
+			);
+			name = grift;
+			path = Sources/grift;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_17 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_18 /* GriftKitTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_18 /* GriftKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* GraphvizTests.swift */,
+				OBJ_20 /* GriftKitTests.swift */,
+			);
+			name = GriftKitTests;
+			path = Tests/GriftKitTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_21 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_22 /* SourceKitten 0.19.1 */,
+				OBJ_70 /* Yams 0.5.0 */,
+				OBJ_100 /* SWXMLHash 4.3.6 */,
+				OBJ_104 /* Commandant 0.13.0 */,
+				OBJ_116 /* Result 3.2.4 */,
+				OBJ_121 /* SwiftGraph 1.5.1 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_22 /* SourceKitten 0.19.1 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* SourceKittenFramework */,
+				OBJ_58 /* sourcekitten */,
+				OBJ_69 /* Package.swift */,
+			);
+			name = "SourceKitten 0.19.1";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_23 /* SourceKittenFramework */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* Clang+SourceKitten.swift */,
+				OBJ_25 /* ClangTranslationUnit.swift */,
+				OBJ_26 /* CodeCompletionItem.swift */,
+				OBJ_27 /* Dictionary+Merge.swift */,
+				OBJ_28 /* Documentation.swift */,
+				OBJ_29 /* File.swift */,
+				OBJ_30 /* JSONOutput.swift */,
+				OBJ_31 /* Language.swift */,
+				OBJ_32 /* LinuxCompatibility.swift */,
+				OBJ_33 /* Module.swift */,
+				OBJ_34 /* ObjCDeclarationKind.swift */,
+				OBJ_35 /* OffsetMap.swift */,
+				OBJ_36 /* Parameter.swift */,
+				OBJ_37 /* Request.swift */,
+				OBJ_38 /* SourceDeclaration.swift */,
+				OBJ_39 /* SourceLocation.swift */,
+				OBJ_40 /* StatementKind.swift */,
+				OBJ_41 /* String+SourceKitten.swift */,
+				OBJ_42 /* Structure.swift */,
+				OBJ_43 /* SwiftDeclarationKind.swift */,
+				OBJ_44 /* SwiftDocKey.swift */,
+				OBJ_45 /* SwiftDocs.swift */,
+				OBJ_46 /* SwiftLangSyntax.swift */,
+				OBJ_47 /* SyntaxKind.swift */,
+				OBJ_48 /* SyntaxMap.swift */,
+				OBJ_49 /* SyntaxToken.swift */,
+				OBJ_50 /* Text.swift */,
+				OBJ_51 /* Version.swift */,
+				OBJ_52 /* Xcode.swift */,
+				OBJ_53 /* library_wrapper.swift */,
+				OBJ_54 /* library_wrapper_CXString.swift */,
+				OBJ_55 /* library_wrapper_Documentation.swift */,
+				OBJ_56 /* library_wrapper_Index.swift */,
+				OBJ_57 /* library_wrapper_sourcekitd.swift */,
+			);
+			name = SourceKittenFramework;
+			path = ".build/checkouts/SourceKitten.git-6484296299232452758/Source/SourceKittenFramework";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_17 /* Tests */,
+				OBJ_21 /* Dependencies */,
+				OBJ_137 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_58 /* sourcekitten */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_59 /* CompleteCommand.swift */,
+				OBJ_60 /* DocCommand.swift */,
+				OBJ_61 /* Errors.swift */,
+				OBJ_62 /* FormatCommand.swift */,
+				OBJ_63 /* IndexCommand.swift */,
+				OBJ_64 /* StructureCommand.swift */,
+				OBJ_65 /* SyntaxCommand.swift */,
+				OBJ_66 /* VersionCommand.swift */,
+				OBJ_67 /* YamlRequestCommand.swift */,
+				OBJ_68 /* main.swift */,
+			);
+			name = sourcekitten;
+			path = ".build/checkouts/SourceKitten.git-6484296299232452758/Source/sourcekitten";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* GriftKit */,
+				OBJ_14 /* grift */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_70 /* Yams 0.5.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_71 /* CYaml */,
+				OBJ_83 /* Yams */,
+				OBJ_99 /* Package.swift */,
+			);
+			name = "Yams 0.5.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_71 /* CYaml */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_72 /* src */,
+				OBJ_79 /* include */,
+			);
+			name = CYaml;
+			path = ".build/checkouts/Yams.git-8068124914099325722/Sources/CYaml";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_72 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_73 /* api.c */,
+				OBJ_74 /* emitter.c */,
+				OBJ_75 /* parser.c */,
+				OBJ_76 /* reader.c */,
+				OBJ_77 /* scanner.c */,
+				OBJ_78 /* writer.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		OBJ_79 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_80 /* CYaml.h */,
+				OBJ_81 /* yaml.h */,
+				OBJ_82 /* module.modulemap */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		OBJ_8 /* GriftKit */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Graph.swift */,
+				OBJ_10 /* GraphBuilder.swift */,
+				OBJ_11 /* GraphStructure.swift */,
+				OBJ_12 /* Structure.swift */,
+				OBJ_13 /* TestFile.swift */,
+			);
+			name = GriftKit;
+			path = Sources/GriftKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_83 /* Yams */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_84 /* Constructor.swift */,
+				OBJ_85 /* Decoder.swift */,
+				OBJ_86 /* Emitter.swift */,
+				OBJ_87 /* Encoder.swift */,
+				OBJ_88 /* Mark.swift */,
+				OBJ_89 /* Node.Mapping.swift */,
+				OBJ_90 /* Node.Scalar.swift */,
+				OBJ_91 /* Node.Sequence.swift */,
+				OBJ_92 /* Node.swift */,
+				OBJ_93 /* Parser.swift */,
+				OBJ_94 /* Representer.swift */,
+				OBJ_95 /* Resolver.swift */,
+				OBJ_96 /* String+Yams.swift */,
+				OBJ_97 /* Tag.swift */,
+				OBJ_98 /* YamlError.swift */,
+			);
+			name = Yams;
+			path = ".build/checkouts/Yams.git-8068124914099325722/Sources/Yams";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"Commandant::Commandant" /* Commandant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_302 /* Build configuration list for PBXNativeTarget "Commandant" */;
+			buildPhases = (
+				OBJ_305 /* Sources */,
+				OBJ_315 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_317 /* PBXTargetDependency */,
+			);
+			name = Commandant;
+			productName = Commandant;
+			productReference = "Commandant::Commandant::Product" /* Commandant.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Commandant::SwiftPMPackageDescription" /* CommandantPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_174 /* Build configuration list for PBXNativeTarget "CommandantPackageDescription" */;
+			buildPhases = (
+				OBJ_177 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommandantPackageDescription;
+			productName = CommandantPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Result::Result" /* Result */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_318 /* Build configuration list for PBXNativeTarget "Result" */;
+			buildPhases = (
+				OBJ_321 /* Sources */,
+				OBJ_324 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Result;
+			productName = Result;
+			productReference = "Result::Result::Product" /* Result.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Result::SwiftPMPackageDescription" /* ResultPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_180 /* Build configuration list for PBXNativeTarget "ResultPackageDescription" */;
+			buildPhases = (
+				OBJ_183 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ResultPackageDescription;
+			productName = ResultPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SWXMLHash::SWXMLHash" /* SWXMLHash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_403 /* Build configuration list for PBXNativeTarget "SWXMLHash" */;
+			buildPhases = (
+				OBJ_406 /* Sources */,
+				OBJ_409 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SWXMLHash;
+			productName = SWXMLHash;
+			productReference = "SWXMLHash::SWXMLHash::Product" /* SWXMLHash.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"SWXMLHash::SwiftPMPackageDescription" /* SWXMLHashPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_168 /* Build configuration list for PBXNativeTarget "SWXMLHashPackageDescription" */;
+			buildPhases = (
+				OBJ_171 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SWXMLHashPackageDescription;
+			productName = SWXMLHashPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SourceKitten::SourceKittenFramework" /* SourceKittenFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_325 /* Build configuration list for PBXNativeTarget "SourceKittenFramework" */;
+			buildPhases = (
+				OBJ_328 /* Sources */,
+				OBJ_363 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_367 /* PBXTargetDependency */,
+				OBJ_368 /* PBXTargetDependency */,
+				OBJ_369 /* PBXTargetDependency */,
+			);
+			name = SourceKittenFramework;
+			productName = SourceKittenFramework;
+			productReference = "SourceKitten::SourceKittenFramework::Product" /* SourceKittenFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"SourceKitten::SwiftPMPackageDescription" /* SourceKittenPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_156 /* Build configuration list for PBXNativeTarget "SourceKittenPackageDescription" */;
+			buildPhases = (
+				OBJ_159 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SourceKittenPackageDescription;
+			productName = SourceKittenPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SourceKitten::sourcekitten" /* sourcekitten */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_275 /* Build configuration list for PBXNativeTarget "sourcekitten" */;
+			buildPhases = (
+				OBJ_278 /* Sources */,
+				OBJ_289 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_296 /* PBXTargetDependency */,
+				OBJ_297 /* PBXTargetDependency */,
+				OBJ_298 /* PBXTargetDependency */,
+				OBJ_299 /* PBXTargetDependency */,
+				OBJ_300 /* PBXTargetDependency */,
+				OBJ_301 /* PBXTargetDependency */,
+			);
+			name = sourcekitten;
+			productName = sourcekitten;
+			productReference = "SourceKitten::sourcekitten::Product" /* sourcekitten */;
+			productType = "com.apple.product-type.tool";
+		};
+		"SwiftGraph::SwiftGraph" /* SwiftGraph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_410 /* Build configuration list for PBXNativeTarget "SwiftGraph" */;
+			buildPhases = (
+				OBJ_413 /* Sources */,
+				OBJ_427 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftGraph;
+			productName = SwiftGraph;
+			productReference = "SwiftGraph::SwiftGraph::Product" /* SwiftGraph.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftGraph::SwiftPMPackageDescription" /* SwiftGraphPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_186 /* Build configuration list for PBXNativeTarget "SwiftGraphPackageDescription" */;
+			buildPhases = (
+				OBJ_189 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftGraphPackageDescription;
+			productName = SwiftGraphPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Yams::CYaml" /* CYaml */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_392 /* Build configuration list for PBXNativeTarget "CYaml" */;
+			buildPhases = (
+				OBJ_395 /* Sources */,
+				OBJ_402 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CYaml;
+			productName = CYaml;
+			productReference = "Yams::CYaml::Product" /* CYaml.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Yams::SwiftPMPackageDescription" /* YamsPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_162 /* Build configuration list for PBXNativeTarget "YamsPackageDescription" */;
+			buildPhases = (
+				OBJ_165 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YamsPackageDescription;
+			productName = YamsPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Yams::Yams" /* Yams */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_370 /* Build configuration list for PBXNativeTarget "Yams" */;
+			buildPhases = (
+				OBJ_373 /* Sources */,
+				OBJ_389 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_391 /* PBXTargetDependency */,
+			);
+			name = Yams;
+			productName = Yams;
+			productReference = "Yams::Yams::Product" /* Yams.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"grift::GriftKit" /* GriftKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_250 /* Build configuration list for PBXNativeTarget "GriftKit" */;
+			buildPhases = (
+				OBJ_253 /* Sources */,
+				OBJ_259 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_267 /* PBXTargetDependency */,
+				OBJ_268 /* PBXTargetDependency */,
+				OBJ_269 /* PBXTargetDependency */,
+				OBJ_270 /* PBXTargetDependency */,
+				OBJ_271 /* PBXTargetDependency */,
+				OBJ_272 /* PBXTargetDependency */,
+				OBJ_273 /* PBXTargetDependency */,
+				OBJ_274 /* PBXTargetDependency */,
+			);
+			name = GriftKit;
+			productName = GriftKit;
+			productReference = "grift::GriftKit::Product" /* GriftKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"grift::GriftKitTests" /* GriftKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_192 /* Build configuration list for PBXNativeTarget "GriftKitTests" */;
+			buildPhases = (
+				OBJ_195 /* Sources */,
+				OBJ_198 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_207 /* PBXTargetDependency */,
+				OBJ_209 /* PBXTargetDependency */,
+				OBJ_211 /* PBXTargetDependency */,
+				OBJ_213 /* PBXTargetDependency */,
+				OBJ_215 /* PBXTargetDependency */,
+				OBJ_217 /* PBXTargetDependency */,
+				OBJ_219 /* PBXTargetDependency */,
+				OBJ_221 /* PBXTargetDependency */,
+				OBJ_223 /* PBXTargetDependency */,
+			);
+			name = GriftKitTests;
+			productName = GriftKitTests;
+			productReference = "grift::GriftKitTests::Product" /* GriftKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"grift::SwiftPMPackageDescription" /* griftPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_150 /* Build configuration list for PBXNativeTarget "griftPackageDescription" */;
+			buildPhases = (
+				OBJ_153 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = griftPackageDescription;
+			productName = griftPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"grift::grift" /* grift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_226 /* Build configuration list for PBXNativeTarget "grift" */;
+			buildPhases = (
+				OBJ_229 /* Sources */,
+				OBJ_232 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_241 /* PBXTargetDependency */,
+				OBJ_242 /* PBXTargetDependency */,
+				OBJ_243 /* PBXTargetDependency */,
+				OBJ_244 /* PBXTargetDependency */,
+				OBJ_245 /* PBXTargetDependency */,
+				OBJ_246 /* PBXTargetDependency */,
+				OBJ_247 /* PBXTargetDependency */,
+				OBJ_248 /* PBXTargetDependency */,
+				OBJ_249 /* PBXTargetDependency */,
+			);
+			name = grift;
+			productName = grift;
+			productReference = "grift::grift::Product" /* grift */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "grift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_137 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"grift::SwiftPMPackageDescription" /* griftPackageDescription */,
+				"SourceKitten::SwiftPMPackageDescription" /* SourceKittenPackageDescription */,
+				"Yams::SwiftPMPackageDescription" /* YamsPackageDescription */,
+				"SWXMLHash::SwiftPMPackageDescription" /* SWXMLHashPackageDescription */,
+				"Commandant::SwiftPMPackageDescription" /* CommandantPackageDescription */,
+				"Result::SwiftPMPackageDescription" /* ResultPackageDescription */,
+				"SwiftGraph::SwiftPMPackageDescription" /* SwiftGraphPackageDescription */,
+				"grift::GriftKitTests" /* GriftKitTests */,
+				"grift::grift" /* grift */,
+				"grift::GriftKit" /* GriftKit */,
+				"SourceKitten::sourcekitten" /* sourcekitten */,
+				"Commandant::Commandant" /* Commandant */,
+				"Result::Result" /* Result */,
+				"SourceKitten::SourceKittenFramework" /* SourceKittenFramework */,
+				"Yams::Yams" /* Yams */,
+				"Yams::CYaml" /* CYaml */,
+				"SWXMLHash::SWXMLHash" /* SWXMLHash */,
+				"SwiftGraph::SwiftGraph" /* SwiftGraph */,
+				"grift::griftPackageTests::ProductTarget" /* griftPackageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_154 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_159 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_160 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_165 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_166 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_171 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_172 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_177 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_178 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_183 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_184 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_189 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_190 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_195 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_196 /* GraphvizTests.swift in Sources */,
+				OBJ_197 /* GriftKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_229 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_230 /* DependenciesCommand.swift in Sources */,
+				OBJ_231 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_253 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_254 /* Graph.swift in Sources */,
+				OBJ_255 /* GraphBuilder.swift in Sources */,
+				OBJ_256 /* GraphStructure.swift in Sources */,
+				OBJ_257 /* Structure.swift in Sources */,
+				OBJ_258 /* TestFile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_278 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_279 /* CompleteCommand.swift in Sources */,
+				OBJ_280 /* DocCommand.swift in Sources */,
+				OBJ_281 /* Errors.swift in Sources */,
+				OBJ_282 /* FormatCommand.swift in Sources */,
+				OBJ_283 /* IndexCommand.swift in Sources */,
+				OBJ_284 /* StructureCommand.swift in Sources */,
+				OBJ_285 /* SyntaxCommand.swift in Sources */,
+				OBJ_286 /* VersionCommand.swift in Sources */,
+				OBJ_287 /* YamlRequestCommand.swift in Sources */,
+				OBJ_288 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_306 /* Argument.swift in Sources */,
+				OBJ_307 /* ArgumentParser.swift in Sources */,
+				OBJ_308 /* ArgumentProtocol.swift in Sources */,
+				OBJ_309 /* Command.swift in Sources */,
+				OBJ_310 /* Errors.swift in Sources */,
+				OBJ_311 /* HelpCommand.swift in Sources */,
+				OBJ_312 /* Option.swift in Sources */,
+				OBJ_313 /* OrderedSet.swift in Sources */,
+				OBJ_314 /* Switch.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_321 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_322 /* Result.swift in Sources */,
+				OBJ_323 /* ResultProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_328 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_329 /* Clang+SourceKitten.swift in Sources */,
+				OBJ_330 /* ClangTranslationUnit.swift in Sources */,
+				OBJ_331 /* CodeCompletionItem.swift in Sources */,
+				OBJ_332 /* Dictionary+Merge.swift in Sources */,
+				OBJ_333 /* Documentation.swift in Sources */,
+				OBJ_334 /* File.swift in Sources */,
+				OBJ_335 /* JSONOutput.swift in Sources */,
+				OBJ_336 /* Language.swift in Sources */,
+				OBJ_337 /* LinuxCompatibility.swift in Sources */,
+				OBJ_338 /* Module.swift in Sources */,
+				OBJ_339 /* ObjCDeclarationKind.swift in Sources */,
+				OBJ_340 /* OffsetMap.swift in Sources */,
+				OBJ_341 /* Parameter.swift in Sources */,
+				OBJ_342 /* Request.swift in Sources */,
+				OBJ_343 /* SourceDeclaration.swift in Sources */,
+				OBJ_344 /* SourceLocation.swift in Sources */,
+				OBJ_345 /* StatementKind.swift in Sources */,
+				OBJ_346 /* String+SourceKitten.swift in Sources */,
+				OBJ_347 /* Structure.swift in Sources */,
+				OBJ_348 /* SwiftDeclarationKind.swift in Sources */,
+				OBJ_349 /* SwiftDocKey.swift in Sources */,
+				OBJ_350 /* SwiftDocs.swift in Sources */,
+				OBJ_351 /* SwiftLangSyntax.swift in Sources */,
+				OBJ_352 /* SyntaxKind.swift in Sources */,
+				OBJ_353 /* SyntaxMap.swift in Sources */,
+				OBJ_354 /* SyntaxToken.swift in Sources */,
+				OBJ_355 /* Text.swift in Sources */,
+				OBJ_356 /* Version.swift in Sources */,
+				OBJ_357 /* Xcode.swift in Sources */,
+				OBJ_358 /* library_wrapper.swift in Sources */,
+				OBJ_359 /* library_wrapper_CXString.swift in Sources */,
+				OBJ_360 /* library_wrapper_Documentation.swift in Sources */,
+				OBJ_361 /* library_wrapper_Index.swift in Sources */,
+				OBJ_362 /* library_wrapper_sourcekitd.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_374 /* Constructor.swift in Sources */,
+				OBJ_375 /* Decoder.swift in Sources */,
+				OBJ_376 /* Emitter.swift in Sources */,
+				OBJ_377 /* Encoder.swift in Sources */,
+				OBJ_378 /* Mark.swift in Sources */,
+				OBJ_379 /* Node.Mapping.swift in Sources */,
+				OBJ_380 /* Node.Scalar.swift in Sources */,
+				OBJ_381 /* Node.Sequence.swift in Sources */,
+				OBJ_382 /* Node.swift in Sources */,
+				OBJ_383 /* Parser.swift in Sources */,
+				OBJ_384 /* Representer.swift in Sources */,
+				OBJ_385 /* Resolver.swift in Sources */,
+				OBJ_386 /* String+Yams.swift in Sources */,
+				OBJ_387 /* Tag.swift in Sources */,
+				OBJ_388 /* YamlError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_395 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_396 /* api.c in Sources */,
+				OBJ_397 /* emitter.c in Sources */,
+				OBJ_398 /* parser.c in Sources */,
+				OBJ_399 /* reader.c in Sources */,
+				OBJ_400 /* scanner.c in Sources */,
+				OBJ_401 /* writer.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_407 /* SWXMLHash+TypeConversion.swift in Sources */,
+				OBJ_408 /* SWXMLHash.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_413 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_414 /* Cycle.swift in Sources */,
+				OBJ_415 /* Edge.swift in Sources */,
+				OBJ_416 /* Graph.swift in Sources */,
+				OBJ_417 /* MST.swift in Sources */,
+				OBJ_418 /* Queue.swift in Sources */,
+				OBJ_419 /* Search.swift in Sources */,
+				OBJ_420 /* Sort.swift in Sources */,
+				OBJ_421 /* Stack.swift in Sources */,
+				OBJ_422 /* SwiftPriorityQueue.swift in Sources */,
+				OBJ_423 /* UnweightedEdge.swift in Sources */,
+				OBJ_424 /* UnweightedGraph.swift in Sources */,
+				OBJ_425 /* WeightedEdge.swift in Sources */,
+				OBJ_426 /* WeightedGraph.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_207 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "grift::GriftKit" /* GriftKit */;
+			targetProxy = 00879D062026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_209 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SourceKitten::sourcekitten" /* sourcekitten */;
+			targetProxy = 00879D072026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_211 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Commandant::Commandant" /* Commandant */;
+			targetProxy = 00879D082026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_213 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Result::Result" /* Result */;
+			targetProxy = 00879D092026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_215 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SourceKitten::SourceKittenFramework" /* SourceKittenFramework */;
+			targetProxy = 00879D0A2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_217 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yams::Yams" /* Yams */;
+			targetProxy = 00879D0B2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_219 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yams::CYaml" /* CYaml */;
+			targetProxy = 00879D0C2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_221 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SWXMLHash::SWXMLHash" /* SWXMLHash */;
+			targetProxy = 00879D0D2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_223 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftGraph::SwiftGraph" /* SwiftGraph */;
+			targetProxy = 00879D0E2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_241 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "grift::GriftKit" /* GriftKit */;
+			targetProxy = 00879CEA2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_242 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SourceKitten::sourcekitten" /* sourcekitten */;
+			targetProxy = 00879CFE2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_243 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Commandant::Commandant" /* Commandant */;
+			targetProxy = 00879CFF2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_244 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Result::Result" /* Result */;
+			targetProxy = 00879D002026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_245 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SourceKitten::SourceKittenFramework" /* SourceKittenFramework */;
+			targetProxy = 00879D012026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_246 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yams::Yams" /* Yams */;
+			targetProxy = 00879D022026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_247 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yams::CYaml" /* CYaml */;
+			targetProxy = 00879D032026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_248 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SWXMLHash::SWXMLHash" /* SWXMLHash */;
+			targetProxy = 00879D042026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_249 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftGraph::SwiftGraph" /* SwiftGraph */;
+			targetProxy = 00879D052026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_267 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SourceKitten::sourcekitten" /* sourcekitten */;
+			targetProxy = 00879CEB2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_268 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Commandant::Commandant" /* Commandant */;
+			targetProxy = 00879CF72026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_269 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Result::Result" /* Result */;
+			targetProxy = 00879CF82026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_270 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SourceKitten::SourceKittenFramework" /* SourceKittenFramework */;
+			targetProxy = 00879CF92026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yams::Yams" /* Yams */;
+			targetProxy = 00879CFA2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_272 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yams::CYaml" /* CYaml */;
+			targetProxy = 00879CFB2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SWXMLHash::SWXMLHash" /* SWXMLHash */;
+			targetProxy = 00879CFC2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_274 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftGraph::SwiftGraph" /* SwiftGraph */;
+			targetProxy = 00879CFD2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_296 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Commandant::Commandant" /* Commandant */;
+			targetProxy = 00879CEC2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_297 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Result::Result" /* Result */;
+			targetProxy = 00879CEE2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_298 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SourceKitten::SourceKittenFramework" /* SourceKittenFramework */;
+			targetProxy = 00879CEF2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_299 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yams::Yams" /* Yams */;
+			targetProxy = 00879CF42026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_300 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yams::CYaml" /* CYaml */;
+			targetProxy = 00879CF52026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_301 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SWXMLHash::SWXMLHash" /* SWXMLHash */;
+			targetProxy = 00879CF62026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_317 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Result::Result" /* Result */;
+			targetProxy = 00879CED2026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_367 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yams::Yams" /* Yams */;
+			targetProxy = 00879CF02026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_368 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yams::CYaml" /* CYaml */;
+			targetProxy = 00879CF22026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SWXMLHash::SWXMLHash" /* SWXMLHash */;
+			targetProxy = 00879CF32026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_391 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yams::CYaml" /* CYaml */;
+			targetProxy = 00879CF12026A61C000D10AA /* PBXContainerItemProxy */;
+		};
+		OBJ_432 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "grift::GriftKitTests" /* GriftKitTests */;
+			targetProxy = 00879D0F2026A61E000D10AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_158 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_169 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_170 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		OBJ_182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		OBJ_187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_188 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode-9.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-9.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_193 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/.build/checkouts/SourceKit.git-6033254968535974678",
+					"$(SRCROOT)/.build/checkouts/Clang_C.git-5715122005051714050",
+					"$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/GriftKitTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = GriftKitTests;
+			};
+			name = Debug;
+		};
+		OBJ_194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/.build/checkouts/SourceKit.git-6033254968535974678",
+					"$(SRCROOT)/.build/checkouts/Clang_C.git-5715122005051714050",
+					"$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/GriftKitTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = GriftKitTests;
+			};
+			name = Release;
+		};
+		OBJ_227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/.build/checkouts/SourceKit.git-6033254968535974678",
+					"$(SRCROOT)/.build/checkouts/Clang_C.git-5715122005051714050",
+					"$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/grift_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = grift;
+			};
+			name = Debug;
+		};
+		OBJ_228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/.build/checkouts/SourceKit.git-6033254968535974678",
+					"$(SRCROOT)/.build/checkouts/Clang_C.git-5715122005051714050",
+					"$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/grift_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = grift;
+			};
+			name = Release;
+		};
+		OBJ_251 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/.build/checkouts/SourceKit.git-6033254968535974678",
+					"$(SRCROOT)/.build/checkouts/Clang_C.git-5715122005051714050",
+					"$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/GriftKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = GriftKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = GriftKit;
+			};
+			name = Debug;
+		};
+		OBJ_252 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/.build/checkouts/SourceKit.git-6033254968535974678",
+					"$(SRCROOT)/.build/checkouts/Clang_C.git-5715122005051714050",
+					"$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/GriftKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = GriftKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = GriftKit;
+			};
+			name = Release;
+		};
+		OBJ_276 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/.build/checkouts/SourceKit.git-6033254968535974678",
+					"$(SRCROOT)/.build/checkouts/Clang_C.git-5715122005051714050",
+					"$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/sourcekitten_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = sourcekitten;
+			};
+			name = Debug;
+		};
+		OBJ_277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/.build/checkouts/SourceKit.git-6033254968535974678",
+					"$(SRCROOT)/.build/checkouts/Clang_C.git-5715122005051714050",
+					"$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/sourcekitten_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = sourcekitten;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = grift.xcodeproj/Commandant_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Commandant;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Commandant;
+			};
+			name = Debug;
+		};
+		OBJ_304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = grift.xcodeproj/Commandant_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Commandant;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Commandant;
+			};
+			name = Release;
+		};
+		OBJ_319 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = grift.xcodeproj/Result_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Result;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = Result;
+			};
+			name = Debug;
+		};
+		OBJ_320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = grift.xcodeproj/Result_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Result;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = Result;
+			};
+			name = Release;
+		};
+		OBJ_326 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/.build/checkouts/SourceKit.git-6033254968535974678",
+					"$(SRCROOT)/.build/checkouts/Clang_C.git-5715122005051714050",
+					"$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/SourceKittenFramework_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = SourceKittenFramework;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SourceKittenFramework;
+			};
+			name = Debug;
+		};
+		OBJ_327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/.build/checkouts/SourceKit.git-6033254968535974678",
+					"$(SRCROOT)/.build/checkouts/Clang_C.git-5715122005051714050",
+					"$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/SourceKittenFramework_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = SourceKittenFramework;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SourceKittenFramework;
+			};
+			name = Release;
+		};
+		OBJ_371 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/Yams_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Yams;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Yams;
+			};
+			name = Debug;
+		};
+		OBJ_372 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+					"$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/Yams_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/grift.xcodeproj/GeneratedModuleMap/CYaml/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Yams;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Yams;
+			};
+			name = Release;
+		};
+		OBJ_393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/CYaml_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CYaml;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = CYaml;
+			};
+			name = Debug;
+		};
+		OBJ_394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Yams.git-8068124914099325722/Sources/CYaml/include",
+				);
+				INFOPLIST_FILE = grift.xcodeproj/CYaml_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CYaml;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = CYaml;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = grift.xcodeproj/SWXMLHash_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SWXMLHash;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SWXMLHash;
+			};
+			name = Debug;
+		};
+		OBJ_405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = grift.xcodeproj/SWXMLHash_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SWXMLHash;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SWXMLHash;
+			};
+			name = Release;
+		};
+		OBJ_411 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = grift.xcodeproj/SwiftGraph_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftGraph;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftGraph;
+			};
+			name = Debug;
+		};
+		OBJ_412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = grift.xcodeproj/SwiftGraph_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftGraph;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftGraph;
+			};
+			name = Release;
+		};
+		OBJ_430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_150 /* Build configuration list for PBXNativeTarget "griftPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_151 /* Debug */,
+				OBJ_152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_156 /* Build configuration list for PBXNativeTarget "SourceKittenPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_157 /* Debug */,
+				OBJ_158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_162 /* Build configuration list for PBXNativeTarget "YamsPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_163 /* Debug */,
+				OBJ_164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_168 /* Build configuration list for PBXNativeTarget "SWXMLHashPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_169 /* Debug */,
+				OBJ_170 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_174 /* Build configuration list for PBXNativeTarget "CommandantPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_175 /* Debug */,
+				OBJ_176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_180 /* Build configuration list for PBXNativeTarget "ResultPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_181 /* Debug */,
+				OBJ_182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_186 /* Build configuration list for PBXNativeTarget "SwiftGraphPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_187 /* Debug */,
+				OBJ_188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_192 /* Build configuration list for PBXNativeTarget "GriftKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_193 /* Debug */,
+				OBJ_194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "grift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_226 /* Build configuration list for PBXNativeTarget "grift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_227 /* Debug */,
+				OBJ_228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_250 /* Build configuration list for PBXNativeTarget "GriftKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_251 /* Debug */,
+				OBJ_252 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_275 /* Build configuration list for PBXNativeTarget "sourcekitten" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_276 /* Debug */,
+				OBJ_277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_302 /* Build configuration list for PBXNativeTarget "Commandant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_303 /* Debug */,
+				OBJ_304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_318 /* Build configuration list for PBXNativeTarget "Result" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_319 /* Debug */,
+				OBJ_320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_325 /* Build configuration list for PBXNativeTarget "SourceKittenFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_326 /* Debug */,
+				OBJ_327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_370 /* Build configuration list for PBXNativeTarget "Yams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_371 /* Debug */,
+				OBJ_372 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_392 /* Build configuration list for PBXNativeTarget "CYaml" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_393 /* Debug */,
+				OBJ_394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_403 /* Build configuration list for PBXNativeTarget "SWXMLHash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_404 /* Debug */,
+				OBJ_405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_410 /* Build configuration list for PBXNativeTarget "SwiftGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_411 /* Debug */,
+				OBJ_412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_429 /* Build configuration list for PBXAggregateTarget "griftPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_430 /* Debug */,
+				OBJ_431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}

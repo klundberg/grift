@@ -34,18 +34,18 @@ public func structures(at path: String, using fileManager: FileManager = .defaul
 
     let filePaths = try filesInDirectory(at: path, using: fileManager)
 
-    return filePaths.flatMap({ structure(forFile: $0) })
+    return try filePaths.flatMap({ try structure(forFile: $0) })
 }
 
-func structures(for code: String) -> [Structure] {
-    return [Structure(file: File(contents: code))]
+func structures(for code: String) throws -> [Structure] {
+    return try [Structure(file: File(contents: code))]
 }
 
-public func structure(forFile path: String) -> Structure? {
+public func structure(forFile path: String) throws -> Structure? {
     guard let file = File(path: path) else {
         return nil
     }
-    return Structure(file: file)
+    return try Structure(file: file)
 }
 
 extension Dictionary {

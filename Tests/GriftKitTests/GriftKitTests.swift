@@ -48,31 +48,31 @@ class GriftKitTests: XCTestCase {
 //        print(toJSON(toAnyObject(index.send())))
 //    }
 
-    func testSingleStructWithNoFieldsCreatesSingleVertexGraph() {
+    func testSingleStructWithNoFieldsCreatesSingleVertexGraph() throws {
 
         let code = "struct Thing { }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = GraphBuilder(structures: try structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 1)
         XCTAssertEqual(graph.edgeCount, 0)
         XCTAssertTrue(graph.vertexInGraph(vertex: "Thing"))
     }
 
-    func testSingleStructSwiftCodeCreatesOneEdgeGraph() {
+    func testSingleStructSwiftCodeCreatesOneEdgeGraph() throws {
         let code = "struct Thing { var x: String }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = GraphBuilder(structures: try structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
     }
 
-    func testTwoStructSwiftCodeCreatesTwoEdgeGraphGraph() {
+    func testTwoStructSwiftCodeCreatesTwoEdgeGraphGraph() throws {
         let code = "struct Thing { var x: String }; struct Foo { var bar: Int }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = try GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 4)
         XCTAssertEqual(graph.edgeCount, 2)
@@ -80,20 +80,20 @@ class GriftKitTests: XCTestCase {
         XCTAssertTrue(graph.edgeExists(from: "Foo", to: "Int"))
     }
 
-    func testNestedStructSwiftCodeCreatesExpectedGraph() {
+    func testNestedStructSwiftCodeCreatesExpectedGraph() throws {
         let code = "struct Thing { struct Foo {} var x: Foo }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = try GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Foo"))
     }
 
-    func testMoreComplexNestedStructSwiftCodeCreatesExpectedGraph() {
+    func testMoreComplexNestedStructSwiftCodeCreatesExpectedGraph() throws {
         let code = "struct Thing { struct Foo { let s: Int } var x: Foo }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = try GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 3)
         XCTAssertEqual(graph.edgeCount, 2)
@@ -101,60 +101,60 @@ class GriftKitTests: XCTestCase {
         XCTAssertTrue(graph.edgeExists(from: "Foo", to: "Int"))
     }
 
-    func testStructWithFunctionParametersShowsParametersProperly() {
+    func testStructWithFunctionParametersShowsParametersProperly() throws {
         let code = "struct Thing { func foo(d: Double) { } }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = try GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
     }
 
-    func testClassWithFunctionParametersShowsParametersProperly() {
+    func testClassWithFunctionParametersShowsParametersProperly() throws {
         let code = "class Thing { func foo(d: Double) { } }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = try GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
     }
 
-    func testEnumWithFunctionParametersShowsParametersProperly() {
+    func testEnumWithFunctionParametersShowsParametersProperly() throws {
         let code = "enum Thing { func foo(d: Double) { } }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = try GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
     }
 
-    func testProtocolWithFunctionParametersShowsParametersProperly() {
+    func testProtocolWithFunctionParametersShowsParametersProperly() throws {
         let code = "protocol Thing { func foo(d: Double) }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = try GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
     }
 
-    func testTwoReferencesToTheSameTypeOnlyYieldOneEdge() {
+    func testTwoReferencesToTheSameTypeOnlyYieldOneEdge() throws {
         let code = "struct Thing { var x: String; var y: String }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = try GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 2)
         XCTAssertEqual(graph.edgeCount, 1)
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
     }
 
-    func testThatGenericTypesPointToBothTypeAndGenericTypeParameter() {
+    func testThatGenericTypesPointToBothTypeAndGenericTypeParameter() throws {
         let code = "struct Thing { var x: Array<String> }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = try GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 3)
         XCTAssertEqual(graph.edgeCount, 2)
@@ -163,10 +163,10 @@ class GriftKitTests: XCTestCase {
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
     }
 
-    func testArrayTypesAreNormalizedToNotHaveBrackets() {
+    func testArrayTypesAreNormalizedToNotHaveBrackets() throws {
         let code = "struct Thing { var x: [String] }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = try GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 3)
         XCTAssertEqual(graph.edgeCount, 2)
@@ -175,10 +175,10 @@ class GriftKitTests: XCTestCase {
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "String"))
     }
 
-    func testThatGenericTypesWithMultipleGenericParamsPointToEachParameter() {
+    func testThatGenericTypesWithMultipleGenericParamsPointToEachParameter() throws {
         let code = "struct Thing { var x: Dictionary<String, Int> }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = try GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 4)
         XCTAssertEqual(graph.edgeCount, 3)
@@ -188,10 +188,10 @@ class GriftKitTests: XCTestCase {
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Int"))
     }
 
-    func testThatDictionaryTypesAreNormalizedToNotHaveBracketsOrColons() {
+    func testThatDictionaryTypesAreNormalizedToNotHaveBracketsOrColons() throws {
         let code = "struct Thing { var x: [String: Int] }"
 
-        let graph = GraphBuilder(structures: structures(for: code)).build()
+        let graph = try GraphBuilder(structures: structures(for: code)).build()
 
         XCTAssertEqual(graph.vertexCount, 4)
         XCTAssertEqual(graph.edgeCount, 3)
@@ -201,10 +201,10 @@ class GriftKitTests: XCTestCase {
         XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Int"))
     }
 
-//    func testStructWithFunctionShowsFunctionReturnTypeProperly() {
+//    func testStructWithFunctionShowsFunctionReturnTypeProperly() throws {
 //        let code = "struct Thing { func foo() -> Double { return 0 } }"
 //
-//        let graph = GraphBuilder(structures: structures(for: code)).build()
+//        let graph = try GraphBuilder(structures: structures(for: code)).build()
 //
 //        XCTAssertEqual(graph.vertexCount, 2)
 //        XCTAssertEqual(graph.edgeCount, 1)

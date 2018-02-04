@@ -1,6 +1,0 @@
-github "Carthage/Commandant" "0.13.0"
-github "antitypical/Result" "3.2.4"
-github "davecom/SwiftGraph" "1.5.1"
-github "drmohundro/SWXMLHash" "4.3.6"
-github "jpsim/SourceKitten" "0.19.1"
-github "jpsim/Yams" "0.5.0"
