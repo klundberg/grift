@@ -1,5 +1,6 @@
 import Foundation
 import SourceKittenFramework
+import Graphviz
 
 private func filesInDirectory(at path: String, using fileManager: FileManager = .default) throws -> [String] {
 

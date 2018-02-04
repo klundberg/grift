@@ -1,4 +1,4 @@
-@testable import GriftKit
+@testable import Graphviz
 import SwiftGraph
 import XCTest
 

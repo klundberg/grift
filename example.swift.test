@@ -20,7 +20,7 @@ open class FooClass {
 
         let const = Array<Int>()
         a_constant = const
-        thing()
+        _ = thing()
     }
 
     func thing() -> String {

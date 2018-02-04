@@ -23,9 +23,15 @@ let package = Package(
             dependencies: ["GriftKit", "Commandant"]),
         .target(
             name: "GriftKit",
-            dependencies: ["SwiftGraph", "SourceKittenFramework"]),
+            dependencies: ["Graphviz", "SwiftGraph", "SourceKittenFramework"]),
+        .target(
+            name: "Graphviz",
+            dependencies: ["SwiftGraph"]),
         .testTarget(
             name: "GriftKitTests",
             dependencies: ["GriftKit"]),
+        .testTarget(
+            name: "GraphvizTests",
+            dependencies: ["Graphviz", "SwiftGraph"]),
     ]
 )
