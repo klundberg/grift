@@ -13,8 +13,10 @@ import SourceKittenFramework
 import SwiftGraph
 
 struct GriftError: Error, CustomStringConvertible {
+    var message: String
+
     var description: String {
-        return "Unknown Error"
+        return message
     }
 }
 
@@ -32,7 +34,7 @@ struct DependenciesCommand: CommandProtocol {
 
             return Result(())
         } catch {
-            return Result(error: GriftError())
+            return Result(error: GriftError(message: "\(error)"))
         }
     }
 }
