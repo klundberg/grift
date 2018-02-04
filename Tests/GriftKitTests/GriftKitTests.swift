@@ -48,7 +48,8 @@ class GriftKitTests: XCTestCase {
 
     private func buildGraph(for code: String) throws -> UnweightedGraph<Vertex> {
         return try GraphBuilder.build(structures: structures(for: code))
-//        return try GraphBuilder.build(docs: docs(for: code))
+//        return GraphBuilder.build(docs: docs(for: code))
+//        return GraphBuilder.build(syntax: syntaxMaps(for: code))
     }
 
     func testSingleStructWithNoFieldsCreatesSingleVertexGraph() throws {
@@ -212,5 +213,4 @@ class GriftKitTests: XCTestCase {
 //        XCTAssertEqual(graph.edgeCount, 1)
 //        XCTAssertTrue(graph.edgeExists(from: "Thing", to: "Double"))
 //    }
-
 }

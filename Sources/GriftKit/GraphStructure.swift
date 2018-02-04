@@ -31,12 +31,15 @@ private func filesInDirectory(at path: String, using fileManager: FileManager = 
 //    })
 }
 
-public func docs(for code: String) throws -> [SwiftDocs] {
+public func syntaxMaps(for code: String) throws -> [SyntaxMap] {
+    return try [SyntaxMap(file: File(contents: code))]
+}
+
+public func docs(for code: String) -> [SwiftDocs] {
     return SwiftDocs(file: File(contents: code), arguments: []).map({ [$0] }) ?? []
 }
 
 public func structures(at path: String, using fileManager: FileManager = .default) throws -> [Structure] {
-
     let filePaths = try filesInDirectory(at: path, using: fileManager)
 
     return try filePaths.flatMap({ try structure(forFile: $0) })

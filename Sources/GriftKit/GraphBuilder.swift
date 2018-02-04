@@ -7,6 +7,12 @@ public typealias Vertex = String
 
 public enum GraphBuilder {
 
+    public static func build(files: [File]) -> UnweightedGraph<Vertex> {
+        let graph = UnweightedGraph<Vertex>()
+
+        return graph
+    }
+
     public static func build(structures: [Structure]) -> UnweightedGraph<Vertex> {
         let graph = UnweightedGraph<Vertex>()
         for structure in structures {
@@ -28,11 +34,7 @@ public enum GraphBuilder {
         var name = name
 
         if let typeName = dict[.typeName] as? String, !name.isEmpty {
-
-            let normalizedTypeName = normalize(typeWithName: typeName)
-
-            let singleTypeNames = splitSingleTypeNames(fromComposedTypeName: normalizedTypeName)
-            for singleTypeName in singleTypeNames {
+            for singleTypeName in normalize(typeWithName: typeName) {
                 graph.addVertextIfNotPresent(singleTypeName)
                 graph.addEdgeIfNotPresent(from: name, to: singleTypeName, directed: true)
             }
@@ -50,7 +52,7 @@ public enum GraphBuilder {
         }
     }
 
-    private static func normalize(typeWithName name: String) -> String {
+    private static func normalize(typeWithName name: String) -> [String] {
         let dictionarShorthandRegex = try! NSRegularExpression(pattern: "\\[\\s*(.+)\\s*:\\s*(.+)\\s*]", options: [])
 
         let dictionaryNormalizedTypeName = dictionarShorthandRegex.stringByReplacingMatches(in: name,
@@ -59,10 +61,12 @@ public enum GraphBuilder {
 
         let arrayShorthandRegex = try! NSRegularExpression(pattern: "\\[(.+)\\]", options: [])
 
-        return arrayShorthandRegex.stringByReplacingMatches(in: dictionaryNormalizedTypeName,
+        let normalizedTypeName = arrayShorthandRegex.stringByReplacingMatches(in: dictionaryNormalizedTypeName,
                                                             options: [],
                                                             range: NSRange(location: 0, length: (dictionaryNormalizedTypeName as NSString).length),
                                                             withTemplate: "Array<$1>")
+
+        return splitSingleTypeNames(fromComposedTypeName: normalizedTypeName)
     }
 
     private static func splitSingleTypeNames(fromComposedTypeName name: String) -> [String] {

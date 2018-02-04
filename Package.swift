@@ -24,12 +24,12 @@ let package = Package(
         .target(
             name: "GriftKit",
             dependencies: ["Graphviz", "SwiftGraph", "SourceKittenFramework"]),
-        .target(
-            name: "Graphviz",
-            dependencies: ["SwiftGraph"]),
         .testTarget(
             name: "GriftKitTests",
             dependencies: ["GriftKit"]),
+        .target(
+            name: "Graphviz",
+            dependencies: ["SwiftGraph"]),
         .testTarget(
             name: "GraphvizTests",
             dependencies: ["Graphviz", "SwiftGraph"]),
