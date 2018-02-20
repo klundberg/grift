@@ -192,7 +192,7 @@ class GriftKitTests: XCTestCase {
     }
 
     func testThatDictionaryTypesAreNormalizedToNotHaveBracketsOrColons() throws {
-        let code = "struct Thing { var x: [String: Int] }"
+        let code = "open class Thing { var x: [String: Int] }"
 
         let graph = try buildGraph(for: code)
 

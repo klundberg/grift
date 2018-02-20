@@ -23,7 +23,7 @@ open class FooClass {
         _ = thing()
     }
 
-    func thing() -> String {
+    public func thing() -> String {
         return a_variable
     }
 }

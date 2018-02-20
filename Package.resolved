@@ -75,7 +75,7 @@
       },
       {
         "package": "SwiftGraph",
-        "repositoryURL": "https://github.com/davecom/SwiftGraph",
+        "repositoryURL": "https://github.com/davecom/SwiftGraph.git",
         "state": {
           "branch": null,
           "revision": "c369391fe1d86ba3f6771cd0004ad996b9a9e076",
