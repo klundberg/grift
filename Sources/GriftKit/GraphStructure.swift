@@ -8,7 +8,7 @@ private func filesInDirectory(at path: String, using fileManager: FileManager = 
         return [] // TODO: throw error
     }
 
-    return enumerator.flatMap({
+    return enumerator.compactMap({
         guard let url = $0 as? URL,
             !url.pathComponents.contains(".build"),
             !url.pathComponents.contains("Carthage"),
@@ -39,10 +39,14 @@ public func docs(for code: String) -> [SwiftDocs] {
     return SwiftDocs(file: File(contents: code), arguments: []).map({ [$0] }) ?? []
 }
 
+public func files(at path: String, using fileManager: FileManager = .default) throws -> [File] {
+    return try filesInDirectory(at: path, using: fileManager).compactMap(File.init(path:))
+}
+
 public func structures(at path: String, using fileManager: FileManager = .default) throws -> [Structure] {
     let filePaths = try filesInDirectory(at: path, using: fileManager)
 
-    return try filePaths.flatMap({ try structure(forFile: $0) })
+    return try filePaths.compactMap({ try structure(forFile: $0) })
 }
 
 func structures(for code: String) throws -> [Structure] {

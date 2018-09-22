@@ -11,6 +11,7 @@ import GriftKit
 import Result
 import SourceKittenFramework
 import SwiftGraph
+import Curry
 
 struct GriftError: Error, CustomStringConvertible {
     var message: String
@@ -27,8 +28,10 @@ struct DependenciesCommand: CommandProtocol {
 
     func run(_ options: DependenciesOptions) -> Result<(), GriftError> {
         do {
-            let structures = try GriftKit.structures(at: options.path)
-            let graph = GraphBuilder.build(structures: structures)
+//            let structures = try GriftKit.structures(at: options.path)
+//            let graph = GraphBuilder.build(structures: structures)
+            let files = try GriftKit.files(at: options.path)
+            let graph = GraphBuilder.build(files: files, compilerLogPath: options.compilerLogPath)
             let dot = graph.graphviz()
             print(dot.description)
 
@@ -41,13 +44,12 @@ struct DependenciesCommand: CommandProtocol {
 
 struct DependenciesOptions: OptionsProtocol {
     let path: String
-
-    static func create(_ path: String) -> DependenciesOptions {
-        return DependenciesOptions(path: path)
-    }
+    let compilerLogPath: String
 
     static func evaluate(_ m: CommandMode) -> Result<DependenciesOptions, CommandantError<GriftError>> {
-        return create
+        return curry(DependenciesOptions.init)
             <*> m <| Option(key: "path", defaultValue: ".", usage: "The path to generate a dependency graph from")
+            <*> m <| Option(key: "logPath", defaultValue: "", usage: "The path to pull compiler logs from")
+        
     }
 }
